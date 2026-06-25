@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, priority AI responses, and full progress analytics. Plans are billed monthly or yearly through the App Store or Google Play.",
+    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, priority AI responses, and full progress analytics. Pro is $10/month or $100/year (save $20 vs paying monthly). Billed through the App Store or Google Play.",
   },
   {
     q: "How does the AI Coach know my training?",
