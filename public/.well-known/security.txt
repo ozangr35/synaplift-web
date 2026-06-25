@@ -1,0 +1,3 @@
+Contact: mailto:synaplift@outlook.com
+Preferred-Languages: en
+Canonical: https://synaplift.com/.well-known/security.txt

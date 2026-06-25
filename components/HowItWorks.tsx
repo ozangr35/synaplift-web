@@ -2,6 +2,25 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Brain, ClipboardList, Flame } from "lucide-react";
+import PhoneMockup from "@/components/PhoneMockup";
+
+const flowScreens = [
+  {
+    src: "/screenshots/flow-workout.png",
+    alt: "SynapLift active workout logging screen",
+    label: "Log sets",
+  },
+  {
+    src: "/screenshots/feature-progress.png",
+    alt: "SynapLift strength progress chart",
+    label: "Track PRs",
+  },
+  {
+    src: "/screenshots/flow-calendar.png",
+    alt: "SynapLift workout calendar and history",
+    label: "Review history",
+  },
+];
 
 const steps = [
   {
@@ -18,7 +37,7 @@ const steps = [
     step: "02",
     title: "Crush Workout",
     description:
-      "Log every set with rest timers, numpad entry, and live volume tracking while you train.",
+      "Log every set with rest timers, quick entry, and live volume tracking while you train.",
     icon: Flame,
     color: "text-neon-green",
     bg: "bg-neon-green/15",
@@ -98,7 +117,6 @@ export default function HowItWorks() {
           })}
         </div>
 
-        {/* Wide mockup strip placeholder */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,10 +124,23 @@ export default function HowItWorks() {
           transition={{ duration: 0.55, delay: 0.2 }}
           className="mt-14 rounded-3xl border border-white/8 bg-carbon-50 p-6 sm:p-8"
         >
-          <div className="flex aspect-[16/7] w-full items-center justify-center rounded-2xl border border-gray-700 bg-gray-800 text-gray-500 animate-pulse">
-            <span className="px-4 text-sm font-medium">
-              Insert App Flow Mockup / Screenshot Strip Here
-            </span>
+          <div className="grid grid-cols-1 place-items-center gap-10 sm:grid-cols-3 sm:gap-8">
+            {flowScreens.map((screen) => (
+              <div
+                key={screen.src}
+                className="flex w-full max-w-[200px] flex-col items-center gap-3"
+              >
+                <PhoneMockup
+                  src={screen.src}
+                  alt={screen.alt}
+                  size="flow"
+                  className="w-full"
+                />
+                <p className="text-center text-xs font-bold uppercase tracking-wider text-gray-500">
+                  {screen.label}
+                </p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

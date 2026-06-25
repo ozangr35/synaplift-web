@@ -20,7 +20,7 @@ const proFeatures = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative py-20 sm:py-28">
+    <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neon-green/20 to-transparent"
@@ -109,7 +109,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <Link
-                href="#download"
+                href="/#download"
                 className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-neon-blue to-neon-green py-3.5 text-sm font-bold text-carbon transition hover:opacity-90"
               >
                 Download & Upgrade

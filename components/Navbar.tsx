@@ -1,129 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Download, Menu, X } from "lucide-react";
+import { Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "/#features", label: "Features" },
-  { href: "/#pricing", label: "Pricing" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/features", label: "Features" },
+  { href: "/pricing", label: "Pricing" },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <motion.nav
-        initial={{ y: -24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`mx-auto mt-4 max-w-6xl px-4 transition-all duration-300 sm:px-6 ${
-          scrolled ? "mt-2" : ""
-        }`}
-      >
-        <div
-          className={`flex items-center justify-between rounded-2xl border px-4 py-3 backdrop-blur-xl transition-all duration-300 sm:px-6 ${
-            scrolled
-              ? "border-white/10 bg-carbon/80 shadow-glass"
-              : "border-white/5 bg-carbon/50"
-          }`}
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-carbon/90 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-6 sm:px-6">
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/branding/synaplift-logo-wordmark.png"
+            alt="SynapLift"
+            width={220}
+            height={40}
+            className="h-8 w-auto sm:h-9"
+            priority
+          />
+        </Link>
+
+        <nav
+          aria-label="Main navigation"
+          className="flex min-w-0 flex-1 items-center gap-4 overflow-x-auto sm:gap-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          <Link href="/" className="group flex items-center gap-2.5">
-            <Image
-              src="/branding/synaplift-logo-wordmark.png"
-              alt="SynapLift"
-              width={180}
-              height={32}
-              className="h-7 w-auto sm:h-8"
-              priority
-            />
-          </Link>
-
-          <div className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-gray-400 transition hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="hidden md:block">
+          {navLinks.map((link) => (
             <Link
-              href="#download"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-5 py-2.5 text-sm font-bold text-carbon shadow-neon transition hover:opacity-90"
+              key={link.href}
+              href={link.href}
+              className="shrink-0 whitespace-nowrap text-xs font-semibold text-gray-400 transition hover:text-white sm:text-sm"
             >
-              <Download className="h-4 w-4" />
-              Download Now
+              {link.label}
             </Link>
-          </div>
+          ))}
+        </nav>
 
-          <button
-            type="button"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="rounded-lg p-2 text-gray-400 transition hover:bg-white/5 hover:text-white md:hidden"
-            onClick={() => setMobileOpen((v) => !v)}
-          >
-            {mobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
-        </div>
-
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-2 rounded-2xl border border-white/10 bg-carbon/95 p-4 backdrop-blur-xl md:hidden"
-          >
-            <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-semibold text-gray-300 transition hover:bg-white/5 hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="#download"
-                onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-5 py-3 text-sm font-bold text-carbon"
-              >
-                <Download className="h-4 w-4" />
-                Download Now
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </motion.nav>
+        <Link
+          href="/#download"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-3 py-2 text-xs font-bold text-carbon shadow-neon transition hover:opacity-90 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
+        >
+          <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+          Download App
+        </Link>
+      </div>
     </header>
   );
 }

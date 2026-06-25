@@ -16,6 +16,10 @@ export const metadata = {
   title: "SynapLift — Pitch Overview",
   description:
     "Investor & business overview for SynapLift — AI strength training for serious lifters.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const sections = [
@@ -27,7 +31,7 @@ const sections = [
   {
     icon: Zap,
     title: "Solution",
-    body: "SynapLift combines serious workout logging with a Gemini-powered AI Coach that reads your training history, plus Scan AI for physique feedback. One app: log → progress → coach that actually knows you.",
+    body: "SynapLift combines serious workout logging with an AI Coach that reads your training history, plus Scan AI for physique feedback. One app: log → progress → guidance that actually knows you.",
   },
   {
     icon: TrendingUp,
@@ -38,32 +42,32 @@ const sections = [
     icon: Bot,
     title: "Product (live demo)",
     bullets: [
-      "Workout templates, set logging, rest timers, 1RM charts",
-      "AI Coach chat with server-side context from your Firestore history",
-      "Scan AI — physique analysis via secure Cloud Functions → Gemini",
-      "Freemium limits; SynapLift Pro (monthly / yearly / lifetime)",
-      "GDPR-ready privacy, account deletion, Bootsurf (NL entity)",
+      "Workout templates, set logging, rest timers, strength progress charts",
+      "AI Coach chat that uses your logged workouts for personalized replies",
+      "Scan AI — instant physique feedback from your photos",
+      "Free tier with limits; SynapLift Pro (monthly / yearly / lifetime)",
+      "Privacy-first design, account deletion, Bootsurf (Netherlands)",
     ],
   },
   {
     icon: BarChart3,
     title: "Business model",
-    body: "B2C subscription via App Store / Google Play (RevenueCat). AI Coach & Scan AI gated behind SynapLift Pro. Free tier drives activation; paywall after coach engagement (3 free messages). Lifetime tier for subscription-fatigued EU users.",
+    body: "B2C subscription via the App Store and Google Play. AI Coach and Scan AI are included with SynapLift Pro. Free tier drives activation; upgrade after you try the coach. Lifetime option for users who prefer a one-time purchase.",
   },
   {
     icon: Shield,
     title: "Moat & compliance",
     bullets: [
-      "Server-authoritative AI — keys never on client",
-      "Explicit Google Gemini consent (Apple 5.1.2)",
-      "EU privacy policy + medical disclaimer",
-      "Training data flywheel: more logs → better coach context",
+      "Encrypted online processing — photos and messages handled with care",
+      "Clear in-app consent before photos or messages are analyzed",
+      "EU privacy policy and medical disclaimer",
+      "More logged workouts → more relevant coaching over time",
     ],
   },
   {
     icon: Globe,
     title: "Traction & stage",
-    body: "Pre-launch / TestFlight-ready. Built by student entrepreneur team. Seeking mentorship, distribution advice, and optional pre-seed for ASO, trademark (EU Class 9), and user acquisition in TR + NL.",
+    body: "Pre-launch / TestFlight-ready. Built by a student entrepreneur team in the Netherlands. Seeking mentorship, distribution advice, and optional pre-seed for marketing, trademark (EU), and user acquisition in Turkey and the Netherlands.",
   },
   {
     icon: Users,

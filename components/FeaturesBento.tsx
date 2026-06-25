@@ -10,6 +10,7 @@ import {
   Timer,
   TrendingUp,
 } from "lucide-react";
+import PhoneMockup from "@/components/PhoneMockup";
 
 const features = [
   {
@@ -24,7 +25,8 @@ const features = [
       { icon: MessageSquare, text: "Real-time chat coaching" },
       { icon: Dumbbell, text: "Workout & equipment advice" },
     ],
-    mockupLabel: "AI Coach Screen",
+    screenshot: "/screenshots/feature-coach.png",
+    screenshotAlt: "SynapLift AI Coach workout plan with save as template",
   },
   {
     id: "scan",
@@ -35,7 +37,8 @@ const features = [
     accent: "green" as const,
     span: "lg:col-span-1",
     bullets: [{ icon: Camera, text: "Photo-based physique analysis" }],
-    mockupLabel: "Scan AI Screen",
+    screenshot: "/screenshots/feature-scan.png",
+    screenshotAlt: "SynapLift Scan AI physique analysis results",
   },
   {
     id: "tracking",
@@ -49,7 +52,8 @@ const features = [
       { icon: Timer, text: "Built-in rest timers" },
       { icon: TrendingUp, text: "1RM & volume charts" },
     ],
-    mockupLabel: "Progress Screen",
+    screenshot: "/screenshots/feature-progress.png",
+    screenshotAlt: "SynapLift one-rep max progress chart",
   },
 ];
 
@@ -70,19 +74,9 @@ const accentStyles = {
   },
 };
 
-function MockupPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="flex aspect-[9/19] w-full max-w-[140px] items-center justify-center rounded-2xl border border-gray-700 bg-gray-800 text-center text-gray-500 animate-pulse sm:max-w-[160px]">
-      <span className="px-3 text-[10px] font-medium leading-tight">
-        {label}
-      </span>
-    </div>
-  );
-}
-
 export default function FeaturesBento() {
   return (
-    <section id="features" className="relative py-20 sm:py-28">
+    <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -156,7 +150,11 @@ export default function FeaturesBento() {
                   <div
                     className={`mt-6 flex justify-center ${feature.id === "coach" ? "lg:mt-0 lg:shrink-0" : ""}`}
                   >
-                    <MockupPlaceholder label={feature.mockupLabel} />
+                    <PhoneMockup
+                      src={feature.screenshot}
+                      alt={feature.screenshotAlt}
+                      size={feature.id === "coach" ? "md" : "sm"}
+                    />
                   </div>
                 </div>
               </motion.article>

@@ -22,9 +22,9 @@ export default function TermsPage() {
         </p>
         <p className="mt-4 uppercase">
           SynapLift IS NOT A MEDICAL ORGANIZATION, A LICENSED MEDICAL DEVICE, OR A
-          CERTIFIED MEDICAL PROFESSIONAL. THE APP, INCLUDING THE GEMINI-POWERED
-          AI COACH AND ALL TRAINING PLANS, PROVIDES INFORMATION AND
-          RECOMMENDATIONS FOR EDUCATIONAL AND INFORMATIONAL PURPOSES ONLY.
+          CERTIFIED MEDICAL PROFESSIONAL. THE APP, INCLUDING THE AI COACH AND ALL
+          TRAINING PLANS, PROVIDES INFORMATION AND RECOMMENDATIONS FOR EDUCATIONAL
+          AND INFORMATIONAL PURPOSES ONLY.
         </p>
         <ol className="mt-4 list-decimal space-y-3 pl-5 uppercase">
           <li>
@@ -102,7 +102,7 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "Paid plans (monthly, yearly, lifetime) are billed through the Apple App Store or Google Play via RevenueCat.",
+            "Paid plans (monthly, yearly, lifetime) are billed through the Apple App Store or Google Play.",
             "Prices, trials, and renewal terms are shown at purchase and in your platform subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
             "Deleting your SynapLift account does NOT cancel billing — cancel in Apple/Google subscription settings.",
@@ -114,7 +114,7 @@ export default function TermsPage() {
       <LegalSection title="6. AI Coach & Scan AI">
         <LegalList
           items={[
-            "AI features send your prompts and optional images to Google Gemini via our secure backend, as described in the Privacy Policy.",
+            "AI features send your prompts and optional images over encrypted connections to a third-party AI provider (Google), as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
             "Scan AI is for physique and training feedback only — not medical diagnosis.",

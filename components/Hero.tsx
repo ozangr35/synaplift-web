@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Apple, Play, Sparkles } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import PhoneMockup from "@/components/PhoneMockup";
+import { appStoreUrl, playStoreUrl } from "@/lib/site";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -76,30 +76,62 @@ export default function Hero() {
               id="download"
               className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start"
             >
-              <Link
-                href="#"
-                className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-blue/40 hover:bg-carbon-50 sm:w-auto"
-              >
-                <Apple className="h-7 w-7 text-white transition group-hover:text-neon-blue" />
-                <div className="text-left">
-                  <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                    Download on the
-                  </p>
-                  <p className="text-sm font-bold text-white">App Store</p>
+              {appStoreUrl ? (
+                <a
+                  href={appStoreUrl}
+                  rel="noopener noreferrer"
+                  className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-blue/40 hover:bg-carbon-50 sm:w-auto"
+                >
+                  <Apple className="h-7 w-7 text-white transition group-hover:text-neon-blue" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
+                      Download on the
+                    </p>
+                    <p className="text-sm font-bold text-white">App Store</p>
+                  </div>
+                </a>
+              ) : (
+                <div
+                  aria-label="App Store — coming soon"
+                  className="flex w-full max-w-[220px] cursor-default items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 opacity-90 sm:w-auto"
+                >
+                  <Apple className="h-7 w-7 text-white" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
+                      App Store
+                    </p>
+                    <p className="text-sm font-bold text-white">Coming soon</p>
+                  </div>
                 </div>
-              </Link>
-              <Link
-                href="#"
-                className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-green/40 hover:bg-carbon-50 sm:w-auto"
-              >
-                <Play className="h-7 w-7 fill-white text-white transition group-hover:text-neon-green" />
-                <div className="text-left">
-                  <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                    Get it on
-                  </p>
-                  <p className="text-sm font-bold text-white">Google Play</p>
+              )}
+              {playStoreUrl ? (
+                <a
+                  href={playStoreUrl}
+                  rel="noopener noreferrer"
+                  className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-green/40 hover:bg-carbon-50 sm:w-auto"
+                >
+                  <Play className="h-7 w-7 fill-white text-white transition group-hover:text-neon-green" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
+                      Get it on
+                    </p>
+                    <p className="text-sm font-bold text-white">Google Play</p>
+                  </div>
+                </a>
+              ) : (
+                <div
+                  aria-label="Google Play — coming soon"
+                  className="flex w-full max-w-[220px] cursor-default items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 opacity-90 sm:w-auto"
+                >
+                  <Play className="h-7 w-7 fill-white text-white" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
+                      Google Play
+                    </p>
+                    <p className="text-sm font-bold text-white">Coming soon</p>
+                  </div>
                 </div>
-              </Link>
+              )}
             </motion.div>
 
             <motion.p
@@ -125,22 +157,13 @@ export default function Hero() {
               aria-hidden
               className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-b from-neon-blue/20 via-transparent to-neon-green/15 blur-2xl"
             />
-            <div className="relative rounded-[2.5rem] border border-white/10 bg-carbon-50 p-3 shadow-neon">
-              <div className="relative aspect-[9/19] w-full overflow-hidden rounded-3xl border border-gray-700 bg-gray-800">
-                <Image
-                  src="/branding/synaplift-app-icon.png"
-                  alt="SynapLift app icon"
-                  fill
-                  className="object-contain p-12 opacity-90"
-                  priority
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-carbon via-carbon/80 to-transparent px-4 pb-5 pt-16 text-center">
-                  <p className="text-xs font-medium text-gray-500">
-                    Replace with iPhone mockup screenshot
-                  </p>
-                </div>
-              </div>
-            </div>
+            <PhoneMockup
+              src="/screenshots/hero-home.png"
+              alt="SynapLift home screen showing weekly summary and AI Coach"
+              size="lg"
+              priority
+              className="mx-auto lg:mx-0"
+            />
           </motion.div>
         </div>
       </div>

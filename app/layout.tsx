@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "SynapLift — Strength Training, Powered by AI",
   description:
     "Log workouts, track 1RM progress, and get personalized guidance from an AI Coach that knows your lifts. Download SynapLift for iOS and Android.",
@@ -20,6 +22,12 @@ export const metadata: Metadata = {
     "1RM",
     "SynapLift",
   ],
+  referrer: "strict-origin-when-cross-origin",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
   icons: {
     icon: "/branding/synaplift-app-icon.png",
     apple: "/branding/synaplift-app-icon.png",
@@ -31,6 +39,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "SynapLift",
+    url: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

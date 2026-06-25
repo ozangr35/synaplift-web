@@ -39,11 +39,11 @@ export default function PrivacyPage() {
         <p>Depending on how you use SynapLift, we may process:</p>
         <LegalList
           items={[
-            "Account data: email address, display name, authentication identifiers (Firebase Auth), Sign in with Apple / Google where you choose those options.",
-            "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, PRs).",
+            "Account data: email address, display name, and sign-in identifiers when you use Sign in with Apple, Google, or email.",
+            "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
-            "Subscription status: whether you have SynapLift Pro (via RevenueCat; payment is handled by Apple or Google, not stored by us).",
-            "Technical data: app version, device type, and security tokens (e.g. Firebase App Check) to protect our APIs.",
+            "Subscription status: whether you have SynapLift Pro (billing is handled by Apple or Google; we do not store your payment card details).",
+            "Technical data: app version, device type, and security signals to protect our services.",
           ]}
         />
         <p>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
         </p>
         <LegalList
           items={[
-            "Image processing: When you upload a physique or workout photo, the image is transmitted over encrypted connections (TLS) to our secure backend and then to third-party AI processing providers (specifically Google Gemini API) solely for real-time visual or coaching analysis.",
+            "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to a third-party AI provider (Google) solely for real-time coaching or visual analysis.",
             "No biometric identification: SynapLift does not use your photos for facial recognition, biometric identity verification, or permanent user tracking.",
             "Data retention & protection: Uploaded images are analyzed to generate your response and are not stored permanently on public-facing servers for advertising purposes. They are not sold to data brokers or used for targeted advertising.",
             "User control: You can revoke camera or photo-library permissions at any time in your iOS or Android system settings. Without permission, you can still use text-based coaching where available.",
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         />
         <p>
           <strong className="text-white">Third-party AI (Apple Guideline 5.1.2):</strong>{" "}
-          Before your content is sent to Google Gemini, the SynapLift app shows you
+          Before your content is sent for AI analysis, the SynapLift app shows you
           an in-app disclosure naming the provider and asking for{" "}
           <strong className="text-white">explicit permission</strong>. A general
           terms checkbox alone is not sufficient — you must consent to AI
@@ -97,9 +97,8 @@ export default function PrivacyPage() {
         <p>We do not sell your personal data. We use trusted processors:</p>
         <LegalList
           items={[
-            "Google Firebase & Cloud Functions — authentication, database, and secure AI proxy (EU/US regions per Google’s terms).",
-            "Google Gemini API — AI text and vision analysis (content you submit for coaching/scan).",
-            "RevenueCat — subscription entitlement status (Apple/Google handle payment).",
+            "Google — secure sign-in, cloud storage, and AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
+            "Our subscription partner — confirms whether you have SynapLift Pro (Apple and Google handle payment).",
             "Apple App Store / Google Play — in-app purchases and subscriptions (we do not receive your full card details).",
           ]}
         />
@@ -175,10 +174,9 @@ export default function PrivacyPage() {
 
       <LegalSection title="11. Security">
         <p>
-          We use encryption in transit (HTTPS/TLS), Firebase security rules,
-          authenticated APIs, and App Check on AI endpoints. No method of
-          transmission over the internet is 100% secure; we work to protect
-          your data using industry-standard measures.
+          We use encryption in transit, access controls, and additional checks on
+          AI features. No method of transmission over the internet is 100% secure;
+          we work to protect your data using industry-standard measures.
         </p>
       </LegalSection>
 
