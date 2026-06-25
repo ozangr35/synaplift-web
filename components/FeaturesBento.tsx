@@ -16,7 +16,7 @@ const features = [
     id: "coach",
     title: "Smart AI Coach",
     description:
-      "Chat with a Gemini-powered coach that reads your logged lifts, PRs, and volume — for advice that matches your real training, not a generic template.",
+      "Chat with an AI coach that reads your logged lifts, PRs, and volume — for advice that matches your real training, not a generic template.",
     icon: Bot,
     accent: "blue" as const,
     span: "lg:col-span-2 lg:row-span-2",

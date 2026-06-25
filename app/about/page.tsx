@@ -22,8 +22,8 @@ export default function AboutPage() {
         <div className="mt-10 space-y-6 text-sm leading-relaxed text-gray-400">
           <p>
             <strong className="text-white">SynapLift</strong> is a strength training
-            app that combines serious workout logging with a Gemini-powered AI
-            Coach and Scan AI — so you can train smarter, track real progress,
+            app that combines serious workout logging with an AI Coach and Scan
+            AI — so you can train smarter, track real progress, and get guidance
             and get guidance that feels human, not robotic.
           </p>
           <p>

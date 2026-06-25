@@ -64,7 +64,7 @@ export default function Hero() {
               variants={fadeUp}
               className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg lg:mx-0"
             >
-              Log sets, track 1RM progress, and get coaching from Gemini that
+              Log sets, track 1RM progress, and get coaching from an AI that
               reads your real workout history — not generic templates.
             </motion.p>
 
