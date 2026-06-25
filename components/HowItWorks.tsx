@@ -61,13 +61,7 @@ export default function HowItWorks() {
           </h2>
         </motion.div>
 
-        <div className="relative grid gap-6 md:grid-cols-3 md:gap-8">
-          {/* Connector line — desktop */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute top-[4.5rem] right-[16%] left-[16%] hidden h-px bg-gradient-to-r from-neon-blue/40 via-neon-green/40 to-neon-blue/40 md:block"
-          />
-
+        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
           {steps.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -77,7 +71,7 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center"
               >
                 <div
                   className={`relative z-10 mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl ${item.bg} ring-1 ${item.ring}`}
