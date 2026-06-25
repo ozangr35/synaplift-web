@@ -4,15 +4,9 @@ import { motion } from "framer-motion";
 import { Apple, Play, Sparkles } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
 import { appStoreUrl, playStoreUrl } from "@/lib/site";
+import { heroFadeUp } from "@/lib/motion";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.55, ease: "easeOut" },
-  }),
-};
+const fadeUp = heroFadeUp;
 
 export default function Hero() {
   return (

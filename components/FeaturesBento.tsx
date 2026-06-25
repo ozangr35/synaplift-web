@@ -11,6 +11,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import { motionInView } from "@/lib/motion";
 
 const features = [
   {
@@ -79,10 +80,7 @@ export default function FeaturesBento() {
     <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
+          {...motionInView.header}
           className="mb-12 text-center sm:mb-16"
         >
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
@@ -106,10 +104,7 @@ export default function FeaturesBento() {
             return (
               <motion.article
                 key={feature.id}
-                initial={{ opacity: 0, y: 32 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                {...motionInView.card(index * 0.08)}
                 className={`group relative overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-6 transition duration-300 ${styles.border} ${feature.span}`}
               >
                 <div

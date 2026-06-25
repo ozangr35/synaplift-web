@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Brain, ClipboardList, Flame } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import { motionInView } from "@/lib/motion";
 
 const flowScreens = [
   {
@@ -65,10 +66,7 @@ export default function HowItWorks() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
+          {...motionInView.header}
           className="mb-12 text-center sm:mb-16"
         >
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-blue">
@@ -86,10 +84,7 @@ export default function HowItWorks() {
             return (
               <motion.div
                 key={item.step}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                {...motionInView.card(index * 0.1)}
                 className="flex flex-col items-center text-center"
               >
                 <div
@@ -118,10 +113,7 @@ export default function HowItWorks() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.55, delay: 0.2 }}
+          {...motionInView.panel}
           className="mt-14 rounded-3xl border border-white/8 bg-carbon-50 p-6 sm:p-8"
         >
           <div className="grid grid-cols-1 place-items-center gap-10 sm:grid-cols-3 sm:gap-8">

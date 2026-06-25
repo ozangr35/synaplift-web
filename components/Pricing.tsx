@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check, Crown } from "lucide-react";
 import Link from "next/link";
+import { motionInView } from "@/lib/motion";
 
 const freeFeatures = [
   "Workout logging & templates",
@@ -28,10 +29,7 @@ export default function Pricing() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
+          {...motionInView.header}
           className="mb-12 text-center sm:mb-16"
         >
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-blue">
@@ -49,10 +47,7 @@ export default function Pricing() {
 
         <div className="grid gap-5 md:grid-cols-2 md:gap-6">
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
+            {...motionInView.card()}
             className="rounded-3xl border border-white/8 bg-carbon-50 p-8"
           >
             <p className="text-sm font-bold uppercase tracking-widest text-gray-500">
@@ -74,10 +69,7 @@ export default function Pricing() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.08 }}
+            {...motionInView.card(0.08)}
             className="relative overflow-hidden rounded-3xl border border-neon-green/30 bg-carbon-50 p-8 shadow-neon-green"
           >
             <div
