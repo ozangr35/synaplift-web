@@ -37,7 +37,7 @@ export default function Hero() {
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-neon-blue/25 bg-neon-blue/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-neon-blue"
             >
               <Sparkles className="h-3.5 w-3.5" />
-              AI-Powered Fitness
+              Built for Serious Lifters
             </motion.div>
 
             <motion.h1
@@ -47,8 +47,8 @@ export default function Hero() {
               variants={fadeUp}
               className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Your AI Coach Knows{" "}
-              <span className="text-gradient-neon">What You Lift.</span>
+              Strength Without the Spreadsheet.{" "}
+              <span className="text-gradient-neon">Insight Without Guesswork.</span>
             </motion.h1>
 
             <motion.p
@@ -58,8 +58,8 @@ export default function Hero() {
               variants={fadeUp}
               className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg lg:mx-0"
             >
-              Log sets, track 1RM progress, and get coaching from an AI that
-              reads your real workout history — not generic templates.
+              SynapLift logs your sets, tracks PRs and volume, and coaches you from
+              your real training history — not a generic plan pulled off the shelf.
             </motion.p>
 
             <motion.div

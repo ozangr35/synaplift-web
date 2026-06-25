@@ -11,9 +11,9 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "SynapLift — Strength Training, Powered by AI",
+  title: "SynapLift — Strength Training, Elevated",
   description:
-    "Log workouts, track 1RM progress, and get personalized guidance from an AI Coach that knows your lifts. Download SynapLift for iOS and Android.",
+    "Log workouts, track PRs, and get AI coaching grounded in your real training. SynapLift for iOS and Android.",
   keywords: [
     "fitness",
     "strength training",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     apple: "/branding/synaplift-app-icon.png",
   },
   openGraph: {
-    title: "SynapLift — Strength Training, Powered by AI",
+    title: "SynapLift — Strength Training, Elevated",
     description:
-      "Log workouts, track 1RM progress, and get personalized guidance from an AI Coach that knows your lifts.",
+      "Log workouts, track PRs, and get AI coaching grounded in your real training.",
     type: "website",
     locale: "en_US",
     siteName: "SynapLift",
