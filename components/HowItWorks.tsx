@@ -1,0 +1,124 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, Brain, ClipboardList, Flame } from "lucide-react";
+
+const steps = [
+  {
+    step: "01",
+    title: "Build Template",
+    description:
+      "Create custom workout templates with exercises, sets, and targets — or start from proven routines.",
+    icon: ClipboardList,
+    color: "text-neon-blue",
+    bg: "bg-neon-blue/15",
+    ring: "ring-neon-blue/25",
+  },
+  {
+    step: "02",
+    title: "Crush Workout",
+    description:
+      "Log every set with rest timers, numpad entry, and live volume tracking while you train.",
+    icon: Flame,
+    color: "text-neon-green",
+    bg: "bg-neon-green/15",
+    ring: "ring-neon-green/25",
+  },
+  {
+    step: "03",
+    title: "AI Analysis",
+    description:
+      "Review progress charts, chat with your AI Coach, and run Scan AI for physique insights.",
+    icon: Brain,
+    color: "text-neon-blue",
+    bg: "bg-neon-blue/15",
+    ring: "ring-neon-blue/25",
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section id="how-it-works" className="relative py-20 sm:py-28">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+      />
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-12 text-center sm:mb-16"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-blue">
+            How it works
+          </p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+            From plan to progress in{" "}
+            <span className="text-gradient-neon">three steps</span>
+          </h2>
+        </motion.div>
+
+        <div className="relative grid gap-6 md:grid-cols-3 md:gap-8">
+          {/* Connector line — desktop */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-[4.5rem] right-[16%] left-[16%] hidden h-px bg-gradient-to-r from-neon-blue/40 via-neon-green/40 to-neon-blue/40 md:block"
+          />
+
+          {steps.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative flex flex-col items-center text-center"
+              >
+                <div
+                  className={`relative z-10 mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl ${item.bg} ring-1 ${item.ring}`}
+                >
+                  <Icon className={`h-7 w-7 ${item.color}`} strokeWidth={2} />
+                  <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-carbon-100 text-[10px] font-black text-white ring-1 ring-white/10">
+                    {item.step}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-black text-white">{item.title}</h3>
+                <p className="mt-2 max-w-xs text-sm leading-relaxed text-gray-400">
+                  {item.description}
+                </p>
+
+                {index < steps.length - 1 && (
+                  <ArrowRight
+                    aria-hidden
+                    className="mt-6 h-5 w-5 rotate-90 text-gray-600 md:hidden"
+                  />
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Wide mockup strip placeholder */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.55, delay: 0.2 }}
+          className="mt-14 rounded-3xl border border-white/8 bg-carbon-50 p-6 sm:p-8"
+        >
+          <div className="flex aspect-[16/7] w-full items-center justify-center rounded-2xl border border-gray-700 bg-gray-800 text-gray-500 animate-pulse">
+            <span className="px-4 text-sm font-medium">
+              Insert App Flow Mockup / Screenshot Strip Here
+            </span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
