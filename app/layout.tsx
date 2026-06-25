@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     "SynapLift",
   ],
   icons: {
-    icon: "/branding/myon-app-icon.png",
-    apple: "/branding/myon-app-icon.png",
+    icon: "/branding/synaplift-app-icon.png",
+    apple: "/branding/synaplift-app-icon.png",
   },
   openGraph: {
     title: "SynapLift — Strength Training, Powered by AI",

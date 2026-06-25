@@ -50,19 +50,11 @@ export default function Navbar() {
         >
           <Link href="/" className="group flex items-center gap-2.5">
             <Image
-              src="/branding/myon-app-icon.png"
+              src="/branding/synaplift-logo-wordmark.png"
               alt="SynapLift"
-              width={36}
-              height={36}
-              className="rounded-xl ring-1 ring-white/10 transition group-hover:ring-neon-blue/40"
-              priority
-            />
-            <Image
-              src="/branding/myon-logo-wordmark.png"
-              alt="SynapLift"
-              width={88}
-              height={24}
-              className="hidden h-6 w-auto sm:block"
+              width={180}
+              height={32}
+              className="h-7 w-auto sm:h-8"
               priority
             />
           </Link>

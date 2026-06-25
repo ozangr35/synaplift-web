@@ -128,7 +128,7 @@ export default function Hero() {
             <div className="relative rounded-[2.5rem] border border-white/10 bg-carbon-50 p-3 shadow-neon">
               <div className="relative aspect-[9/19] w-full overflow-hidden rounded-3xl border border-gray-700 bg-gray-800">
                 <Image
-                  src="/branding/myon-app-icon.png"
+                  src="/branding/synaplift-app-icon.png"
                   alt="SynapLift app icon"
                   fill
                   className="object-contain p-12 opacity-90"
