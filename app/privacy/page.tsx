@@ -16,14 +16,15 @@ export default function PrivacyPage() {
     <LegalPage eyebrow="Legal" title="Privacy Policy">
       <LegalSection title="1. Who we are">
         <p>
-          SynapLift (&quot;we&quot;, &quot;us&quot;) provides a strength-training mobile
-          application with workout logging, progress tracking, and AI-powered
-          coaching features. We are established in the{" "}
+          <strong className="text-white">Bootsurf</strong> (&quot;we&quot;, &quot;us&quot;)
+          operates SynapLift, a strength-training mobile application with workout
+          logging, progress tracking, and AI-powered coaching features. We are
+          established in the{" "}
           <strong className="text-white">Netherlands</strong> (KVK: 12345678).
         </p>
         <p>
           Privacy contact:{" "}
-          <LegalLink href="mailto:support@myon.nl">support@myon.nl</LegalLink>
+          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
         </p>
         <p>
           This policy describes how we process personal data when you use the
@@ -132,7 +133,7 @@ export default function PrivacyPage() {
         />
         <p>
           To exercise your rights, email{" "}
-          <LegalLink href="mailto:support@myon.nl">support@myon.nl</LegalLink>{" "}
+          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>{" "}
           or delete your account in the app (Settings → Delete account).
         </p>
       </LegalSection>
@@ -191,9 +192,9 @@ export default function PrivacyPage() {
 
       <LegalSection title="13. Contact">
         <p>
-          SynapLift · Netherlands · KVK 12345678
+          Bootsurf · Netherlands · KVK 12345678
           <br />
-          <LegalLink href="mailto:support@myon.nl">support@myon.nl</LegalLink>
+          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
         </p>
       </LegalSection>
     </LegalPage>

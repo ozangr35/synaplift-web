@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export const metadata = {
   title: "About — SynapLift",
@@ -24,7 +25,7 @@ export default function AboutPage() {
             <strong className="text-white">SynapLift</strong> is a strength training
             app that combines serious workout logging with an AI Coach and Scan
             AI — so you can train smarter, track real progress, and get guidance
-            and get guidance that feels human, not robotic.
+            that feels human, not robotic.
           </p>
           <p>
             Log sets and 1RM trends, build templates, run rest timers, and chat
@@ -32,14 +33,38 @@ export default function AboutPage() {
             SynapLift Pro unlocks unlimited AI Coach and Scan AI.
           </p>
           <p>
-            We&apos;re based in the Netherlands and focused on one thing: helping
-            you get stronger with tools that respect your time in the gym.
+            We&apos;re <strong className="text-white">Bootsurf</strong>, based in
+            the Netherlands — building SynapLift to help you get stronger with
+            tools that respect your time in the gym.
           </p>
         </div>
 
+        <div className="mt-10">
+          <a
+            href="mailto:synaplift@outlook.com"
+            className="flex items-start gap-4 rounded-2xl border border-white/8 bg-carbon-50 p-6 transition hover:border-neon-blue/30"
+          >
+            <Mail className="mt-0.5 h-5 w-5 shrink-0 text-neon-blue" />
+            <div>
+              <p className="font-bold text-white">Contact</p>
+              <p className="mt-1 text-sm text-neon-blue">synaplift@outlook.com</p>
+              <p className="mt-2 text-sm text-gray-500">
+                Support, feedback, and privacy requests
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <Link
+          href="/contact"
+          className="mt-6 inline-block text-sm font-semibold text-neon-green hover:underline"
+        >
+          More contact options →
+        </Link>
+
         <Link
           href="/"
-          className="mt-10 inline-block text-sm font-semibold text-neon-blue hover:underline"
+          className="mt-6 inline-block text-sm font-semibold text-neon-blue hover:underline"
         >
           ← Back to home
         </Link>

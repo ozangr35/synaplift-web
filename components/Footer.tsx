@@ -33,17 +33,17 @@ export default function Footer() {
               </Link>
             ))}
             <a
-              href="mailto:support@myon.nl"
+              href="mailto:synaplift@outlook.com"
               className="inline-flex items-center gap-2 font-semibold text-gray-400 transition hover:text-neon-green"
             >
               <Mail className="h-4 w-4" />
-              Contact: support@myon.nl
+              Contact: synaplift@outlook.com
             </a>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/8 pt-8 text-xs text-gray-600 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 SynapLift</p>
+          <p>© 2026 Bootsurf</p>
           <p>KVK: 12345678</p>
         </div>
       </div>

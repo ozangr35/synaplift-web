@@ -42,7 +42,7 @@ const sections = [
       "AI Coach chat with server-side context from your Firestore history",
       "Scan AI — physique analysis via secure Cloud Functions → Gemini",
       "Freemium limits; SynapLift Pro (monthly / yearly / lifetime)",
-      "GDPR-ready privacy, account deletion, Netherlands entity",
+      "GDPR-ready privacy, account deletion, Bootsurf (NL entity)",
     ],
   },
   {
@@ -89,12 +89,12 @@ export default function PitchPage() {
           SynapLift — AI Coach That Knows Your Lifts
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
-          Strength training app · Netherlands ·{" "}
+          Strength training app · Bootsurf · Netherlands ·{" "}
           <a
-            href="mailto:support@myon.nl"
+            href="mailto:synaplift@outlook.com"
             className="font-semibold text-neon-blue hover:underline"
           >
-            support@myon.nl
+            synaplift@outlook.com
           </a>
         </p>
 

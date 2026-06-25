@@ -21,20 +21,27 @@ export default function ContactPage() {
         </h1>
         <p className="mt-4 text-sm text-gray-500">
           Questions about the app, billing, or partnerships — we read every
-          message.
+          message. Reach us at{" "}
+          <a
+            href="mailto:synaplift@outlook.com"
+            className="font-semibold text-neon-blue hover:underline"
+          >
+            synaplift@outlook.com
+          </a>
+          .
         </p>
 
         <div className="mt-10 space-y-6">
           <a
-            href="mailto:support@myon.nl"
+            href="mailto:synaplift@outlook.com"
             className="flex items-start gap-4 rounded-2xl border border-white/8 bg-carbon-50 p-6 transition hover:border-neon-blue/30"
           >
             <Mail className="mt-0.5 h-5 w-5 shrink-0 text-neon-blue" />
             <div>
-              <p className="font-bold text-white">Email</p>
-              <p className="mt-1 text-sm text-neon-blue">support@myon.nl</p>
+              <p className="font-bold text-white">Support</p>
+              <p className="mt-1 text-sm text-neon-blue">synaplift@outlook.com</p>
               <p className="mt-2 text-sm text-gray-500">
-                Support, feedback, App Store & subscription help
+                Support, feedback, App Store &amp; subscription help
               </p>
             </div>
           </a>
@@ -43,7 +50,7 @@ export default function ContactPage() {
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-neon-green" />
             <div>
               <p className="font-bold text-white">Company</p>
-              <p className="mt-1 text-sm text-gray-400">SynapLift · Netherlands</p>
+              <p className="mt-1 text-sm text-gray-400">Bootsurf · Netherlands</p>
               <p className="mt-1 text-xs text-gray-600">KVK: 12345678</p>
             </div>
           </div>

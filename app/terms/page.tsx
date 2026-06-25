@@ -43,8 +43,8 @@ export default function TermsPage() {
           </li>
           <li>
             <strong className="text-white">Limitation of liability:</strong>{" "}
-            Under no circumstances shall SynapLift (or its holding company in the
-            Netherlands) be held liable for any physical injuries, health
+            Under no circumstances shall Bootsurf (operator of SynapLift,
+            established in the Netherlands) be held liable for any physical injuries, health
             complications, or damages resulting from the use of the app or
             adherence to the AI Coach&apos;s recommendations.
           </li>
@@ -192,9 +192,9 @@ export default function TermsPage() {
 
       <LegalSection title="13. Contact">
         <p>
-          SynapLift · Netherlands · KVK 12345678
+          Bootsurf · Netherlands · KVK 12345678
           <br />
-          <LegalLink href="mailto:support@myon.nl">support@myon.nl</LegalLink>
+          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
         </p>
       </LegalSection>
     </LegalPage>
