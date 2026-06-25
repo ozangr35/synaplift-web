@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: "/features", label: "Features" },
+  { href: "/#features", label: "Features" },
   { href: "/product", label: "Product" },
   { href: "/pricing", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
@@ -15,26 +15,45 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
 
+  const goHome = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") return;
+
+    event.preventDefault();
+    if (window.location.hash) {
+      window.history.replaceState(null, "", "/");
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-carbon/90 backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 sm:px-6">
-        <Link href="/" className="shrink-0">
+        <Link
+          href="/"
+          scroll
+          onClick={goHome}
+          className="relative z-20 block shrink-0 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue"
+          aria-label="SynapLift home"
+        >
           <Image
-            src="/branding/synaplift-logo-wordmark.png"
-            alt="SynapLift"
-            width={220}
-            height={40}
-            className="h-8 w-auto sm:h-9"
+            src="/branding/synaplift-app-icon.png"
+            alt=""
+            width={52}
+            height={52}
+            className="h-11 w-11 rounded-2xl sm:h-12 sm:w-12"
             priority
           />
         </Link>
 
         <nav
           aria-label="Main navigation"
-          className="flex min-w-0 items-center justify-center gap-1 overflow-x-auto sm:gap-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="relative z-10 flex min-w-0 items-center justify-center gap-1 overflow-x-auto sm:gap-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {navLinks.map((link) => {
-            const active = pathname === link.href;
+            const active =
+              link.href === "/#features"
+                ? pathname === "/"
+                : pathname === link.href;
             return (
               <Link
                 key={link.href}

@@ -75,9 +75,16 @@ const accentStyles = {
   },
 };
 
-export default function FeaturesBento() {
+export default function FeaturesBento({ embedded = false }: { embedded?: boolean }) {
   return (
-    <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
+    <section
+      id="features"
+      className={
+        embedded
+          ? "relative scroll-mt-24 py-20 sm:py-28"
+          : "relative scroll-mt-24 pt-28 pb-20 sm:pt-32 sm:pb-28"
+      }
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           {...motionInView.header}

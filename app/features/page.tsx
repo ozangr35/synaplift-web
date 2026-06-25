@@ -1,6 +1,4 @@
-import FeaturesBento from "@/components/FeaturesBento";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "Features — SynapLift",
@@ -9,11 +7,5 @@ export const metadata = {
 };
 
 export default function FeaturesPage() {
-  return (
-    <main className="min-h-screen overflow-x-hidden bg-carbon">
-      <Navbar />
-      <FeaturesBento />
-      <Footer />
-    </main>
-  );
+  permanentRedirect("/#features");
 }
