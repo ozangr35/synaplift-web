@@ -35,10 +35,10 @@ export default function ProductPage() {
               See features
             </Link>
             <Link
-              href="/pricing"
+              href="/faq"
               className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-5 py-2.5 text-sm font-semibold text-neon-green transition hover:bg-neon-green/15"
             >
-              View pricing
+              Read the FAQ
             </Link>
           </div>
         </div>

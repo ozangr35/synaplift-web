@@ -8,7 +8,6 @@ import {
   Shield,
   Target,
   TrendingUp,
-  Users,
   Zap,
 } from "lucide-react";
 
@@ -26,7 +25,7 @@ const sections = [
   {
     icon: Target,
     title: "Problem",
-    body: "Most gym apps are either dumb logbooks (Hevy, Strong) or generic AI body-scan clones with no memory of what you actually lift. Lifters want guidance that knows their PRs, volume, and weak points — not another cookie-cutter plan.",
+    body: "Most gym apps stop at logging sets and reps, or push generic AI advice with no memory of what you actually lift. Lifters want guidance that knows their PRs, volume, and weak points — not another cookie-cutter plan.",
   },
   {
     icon: Zap,
@@ -42,17 +41,17 @@ const sections = [
     icon: Bot,
     title: "Product (live demo)",
     bullets: [
-      "Workout templates, set logging, rest timers, strength progress charts",
-      "AI Coach chat that uses your logged workouts for personalized replies",
-      "Scan AI — instant physique feedback from your photos",
-      "Free tier with limits; SynapLift Pro (monthly / yearly / lifetime)",
+      "Workout logging, templates, rest timers, and progress charts",
+      "AI Coach chat grounded in your logged workouts (SynapLift Pro)",
+      "Scan AI — physique feedback from your photos (SynapLift Pro)",
+      "SynapLift Pro subscription (monthly / yearly)",
       "Privacy-first design, account deletion, Bootsurf (Netherlands)",
     ],
   },
   {
     icon: BarChart3,
     title: "Business model",
-    body: "B2C subscription via the App Store and Google Play. AI Coach and Scan AI are included with SynapLift Pro. Free tier drives activation; upgrade after you try the coach. Lifetime option for users who prefer a one-time purchase.",
+    body: "B2C subscription via the App Store and Google Play. Workouts and progress are free; AI Coach and Scan AI are included with SynapLift Pro.",
   },
   {
     icon: Shield,
@@ -68,16 +67,6 @@ const sections = [
     icon: Globe,
     title: "Traction & stage",
     body: "Pre-launch / TestFlight-ready. Built by a student entrepreneur team in the Netherlands. Seeking mentorship, distribution advice, and optional pre-seed for marketing, trademark (EU), and user acquisition in Turkey and the Netherlands.",
-  },
-  {
-    icon: Users,
-    title: "Ask (25 June event)",
-    bullets: [
-      "Feedback on positioning vs. Form AI / Hevy / Fitbod",
-      "Go-to-market for EU student & gym communities",
-      "Pricing sanity check (monthly / yearly / lifetime)",
-      "Introductions to fitness influencers or accelerator programs",
-    ],
   },
 ];
 

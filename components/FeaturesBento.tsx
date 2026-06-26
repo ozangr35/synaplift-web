@@ -7,6 +7,7 @@ import {
   Camera,
   Dumbbell,
   MessageSquare,
+  Salad,
   Timer,
   TrendingUp,
 } from "lucide-react";
@@ -18,13 +19,13 @@ const features = [
     id: "coach",
     title: "Smart AI Coach",
     description:
-      "Chat with an AI coach that reads your logged lifts, PRs, and volume — for advice that matches your real training, not a generic template.",
+      "Chat with an AI coach that reads your logged lifts, PRs, and volume — plus ask how healthy a meal is or attach a food photo for quick feedback.",
     icon: Bot,
     accent: "blue" as const,
-    span: "lg:col-span-2 lg:row-span-2",
     bullets: [
       { icon: MessageSquare, text: "Real-time chat coaching" },
       { icon: Dumbbell, text: "Workout & equipment advice" },
+      { icon: Salad, text: "Ask if your food is healthy — text or photo" },
     ],
     screenshot: "/screenshots/feature-coach.png",
     screenshotAlt: "SynapLift AI Coach workout plan with save as template",
@@ -36,7 +37,6 @@ const features = [
       "Upload a physique photo for instant AI analysis — body composition insights and actionable suggestions.",
     icon: Camera,
     accent: "green" as const,
-    span: "lg:col-span-1",
     bullets: [{ icon: Camera, text: "Photo-based physique analysis" }],
     screenshot: "/screenshots/feature-scan.png",
     screenshotAlt: "SynapLift Scan AI physique analysis results",
@@ -48,7 +48,6 @@ const features = [
       "Rest timers, volume analytics, and 1RM charts so every session compounds into measurable progress.",
     icon: BarChart3,
     accent: "blue" as const,
-    span: "lg:col-span-1",
     bullets: [
       { icon: Timer, text: "Built-in rest timers" },
       { icon: TrendingUp, text: "1RM & volume charts" },
@@ -56,7 +55,7 @@ const features = [
     screenshot: "/screenshots/feature-progress.png",
     screenshotAlt: "SynapLift one-rep max progress chart",
   },
-];
+] as const;
 
 const accentStyles = {
   blue: {
@@ -88,7 +87,7 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           {...motionInView.header}
-          className="mb-12 text-center sm:mb-16"
+          className="mb-12 text-center sm:mb-14"
         >
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
             Features
@@ -103,7 +102,7 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-3 lg:grid-rows-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:items-stretch lg:gap-5">
           {features.map((feature, index) => {
             const styles = accentStyles[feature.accent];
             const Icon = feature.icon;
@@ -112,50 +111,46 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
               <motion.article
                 key={feature.id}
                 {...motionInView.card(index * 0.08)}
-                className={`group relative overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-6 transition duration-300 ${styles.border} ${feature.span}`}
+                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-5 sm:p-6 transition duration-300 ${styles.border}`}
               >
                 <div
                   aria-hidden
                   className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${styles.glow} to-transparent opacity-0 transition group-hover:opacity-100`}
                 />
 
-                <div
-                  className={`relative flex h-full flex-col ${feature.id === "coach" ? "lg:flex-row lg:items-center lg:gap-8" : ""}`}
-                >
-                  <div className="flex-1">
-                    <div
-                      className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl ${styles.iconBg} ring-1 ${styles.ring}`}
-                    >
-                      <Icon className={`h-5 w-5 ${styles.icon}`} />
-                    </div>
-                    <h3 className="text-xl font-black tracking-tight text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                      {feature.description}
-                    </p>
-                    <ul className="mt-5 space-y-2">
-                      {feature.bullets.map((bullet) => (
-                        <li
-                          key={bullet.text}
-                          className="flex items-center gap-2 text-sm text-gray-300"
-                        >
-                          <bullet.icon
-                            className={`h-4 w-4 shrink-0 ${styles.icon}`}
-                          />
-                          {bullet.text}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
+                <div className="relative flex min-h-0 flex-1 flex-col">
                   <div
-                    className={`mt-6 flex justify-center ${feature.id === "coach" ? "lg:mt-0 lg:shrink-0" : ""}`}
+                    className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${styles.iconBg} ring-1 ${styles.ring}`}
                   >
+                    <Icon className={`h-5 w-5 ${styles.icon}`} />
+                  </div>
+                  <h3 className="text-lg font-black tracking-tight text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                    {feature.description}
+                  </p>
+                  <ul className="mt-4 space-y-1.5">
+                    {feature.bullets.map((bullet) => (
+                      <li
+                        key={bullet.text}
+                        className="flex items-center gap-2 text-sm text-gray-300"
+                      >
+                        <bullet.icon
+                          className={`h-3.5 w-3.5 shrink-0 ${styles.icon}`}
+                        />
+                        {bullet.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="relative mt-6 flex flex-1 flex-col justify-end border-t border-white/6 pt-5">
+                  <div className="flex min-h-[300px] items-center justify-center sm:min-h-[320px]">
                     <PhoneMockup
                       src={feature.screenshot}
                       alt={feature.screenshotAlt}
-                      size={feature.id === "coach" ? "md" : "sm"}
+                      size="feature"
                     />
                   </div>
                 </div>

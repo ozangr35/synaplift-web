@@ -7,11 +7,11 @@ import { motionInView } from "@/lib/motion";
 const faqs = [
   {
     q: "What is SynapLift?",
-    a: "SynapLift is a strength training app that combines workout logging, progress analytics, an AI Coach that reads your lift history, and Scan AI for physique feedback.",
+    a: "SynapLift is a strength training app that combines workout logging, progress analytics, an AI Coach that reads your lift history (and can comment on meals you ask about), and Scan AI for physique feedback.",
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. You can log workouts, use templates, rest timers, and limited AI features for free. SynapLift Pro unlocks unlimited AI Coach and Scan AI.",
+    a: "Yes. You can log workouts, use templates, rest timers, and track progress for free. You get one free AI Coach message to try; SynapLift Pro unlocks unlimited AI Coach and Scan AI.",
   },
   {
     q: "What does SynapLift Pro include?",
@@ -22,12 +22,16 @@ const faqs = [
     a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice — not a one-size-fits-all program.",
   },
   {
+    q: "Can I ask the AI Coach about my food?",
+    a: "Yes. Type a question or attach a meal photo in AI Coach chat — for example, whether a plate looks balanced or how it fits your goals. It’s a quick sanity check, not medical or dietitian advice.",
+  },
+  {
     q: "Is my data private?",
-    a: "We collect only what's needed to run the app and improve your experience. Read our Privacy Policy for full details on storage, AI processing, and your rights.",
+    a: "We collect only what’s needed to run the app and improve your experience. Read our Privacy Policy for full details on storage, AI processing, and your rights.",
   },
   {
     q: "When will the app be on the App Store and Google Play?",
-    a: "We're preparing for launch. Download links on the homepage will go live as soon as the stores are available in your region.",
+    a: "We’re preparing for launch. Download links on the homepage will go live as soon as the stores are available in your region.",
   },
   {
     q: "How do I cancel or restore a subscription?",
@@ -48,7 +52,7 @@ export default function Faq() {
             <span className="text-gradient-neon">before they download</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-gray-400">
-            Quick answers about SynapLift, pricing, privacy, and subscriptions.
+            Quick answers about SynapLift, privacy, subscriptions, and the app.
           </p>
         </motion.div>
 
@@ -67,7 +71,7 @@ export default function Faq() {
                 <p className="border-t border-white/6 px-5 pb-5 text-sm leading-relaxed text-gray-400 sm:px-6">
                   {item.q === "Is my data private?" ? (
                     <>
-                      We collect only what's needed to run the app. See our{" "}
+                      We collect only what’s needed to run the app. See our{" "}
                       <Link href="/privacy" className="font-semibold text-neon-blue hover:underline">
                         Privacy Policy
                       </Link>{" "}

@@ -112,21 +112,21 @@ export default function HowItWorks() {
           })}
         </div>
 
+        {/* Wide mockup strip placeholder */}
         <motion.div
           {...motionInView.panel}
           className="mt-14 rounded-3xl border border-white/8 bg-carbon-50 p-6 sm:p-8"
         >
-          <div className="grid grid-cols-1 place-items-center gap-10 sm:grid-cols-3 sm:gap-8">
+          <div className="grid grid-cols-1 place-items-center gap-10 md:grid-cols-3 md:gap-6 lg:gap-8">
             {flowScreens.map((screen) => (
               <div
                 key={screen.src}
-                className="flex w-full max-w-[200px] flex-col items-center gap-3"
+                className="flex flex-col items-center gap-3"
               >
                 <PhoneMockup
                   src={screen.src}
                   alt={screen.alt}
                   size="flow"
-                  className="w-full"
                 />
                 <p className="text-center text-xs font-bold uppercase tracking-wider text-gray-500">
                   {screen.label}

@@ -23,10 +23,10 @@ export default function Home() {
               How the product works
             </Link>
             <Link
-              href="/pricing"
+              href="/faq"
               className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-6 py-3 text-sm font-bold text-neon-green transition hover:bg-neon-green/15"
             >
-              View pricing
+              Read the FAQ
             </Link>
           </div>
         </div>

@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Apple, Play, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
-import { appStoreUrl, playStoreUrl } from "@/lib/site";
+import StoreBadge from "@/components/StoreBadge";
+import { appStoreUrl } from "@/lib/site";
 import { heroFadeUp } from "@/lib/motion";
 
 const fadeUp = heroFadeUp;
@@ -26,9 +27,9 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="flex flex-col items-center gap-12 xl:flex-row xl:items-center xl:justify-between xl:gap-14">
           {/* Copy */}
-          <div className="text-center lg:text-left">
+          <div className="w-full min-w-0 max-w-xl text-center xl:flex-1 xl:text-left">
             <motion.div
               custom={0}
               initial="hidden"
@@ -45,7 +46,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
+              className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl xl:text-[3.25rem] xl:leading-[1.08]"
             >
               Strength Without the Spreadsheet.{" "}
               <span className="text-gradient-neon">Insight Without Guesswork.</span>
@@ -56,10 +57,11 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg lg:mx-0"
+              className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg xl:mx-0"
             >
               SynapLift logs your sets, tracks PRs and volume, and coaches you from
-              your real training history — not a generic plan pulled off the shelf.
+              your real training history — including quick answers on whether your
+              food looks healthy when you ask or send a photo.
             </motion.p>
 
             <motion.div
@@ -68,64 +70,9 @@ export default function Hero() {
               animate="visible"
               variants={fadeUp}
               id="download"
-              className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start"
+              className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4 xl:justify-start"
             >
-              {appStoreUrl ? (
-                <a
-                  href={appStoreUrl}
-                  rel="noopener noreferrer"
-                  className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-blue/40 hover:bg-carbon-50 sm:w-auto"
-                >
-                  <Apple className="h-7 w-7 text-white transition group-hover:text-neon-blue" />
-                  <div className="text-left">
-                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                      Download on the
-                    </p>
-                    <p className="text-sm font-bold text-white">App Store</p>
-                  </div>
-                </a>
-              ) : (
-                <div
-                  aria-label="App Store — coming soon"
-                  className="flex w-full max-w-[220px] cursor-default items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 opacity-90 sm:w-auto"
-                >
-                  <Apple className="h-7 w-7 text-white" />
-                  <div className="text-left">
-                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                      App Store
-                    </p>
-                    <p className="text-sm font-bold text-white">Coming soon</p>
-                  </div>
-                </div>
-              )}
-              {playStoreUrl ? (
-                <a
-                  href={playStoreUrl}
-                  rel="noopener noreferrer"
-                  className="group flex w-full max-w-[220px] items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 transition hover:border-neon-green/40 hover:bg-carbon-50 sm:w-auto"
-                >
-                  <Play className="h-7 w-7 fill-white text-white transition group-hover:text-neon-green" />
-                  <div className="text-left">
-                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                      Get it on
-                    </p>
-                    <p className="text-sm font-bold text-white">Google Play</p>
-                  </div>
-                </a>
-              ) : (
-                <div
-                  aria-label="Google Play — coming soon"
-                  className="flex w-full max-w-[220px] cursor-default items-center gap-3 rounded-2xl border border-white/10 bg-carbon-100 px-5 py-3.5 opacity-90 sm:w-auto"
-                >
-                  <Play className="h-7 w-7 fill-white text-white" />
-                  <div className="text-left">
-                    <p className="text-[10px] font-medium uppercase tracking-wide text-gray-500">
-                      Google Play
-                    </p>
-                    <p className="text-sm font-bold text-white">Coming soon</p>
-                  </div>
-                </div>
-              )}
+              <StoreBadge store="app-store" href={appStoreUrl} />
             </motion.div>
 
             <motion.p
@@ -135,7 +82,7 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-6 text-xs text-gray-600"
             >
-              Free to start · SynapLift Pro unlocks unlimited AI Coach & Scan AI
+              Free to start · SynapLift Pro unlocks AI Coach & Scan AI
             </motion.p>
           </div>
 
@@ -145,7 +92,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="relative mx-auto w-full max-w-[320px] lg:max-w-none lg:justify-self-end"
+            className="relative shrink-0"
           >
             <div
               aria-hidden
@@ -156,7 +103,6 @@ export default function Hero() {
               alt="SynapLift home screen showing weekly summary and AI Coach"
               size="lg"
               priority
-              className="mx-auto lg:mx-0"
             />
           </motion.div>
         </div>
