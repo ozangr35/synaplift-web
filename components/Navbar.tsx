@@ -26,10 +26,27 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-carbon/90 backdrop-blur-xl">
-      <div className="mx-auto grid h-[60px] max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 sm:h-[64px] sm:gap-4 sm:px-6">
+      <div className="mx-auto grid h-[60px] max-w-6xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 sm:h-[64px] sm:gap-4 sm:px-6">
+        <Link
+          href="/"
+          scroll
+          onClick={goHome}
+          className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-[22%] bg-black ring-1 ring-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-11 sm:w-11"
+          aria-label="SynapLift home"
+        >
+          <Image
+            src="/branding/synaplift-app-icon.png"
+            alt=""
+            width={44}
+            height={44}
+            className="h-full w-full object-contain"
+            priority
+          />
+        </Link>
+
         <nav
           aria-label="Main navigation"
-          className="flex min-w-0 items-center justify-start gap-0.5 sm:gap-1"
+          className="flex min-w-0 items-center justify-center gap-0.5 sm:gap-1"
         >
           {navLinks.map((link) => {
             const active =
@@ -52,26 +69,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex justify-center">
-          <Link
-            href="/"
-            scroll
-            onClick={goHome}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-12 sm:w-12"
-            aria-label="SynapLift home"
-          >
-            <Image
-              src="/branding/synaplift-app-icon.png"
-              alt=""
-              width={48}
-              height={48}
-              className="h-full w-full rounded-2xl object-cover object-center"
-              priority
-            />
-          </Link>
-        </div>
-
-        <div className="flex min-w-0 justify-end">
+        <div className="flex shrink-0 justify-end">
           <Link
             href="/#download"
             className="inline-flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-3 py-2 text-xs font-bold whitespace-nowrap text-carbon shadow-neon transition hover:opacity-90 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
