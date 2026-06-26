@@ -27,28 +27,9 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-carbon/90 backdrop-blur-xl">
       <div className="mx-auto grid h-[60px] max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 sm:h-[64px] sm:gap-4 sm:px-6">
-        <div className="flex min-w-0 justify-start">
-          <Link
-            href="/"
-            scroll
-            onClick={goHome}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-12 sm:w-12"
-            aria-label="SynapLift home"
-          >
-            <Image
-              src="/branding/synaplift-app-icon.png"
-              alt=""
-              width={48}
-              height={48}
-              className="h-full w-full rounded-2xl object-cover object-center"
-              priority
-            />
-          </Link>
-        </div>
-
         <nav
           aria-label="Main navigation"
-          className="flex items-center justify-center gap-0.5 sm:gap-1"
+          className="flex min-w-0 items-center justify-start gap-0.5 sm:gap-1"
         >
           {navLinks.map((link) => {
             const active =
@@ -70,6 +51,25 @@ export default function Navbar() {
             );
           })}
         </nav>
+
+        <div className="flex justify-center">
+          <Link
+            href="/"
+            scroll
+            onClick={goHome}
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-12 sm:w-12"
+            aria-label="SynapLift home"
+          >
+            <Image
+              src="/branding/synaplift-app-icon.png"
+              alt=""
+              width={48}
+              height={48}
+              className="h-full w-full rounded-2xl object-cover object-center"
+              priority
+            />
+          </Link>
+        </div>
 
         <div className="flex min-w-0 justify-end">
           <Link
