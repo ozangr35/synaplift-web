@@ -1,7 +1,6 @@
 "use client";
 
 import { Download } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -31,16 +30,17 @@ export default function Navbar() {
           href="/"
           scroll
           onClick={goHome}
-          className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-[22%] bg-black ring-1 ring-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-11 sm:w-11"
+          className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[22%] bg-black ring-1 ring-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-blue sm:h-11 sm:w-11"
           aria-label="SynapLift home"
         >
-          <Image
+          {/* Native img avoids Next/Image wrapper offset in the nav slot */}
+          <img
             src="/branding/synaplift-app-icon.png"
             alt=""
             width={44}
             height={44}
-            className="h-full w-full object-contain"
-            priority
+            decoding="async"
+            className="block h-full w-full object-contain object-center"
           />
         </Link>
 
