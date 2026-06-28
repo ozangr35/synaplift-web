@@ -4,6 +4,13 @@ import {
   LegalPage,
   LegalSection,
 } from "@/components/LegalPage";
+import {
+  companyName,
+  companyCountry,
+  kvkLegalFooter,
+  kvkNumber,
+  supportEmail,
+} from "@/lib/legal";
 
 export const metadata = {
   title: "Privacy Policy — SynapLift",
@@ -16,15 +23,15 @@ export default function PrivacyPage() {
     <LegalPage eyebrow="Legal" title="Privacy Policy">
       <LegalSection title="1. Who we are">
         <p>
-          <strong className="text-white">Bootsurf</strong> (&quot;we&quot;, &quot;us&quot;)
+          <strong className="text-white">{companyName}</strong> (&quot;we&quot;, &quot;us&quot;)
           operates SynapLift, a strength-training mobile application with workout
           logging, progress tracking, and AI-powered coaching features. We are
           established in the{" "}
-          <strong className="text-white">Netherlands</strong> (KVK: 12345678).
+          <strong className="text-white">{companyCountry}</strong> (KVK: {kvkNumber}).
         </p>
         <p>
           Privacy contact:{" "}
-          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
+          <LegalLink href={`mailto:${supportEmail}`}>{supportEmail}</LegalLink>
         </p>
         <p>
           This policy describes how we process personal data when you use the
@@ -39,7 +46,7 @@ export default function PrivacyPage() {
         <p>Depending on how you use SynapLift, we may process:</p>
         <LegalList
           items={[
-            "Account data: email address, display name, and sign-in identifiers when you use Sign in with Apple, Google, or email.",
+            "Account data: email address (when provided by Apple or Google), display name, and sign-in identifiers when you use Sign in with Apple or Google.",
             "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
             "Subscription status: whether you have SynapLift Pro (billing is handled by Apple or Google; we do not store your payment card details).",
@@ -190,7 +197,7 @@ export default function PrivacyPage() {
 
       <LegalSection title="13. Contact">
         <p>
-          Bootsurf · Netherlands · KVK 12345678
+          {kvkLegalFooter}
           <br />
           <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
         </p>

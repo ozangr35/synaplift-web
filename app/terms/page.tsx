@@ -6,6 +6,7 @@ import {
   MedicalDisclaimerBox,
 } from "@/components/LegalPage";
 import Link from "next/link";
+import { kvkLegalFooter, supportEmail } from "@/lib/legal";
 
 export const metadata = {
   title: "Terms of Service — SynapLift",
@@ -192,9 +193,9 @@ export default function TermsPage() {
 
       <LegalSection title="13. Contact">
         <p>
-          Bootsurf · Netherlands · KVK 12345678
+          {kvkLegalFooter}
           <br />
-          <LegalLink href="mailto:synaplift@outlook.com">synaplift@outlook.com</LegalLink>
+          <LegalLink href={`mailto:${supportEmail}`}>{supportEmail}</LegalLink>
         </p>
       </LegalSection>
     </LegalPage>

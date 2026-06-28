@@ -2,6 +2,11 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
+import {
+  companyLegalLine,
+  kvkDisplay,
+  supportEmail,
+} from "@/lib/legal";
 
 export const metadata = {
   title: "Contact — SynapLift",
@@ -23,23 +28,23 @@ export default function ContactPage() {
           Questions about the app, billing, or partnerships — we read every
           message. Reach us at{" "}
           <a
-            href="mailto:synaplift@outlook.com"
+            href={`mailto:${supportEmail}`}
             className="font-semibold text-neon-blue hover:underline"
           >
-            synaplift@outlook.com
+            {supportEmail}
           </a>
           .
         </p>
 
         <div className="mt-10 space-y-6">
           <a
-            href="mailto:synaplift@outlook.com"
+            href={`mailto:${supportEmail}`}
             className="flex items-start gap-4 rounded-2xl border border-white/8 bg-carbon-50 p-6 transition hover:border-neon-blue/30"
           >
             <Mail className="mt-0.5 h-5 w-5 shrink-0 text-neon-blue" />
             <div>
               <p className="font-bold text-white">Support</p>
-              <p className="mt-1 text-sm text-neon-blue">synaplift@outlook.com</p>
+              <p className="mt-1 text-sm text-neon-blue">{supportEmail}</p>
               <p className="mt-2 text-sm text-gray-500">
                 Support, feedback, App Store &amp; subscription help
               </p>
@@ -50,8 +55,8 @@ export default function ContactPage() {
             <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-neon-green" />
             <div>
               <p className="font-bold text-white">Company</p>
-              <p className="mt-1 text-sm text-gray-400">Bootsurf · Netherlands</p>
-              <p className="mt-1 text-xs text-gray-600">KVK: 12345678</p>
+              <p className="mt-1 text-sm text-gray-400">{companyLegalLine}</p>
+              <p className="mt-1 text-xs text-gray-600">{kvkDisplay}</p>
             </div>
           </div>
         </div>
