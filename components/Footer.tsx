@@ -4,6 +4,8 @@ import { companyLegalLine, kvkDisplay, supportEmail } from "@/lib/legal";
 
 const footerLinks = [
   { href: "/about", label: "About" },
+  { href: "/product", label: "Product" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
   { href: "/pitch", label: "Pitch" },
   { href: "/privacy", label: "Privacy Policy" },

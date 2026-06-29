@@ -1,15 +1,16 @@
 import Image from "next/image";
+import { assets } from "@/lib/assets";
 
 const badges = {
   "app-store": {
-    src: "/badges/app-store.svg",
+    src: assets.badges.appStore,
     width: 120,
     height: 40,
     label: "Download on the App Store",
     soonLabel: "App Store — coming soon",
   },
   "google-play": {
-    src: "/badges/google-play.png",
+    src: assets.badges.googlePlay,
     width: 135,
     height: 52,
     label: "Get it on Google Play",

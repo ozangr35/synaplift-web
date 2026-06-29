@@ -12,6 +12,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import { assets } from "@/lib/assets";
 import { motionInView } from "@/lib/motion";
 
 const features = [
@@ -27,7 +28,7 @@ const features = [
       { icon: Dumbbell, text: "Workout & equipment advice" },
       { icon: Salad, text: "Ask if your food is healthy — text or photo" },
     ],
-    screenshot: "/screenshots/feature-coach.png",
+    screenshot: assets.screenshots.featureCoach,
     screenshotAlt: "SynapLift AI Coach workout plan with save as template",
   },
   {
@@ -38,7 +39,7 @@ const features = [
     icon: Camera,
     accent: "green" as const,
     bullets: [{ icon: Camera, text: "Photo-based physique analysis" }],
-    screenshot: "/screenshots/feature-scan.png",
+    screenshot: assets.screenshots.featureScan,
     screenshotAlt: "SynapLift Scan AI physique analysis results",
   },
   {
@@ -52,7 +53,7 @@ const features = [
       { icon: Timer, text: "Built-in rest timers" },
       { icon: TrendingUp, text: "1RM & volume charts" },
     ],
-    screenshot: "/screenshots/feature-progress.png",
+    screenshot: assets.screenshots.featureProgress,
     screenshotAlt: "SynapLift one-rep max progress chart",
   },
 ] as const;

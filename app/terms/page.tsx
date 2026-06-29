@@ -103,7 +103,7 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "Paid plans (monthly, yearly, lifetime) are billed through the Apple App Store or Google Play.",
+            "Paid plans (monthly and yearly) are billed through the Apple App Store or Google Play.",
             "Prices, trials, and renewal terms are shown at purchase and in your platform subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
             "Deleting your SynapLift account does NOT cancel billing — cancel in Apple/Google subscription settings.",

@@ -3,21 +3,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Brain, ClipboardList, Flame } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import { assets } from "@/lib/assets";
 import { motionInView } from "@/lib/motion";
 
 const flowScreens = [
   {
-    src: "/screenshots/flow-workout.png",
+    src: assets.screenshots.flowWorkout,
     alt: "SynapLift active workout logging screen",
     label: "Log sets",
   },
   {
-    src: "/screenshots/feature-progress.png",
+    src: assets.screenshots.featureProgress,
     alt: "SynapLift strength progress chart",
     label: "Track PRs",
   },
   {
-    src: "/screenshots/flow-calendar.png",
+    src: assets.screenshots.flowCalendar,
     alt: "SynapLift workout calendar and history",
     label: "Review history",
   },

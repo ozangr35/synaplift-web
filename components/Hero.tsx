@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
 import StoreBadge from "@/components/StoreBadge";
+import { assets } from "@/lib/assets";
 import { appStoreUrl } from "@/lib/site";
 import { heroFadeUp } from "@/lib/motion";
 
@@ -99,7 +100,7 @@ export default function Hero() {
               className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-b from-neon-blue/20 via-transparent to-neon-green/15 blur-2xl"
             />
             <PhoneMockup
-              src="/screenshots/hero-home.png"
+              src={assets.screenshots.heroHome}
               alt="SynapLift home screen showing weekly summary and AI Coach"
               size="lg"
               priority

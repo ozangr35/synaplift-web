@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { assets } from "@/lib/assets";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
     address: false,
   },
   icons: {
-    icon: "/branding/synaplift-app-icon.png",
-    apple: "/branding/synaplift-app-icon.png",
+    icon: assets.branding.appIcon,
+    apple: assets.branding.appIcon,
   },
   openGraph: {
     title: "SynapLift — Strength Training, Elevated",

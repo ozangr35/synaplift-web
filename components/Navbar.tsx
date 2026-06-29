@@ -3,10 +3,12 @@
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { assets } from "@/lib/assets";
 
 const navLinks = [
   { href: "/#features", label: "Features" },
   { href: "/product", label: "Product" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/faq", label: "FAQ" },
 ];
 
@@ -35,7 +37,7 @@ export default function Navbar() {
         >
           {/* Native img avoids Next/Image wrapper offset in the nav slot */}
           <img
-            src="/branding/synaplift-app-icon.png"
+            src={assets.branding.appIcon}
             alt=""
             width={44}
             height={44}
@@ -71,7 +73,7 @@ export default function Navbar() {
 
         <div className="flex shrink-0 justify-end">
           <Link
-            href="/#download"
+            href="/#pricing"
             className="inline-flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-3 py-2 text-xs font-bold whitespace-nowrap text-carbon shadow-neon transition hover:opacity-90 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
           >
             <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" />

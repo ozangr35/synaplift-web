@@ -2,6 +2,8 @@ import FeaturesBento from "@/components/FeaturesBento";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Pricing from "@/components/Pricing";
+import SocialProof from "@/components/SocialProof";
 import Link from "next/link";
 
 export default function Home() {
@@ -9,7 +11,9 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
+      <SocialProof />
       <FeaturesBento embedded />
+      <Pricing embedded />
       <section className="border-t border-white/8 py-14 sm:py-16">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6">
           <p className="text-sm text-gray-400">
@@ -21,6 +25,12 @@ export default function Home() {
               className="rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               How the product works
+            </Link>
+            <Link
+              href="/pricing"
+              className="rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-sm font-bold text-white transition hover:border-neon-blue/40"
+            >
+              View pricing
             </Link>
             <Link
               href="/faq"

@@ -1,8 +1,6 @@
 /**
  * Legal entity constants for synaplift.com — keep in sync with
  * lib/core/constants/legal_links.dart in the Flutter app.
- *
- * TODO(before App Store): set real KVK from Kamer van Koophandel.
  */
 export const companyName = "Bootsurf";
 export const companyCountry = "Netherlands";
