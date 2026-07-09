@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
 import { assets } from "@/lib/assets";
-import { motionInView } from "@/lib/motion";
+import { hoverLift, motionInView } from "@/lib/motion";
 
 const features = [
   {
@@ -81,29 +81,27 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
       id="features"
       className={
         embedded
-          ? "relative scroll-mt-24 py-20 sm:py-28"
-          : "relative scroll-mt-24 pt-28 pb-20 sm:pt-32 sm:pb-28"
+          ? "relative scroll-mt-24 section-pad-embedded"
+          : "relative scroll-mt-24 pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24"
       }
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="section-shell">
         <motion.div
           {...motionInView.header}
-          className="mb-12 text-center sm:mb-14"
+          className="mb-10 text-center sm:mb-14"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
-            Features
-          </p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+          <p className="section-eyebrow text-neon-green">Features</p>
+          <h2 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight">
             Everything you need to{" "}
             <span className="text-gradient-neon">train smarter</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-400 sm:text-base">
             A premium training stack — AI coaching, physique analysis, and pro-grade
             tracking in one app.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:items-stretch lg:gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3 lg:items-stretch">
           {features.map((feature, index) => {
             const styles = accentStyles[feature.accent];
             const Icon = feature.icon;
@@ -112,7 +110,8 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
               <motion.article
                 key={feature.id}
                 {...motionInView.card(index * 0.08)}
-                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-5 sm:p-6 transition duration-300 ${styles.border}`}
+                {...hoverLift}
+                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-5 transition duration-300 sm:p-6 ${styles.border}`}
               >
                 <div
                   aria-hidden
@@ -135,19 +134,19 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
                     {feature.bullets.map((bullet) => (
                       <li
                         key={bullet.text}
-                        className="flex items-center gap-2 text-sm text-gray-300"
+                        className="flex items-start gap-2 text-sm text-gray-300"
                       >
                         <bullet.icon
-                          className={`h-3.5 w-3.5 shrink-0 ${styles.icon}`}
+                          className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${styles.icon}`}
                         />
-                        {bullet.text}
+                        <span>{bullet.text}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="relative mt-6 flex flex-1 flex-col justify-end border-t border-white/6 pt-5">
-                  <div className="flex min-h-[300px] items-center justify-center sm:min-h-[320px]">
+                <div className="relative mt-5 flex flex-col justify-end border-t border-white/6 pt-5 sm:mt-6">
+                  <div className="flex min-h-[240px] items-center justify-center sm:min-h-[280px] lg:min-h-[300px]">
                     <PhoneMockup
                       src={feature.screenshot}
                       alt={feature.screenshotAlt}

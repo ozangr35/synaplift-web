@@ -15,9 +15,9 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/8 bg-carbon">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          <div>
+      <div className="section-shell py-12 sm:py-16">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start md:gap-12 lg:gap-16">
+          <div className="min-w-0">
             <p className="text-2xl font-black tracking-tight text-white">SynapLift</p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-500">
               Strength training, powered by AI. Built for lifters who want smarter
@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 text-sm">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-2">
             {footerLinks.map((link) => (
               <Link
                 key={link.href}
@@ -37,17 +37,17 @@ export default function Footer() {
             ))}
             <a
               href={`mailto:${supportEmail}`}
-              className="inline-flex items-center gap-2 font-semibold text-gray-400 transition hover:text-neon-green"
+              className="col-span-2 inline-flex items-center gap-2 font-semibold text-gray-400 transition hover:text-neon-green"
             >
-              <Mail className="h-4 w-4" />
-              Contact: {supportEmail}
+              <Mail className="h-4 w-4 shrink-0" />
+              <span className="break-all">{supportEmail}</span>
             </a>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/8 pt-8 text-xs text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 {companyLegalLine.split(" · ")[0]}</p>
-          <p>{kvkDisplay}</p>
+          <p className="sm:text-right">{kvkDisplay}</p>
         </div>
       </div>
     </footer>

@@ -59,34 +59,32 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-20 sm:py-28">
+    <section id="how-it-works" className="relative section-pad">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
       />
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="section-shell">
         <motion.div
           {...motionInView.header}
-          className="mb-12 text-center sm:mb-16"
+          className="mb-10 text-center sm:mb-14"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-blue">
-            How it works
-          </p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+          <p className="section-eyebrow text-neon-blue">How it works</p>
+          <h2 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight">
             From plan to progress in{" "}
             <span className="text-gradient-neon">three steps</span>
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+        <div className="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
           {steps.map((item, index) => {
             const Icon = item.icon;
             return (
               <motion.div
                 key={item.step}
                 {...motionInView.card(index * 0.1)}
-                className="flex flex-col items-center text-center"
+                className="relative flex flex-col items-center text-center"
               >
                 <div
                   className={`relative z-10 mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl ${item.bg} ring-1 ${item.ring}`}
@@ -105,7 +103,7 @@ export default function HowItWorks() {
                 {index < steps.length - 1 && (
                   <ArrowRight
                     aria-hidden
-                    className="mt-6 h-5 w-5 rotate-90 text-gray-600 md:hidden"
+                    className="mt-6 h-5 w-5 rotate-90 text-gray-600 sm:hidden"
                   />
                 )}
               </motion.div>
@@ -113,16 +111,15 @@ export default function HowItWorks() {
           })}
         </div>
 
-        {/* Wide mockup strip placeholder */}
         <motion.div
           {...motionInView.panel}
-          className="mt-14 rounded-3xl border border-white/8 bg-carbon-50 p-6 sm:p-8"
+          className="mt-10 rounded-3xl border border-white/8 bg-carbon-50 p-5 sm:mt-14 sm:p-8"
         >
-          <div className="grid grid-cols-1 place-items-center gap-10 md:grid-cols-3 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 place-items-center gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
             {flowScreens.map((screen) => (
               <div
                 key={screen.src}
-                className="flex flex-col items-center gap-3"
+                className="flex w-full max-w-[220px] flex-col items-center gap-3 sm:max-w-none"
               >
                 <PhoneMockup
                   src={screen.src}

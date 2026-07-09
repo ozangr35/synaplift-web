@@ -41,17 +41,15 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <motion.div {...motionInView.header} className="mb-12 text-center sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
-            FAQ
-          </p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24">
+      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6">
+        <motion.div {...motionInView.header} className="mb-10 text-center sm:mb-14">
+          <p className="section-eyebrow text-neon-green">FAQ</p>
+          <h1 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight text-white">
             Questions lifters ask{" "}
             <span className="text-gradient-neon">before they download</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-xl text-sm text-gray-400 sm:text-base">
             Quick answers about SynapLift, privacy, subscriptions, and the app.
           </p>
         </motion.div>
@@ -60,15 +58,15 @@ export default function Faq() {
           {faqs.map((item, index) => (
             <motion.div key={item.q} {...motionInView.card(index * 0.04)}>
               <details className="group rounded-2xl border border-white/8 bg-carbon-50 open:border-neon-blue/25">
-                <summary className="cursor-pointer list-none px-5 py-4 text-sm font-bold text-white marker:content-none sm:px-6 sm:text-base [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center justify-between gap-4">
-                    {item.q}
-                    <span className="shrink-0 text-lg font-normal text-gray-500 transition group-open:rotate-45">
+                <summary className="cursor-pointer list-none px-4 py-4 text-sm font-bold text-white marker:content-none sm:px-6 sm:text-base [&::-webkit-details-marker]:hidden">
+                  <span className="flex items-start justify-between gap-4">
+                    <span className="min-w-0 text-left leading-snug">{item.q}</span>
+                    <span className="shrink-0 text-lg font-normal leading-none text-gray-500 transition group-open:rotate-45">
                       +
                     </span>
                   </span>
                 </summary>
-                <p className="border-t border-white/6 px-5 pb-5 text-sm leading-relaxed text-gray-400 sm:px-6">
+                <p className="border-t border-white/6 px-4 pb-5 text-sm leading-relaxed text-gray-400 sm:px-6">
                   {item.q === "Is my data private?" ? (
                     <>
                       We collect only what’s needed to run the app. See our{" "}
