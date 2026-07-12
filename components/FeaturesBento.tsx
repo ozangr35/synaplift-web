@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
   BarChart3,
   Bot,
@@ -12,8 +9,8 @@ import {
   TrendingUp,
 } from "lucide-react";
 import PhoneMockup from "@/components/PhoneMockup";
+import Reveal from "@/components/Reveal";
 import { assets } from "@/lib/assets";
-import { hoverLift, motionInView } from "@/lib/motion";
 
 const features = [
   {
@@ -63,14 +60,12 @@ const accentStyles = {
     ring: "ring-neon-blue/30",
     iconBg: "bg-neon-blue/15",
     icon: "text-neon-blue",
-    glow: "from-neon-blue/10",
     border: "hover:border-neon-blue/30",
   },
   green: {
     ring: "ring-neon-green/30",
     iconBg: "bg-neon-green/15",
     icon: "text-neon-green",
-    glow: "from-neon-green/10",
     border: "hover:border-neon-green/30",
   },
 };
@@ -86,75 +81,71 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
       }
     >
       <div className="section-shell">
-        <motion.div
-          {...motionInView.header}
-          className="mb-10 text-center sm:mb-14"
-        >
+        <Reveal className="mb-10 text-center sm:mb-14">
           <p className="section-eyebrow text-neon-green">Features</p>
           <h2 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight">
             Everything you need to{" "}
             <span className="text-gradient-neon">train smarter</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-400 sm:text-base">
-            A premium training stack — AI coaching, physique analysis, and pro-grade
-            tracking in one app.
+            A personal trainer in your pocket — AI coaching, physique analysis, and
+            pro-grade tracking in one app.
           </p>
-        </motion.div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3 lg:items-stretch">
+        <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
           {features.map((feature, index) => {
             const styles = accentStyles[feature.accent];
             const Icon = feature.icon;
+            const isLast = index === features.length - 1;
 
             return (
-              <motion.article
+              <Reveal
                 key={feature.id}
-                {...motionInView.card(index * 0.08)}
-                {...hoverLift}
-                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-5 transition duration-300 sm:p-6 ${styles.border}`}
+                delay={index * 60}
+                className={`h-full ${isLast ? "md:col-span-2 md:max-w-md md:justify-self-center lg:col-span-1 lg:max-w-none" : ""}`}
               >
-                <div
-                  aria-hidden
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${styles.glow} to-transparent opacity-0 transition group-hover:opacity-100`}
-                />
-
-                <div className="relative flex min-h-0 flex-1 flex-col">
-                  <div
-                    className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${styles.iconBg} ring-1 ${styles.ring}`}
-                  >
-                    <Icon className={`h-5 w-5 ${styles.icon}`} />
+                <article
+                  className={`card-hover group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-carbon-50 p-5 sm:p-6 ${styles.border}`}
+                >
+                  <div className="relative flex min-h-0 flex-1 flex-col">
+                    <div
+                      className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${styles.iconBg} ring-1 ${styles.ring}`}
+                    >
+                      <Icon className={`h-5 w-5 ${styles.icon}`} />
+                    </div>
+                    <h3 className="text-lg font-black tracking-tight text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                      {feature.description}
+                    </p>
+                    <ul className="mt-4 space-y-1.5">
+                      {feature.bullets.map((bullet) => (
+                        <li
+                          key={bullet.text}
+                          className="flex items-start gap-2 text-sm text-gray-300"
+                        >
+                          <bullet.icon
+                            className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${styles.icon}`}
+                          />
+                          <span>{bullet.text}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-lg font-black tracking-tight text-white">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-400">
-                    {feature.description}
-                  </p>
-                  <ul className="mt-4 space-y-1.5">
-                    {feature.bullets.map((bullet) => (
-                      <li
-                        key={bullet.text}
-                        className="flex items-start gap-2 text-sm text-gray-300"
-                      >
-                        <bullet.icon
-                          className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${styles.icon}`}
-                        />
-                        <span>{bullet.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
 
-                <div className="relative mt-5 flex flex-col justify-end border-t border-white/6 pt-5 sm:mt-6">
-                  <div className="flex min-h-[240px] items-center justify-center sm:min-h-[280px] lg:min-h-[300px]">
-                    <PhoneMockup
-                      src={feature.screenshot}
-                      alt={feature.screenshotAlt}
-                      size="feature"
-                    />
+                  <div className="relative mt-5 flex flex-col justify-end border-t border-white/6 pt-5 sm:mt-6">
+                    <div className="flex min-h-[240px] items-center justify-center sm:min-h-[280px] lg:min-h-[300px]">
+                      <PhoneMockup
+                        src={feature.screenshot}
+                        alt={feature.screenshotAlt}
+                        size="feature"
+                      />
+                    </div>
                   </div>
-                </div>
-              </motion.article>
+                </article>
+              </Reveal>
             );
           })}
         </div>

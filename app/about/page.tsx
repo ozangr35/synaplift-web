@@ -10,13 +10,11 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-carbon">
+    <main className="page-main">
       <Navbar />
-      <article className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6 sm:pt-32">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
-          About us
-        </p>
-        <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+      <article className="page-article">
+        <p className="section-eyebrow text-neon-green">About us</p>
+        <h1 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight text-white">
           Built for lifters who want more than a spreadsheet
         </h1>
 
@@ -42,12 +40,12 @@ export default function AboutPage() {
         <div className="mt-10">
           <a
             href="mailto:synaplift@outlook.com"
-            className="flex items-start gap-4 rounded-2xl border border-white/8 bg-carbon-50 p-6 transition hover:border-neon-blue/30"
+            className="flex items-start gap-4 rounded-2xl border border-white/8 bg-carbon-50 p-5 transition hover:border-neon-blue/30 sm:p-6"
           >
             <Mail className="mt-0.5 h-5 w-5 shrink-0 text-neon-blue" />
-            <div>
+            <div className="min-w-0">
               <p className="font-bold text-white">Contact</p>
-              <p className="mt-1 text-sm text-neon-blue">synaplift@outlook.com</p>
+              <p className="mt-1 break-all text-sm text-neon-blue">synaplift@outlook.com</p>
               <p className="mt-2 text-sm text-gray-500">
                 Support, feedback, and privacy requests
               </p>
@@ -55,19 +53,20 @@ export default function AboutPage() {
           </a>
         </div>
 
-        <Link
-          href="/contact"
-          className="mt-6 inline-block text-sm font-semibold text-neon-green hover:underline"
-        >
-          More contact options →
-        </Link>
-
-        <Link
-          href="/"
-          className="mt-6 inline-block text-sm font-semibold text-neon-blue hover:underline"
-        >
-          ← Back to home
-        </Link>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
+          <Link
+            href="/contact"
+            className="text-sm font-semibold text-neon-green hover:underline"
+          >
+            More contact options →
+          </Link>
+          <Link
+            href="/"
+            className="text-sm font-semibold text-neon-blue hover:underline"
+          >
+            ← Back to home
+          </Link>
+        </div>
       </article>
       <Footer />
     </main>

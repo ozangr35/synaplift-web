@@ -16,16 +16,16 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/8 bg-carbon">
       <div className="section-shell py-12 sm:py-16">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start md:gap-12 lg:gap-16">
-          <div className="min-w-0">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-start lg:gap-16">
+          <div className="min-w-0 text-center lg:text-left">
             <p className="text-2xl font-black tracking-tight text-white">SynapLift</p>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-500">
-              Strength training, powered by AI. Built for lifters who want smarter
-              logs, sharper insights, and a coach in their pocket.
+            <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-gray-500 lg:mx-0">
+              Your personal trainer in your pocket. Log smarter, track real progress,
+              and get AI coaching grounded in the lifts you actually record.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
             {footerLinks.map((link) => (
               <Link
                 key={link.href}
@@ -37,7 +37,7 @@ export default function Footer() {
             ))}
             <a
               href={`mailto:${supportEmail}`}
-              className="col-span-2 inline-flex items-center gap-2 font-semibold text-gray-400 transition hover:text-neon-green"
+              className="col-span-2 inline-flex items-center justify-center gap-2 font-semibold text-gray-400 transition hover:text-neon-green lg:justify-start"
             >
               <Mail className="h-4 w-4 shrink-0" />
               <span className="break-all">{supportEmail}</span>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/8 pt-8 text-xs text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-2 border-t border-white/8 pt-8 text-center text-xs text-gray-600 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>© 2026 {companyLegalLine.split(" · ")[0]}</p>
           <p className="sm:text-right">{kvkDisplay}</p>
         </div>

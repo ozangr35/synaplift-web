@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function ProductPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-carbon">
+    <main className="page-main">
       <Navbar />
-      <section className="border-b border-white/8 pt-24 pb-10 sm:pt-28 sm:pb-12 md:pt-32">
+      <section className="page-hero">
         <div className="section-shell">
           <p className="section-eyebrow text-neon-blue">Product</p>
           <h1 className="mt-3 max-w-3xl text-[clamp(1.75rem,5vw,3rem)] font-black tracking-tight text-white">

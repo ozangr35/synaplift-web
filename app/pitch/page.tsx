@@ -72,36 +72,34 @@ const sections = [
 
 export default function PitchPage() {
   return (
-    <main className="min-h-screen bg-carbon">
+    <main className="page-main">
       <Navbar />
-      <article className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6 sm:pt-32">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
-          Pitch deck · June 2026
-        </p>
-        <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+      <article className="page-article">
+        <p className="section-eyebrow text-neon-green">Pitch deck · June 2026</p>
+        <h1 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight text-white">
           SynapLift — AI Coach That Knows Your Lifts
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
           Strength training app · Bootsurf · Netherlands ·{" "}
           <a
             href="mailto:synaplift@outlook.com"
-            className="font-semibold text-neon-blue hover:underline"
+            className="break-all font-semibold text-neon-blue hover:underline"
           >
             synaplift@outlook.com
           </a>
         </p>
 
-        <div className="mt-10 space-y-8">
+        <div className="mt-10 space-y-6 sm:space-y-8">
           {sections.map((section) => (
             <section
               key={section.title}
-              className="rounded-2xl border border-white/8 bg-carbon-50/50 p-6"
+              className="rounded-2xl border border-white/8 bg-carbon-50/50 p-5 sm:p-6"
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neon-blue/15">
+              <div className="flex items-start gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-neon-blue/15">
                   <section.icon className="h-5 w-5 text-neon-blue" />
                 </div>
-                <h2 className="text-lg font-black text-white">
+                <h2 className="pt-1.5 text-lg font-black text-white">
                   {section.title}
                 </h2>
               </div>
@@ -121,7 +119,7 @@ export default function PitchPage() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-2xl border border-neon-green/25 bg-neon-green/5 p-6">
+        <div className="mt-10 rounded-2xl border border-neon-green/25 bg-neon-green/5 p-5 sm:p-6">
           <p className="text-sm font-bold text-neon-green">Live demo flow</p>
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-gray-300">
             <li>Sign in → complete profile</li>
@@ -132,7 +130,7 @@ export default function PitchPage() {
           </ol>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-4 text-sm">
+        <div className="mt-10 flex flex-col gap-3 text-sm sm:flex-row sm:flex-wrap sm:gap-4">
           <Link
             href="/"
             className="font-semibold text-neon-blue hover:underline"

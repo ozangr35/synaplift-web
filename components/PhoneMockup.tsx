@@ -8,10 +8,10 @@ type PhoneMockupProps = {
 
 const sizeClass = {
   sm: "w-[min(140px,36vw)] sm:w-[140px]",
-  feature: "w-[min(160px,40vw)] sm:w-[168px]",
-  md: "w-[min(176px,42vw)] sm:w-[176px]",
-  flow: "w-[min(168px,38vw)] sm:w-[188px]",
-  lg: "w-[min(200px,48vw)] sm:w-[220px] lg:w-[228px]",
+  feature: "w-[min(168px,44vw)] sm:w-[168px]",
+  md: "w-[min(176px,44vw)] sm:w-[176px]",
+  flow: "w-[min(188px,42vw)] sm:w-[188px]",
+  lg: "w-[min(228px,56vw)] sm:w-[220px] lg:w-[228px]",
 } as const;
 
 /** App screenshots are 473×948 — keep in sync with capture size. */

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="page-main">
       <Navbar />
       <Hero />
       <SocialProof />
@@ -19,22 +19,22 @@ export default function Home() {
           <p className="max-w-lg text-sm text-gray-400 sm:text-base">
             Ready to see the full flow — templates, logging, and AI coaching?
           </p>
-          <div className="flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
+          <div className="grid w-full max-w-xl grid-cols-1 gap-3 sm:max-w-2xl sm:grid-cols-2 lg:max-w-3xl lg:grid-cols-3">
             <Link
               href="/product"
-              className="w-full rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40 sm:w-auto"
+              className="rounded-xl border border-white/10 bg-carbon-50 px-4 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               How the product works
             </Link>
             <Link
               href="/pricing"
-              className="w-full rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40 sm:w-auto"
+              className="rounded-xl border border-white/10 bg-carbon-50 px-4 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               View pricing
             </Link>
             <Link
               href="/faq"
-              className="w-full rounded-xl border border-neon-green/30 bg-neon-green/10 px-6 py-3 text-center text-sm font-bold text-neon-green transition hover:bg-neon-green/15 sm:w-auto"
+              className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-4 py-3 text-center text-sm font-bold text-neon-green transition hover:bg-neon-green/15 sm:col-span-2 lg:col-span-1"
             >
               Read the FAQ
             </Link>

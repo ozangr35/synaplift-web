@@ -3,9 +3,20 @@
 Source for [synaplift.com](https://synaplift.com). Deployed via `ozangr35/synaplift-web` (GitHub Pages).
 
 ```bash
-cd web/frontend && npm run dev
+npm install
+cp .env.example .env.local   # optional: set NEXT_PUBLIC_GA_MEASUREMENT_ID
+npm run dev
 # → http://localhost:3000
 ```
+
+### Google Analytics
+
+1. Create a GA4 property and web data stream for `synaplift.com`.
+2. Copy the measurement ID (`G-XXXXXXXXXX`).
+3. **Local:** set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in `.env.local`.
+4. **Production:** add the same value as a GitHub repository variable named `NEXT_PUBLIC_GA_MEASUREMENT_ID` (Settings → Secrets and variables → Actions → Variables).
+
+Analytics is skipped when the ID is missing, so builds work without it.
 
 ## Sync to live site
 

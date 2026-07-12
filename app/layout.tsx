@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
+import { Suspense } from "react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { assets } from "@/lib/assets";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SynapLift — Strength Training, Elevated",
   description:
-    "Log workouts, track PRs, and get AI coaching grounded in your real training. SynapLift for iOS and Android.",
+    "Your personal trainer in your pocket. Log workouts, track PRs, and get AI coaching grounded in your real training. SynapLift for iOS and Android.",
   keywords: [
     "fitness",
     "strength training",
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SynapLift — Strength Training, Elevated",
     description:
-      "Log workouts, track PRs, and get AI coaching grounded in your real training.",
+      "Your personal trainer in your pocket. Log workouts, track PRs, and get AI coaching grounded in your real training.",
     type: "website",
     locale: "en_US",
     siteName: "SynapLift",
@@ -63,6 +65,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${geistSans.variable} overflow-x-hidden font-sans`}>
         {children}
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
       </body>
     </html>
   );

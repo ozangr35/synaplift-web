@@ -1,8 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { motionInView } from "@/lib/motion";
+import Reveal from "@/components/Reveal";
 
 const faqs = [
   {
@@ -41,9 +38,9 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24">
-      <div className="mx-auto w-full max-w-3xl px-4 sm:px-6">
-        <motion.div {...motionInView.header} className="mb-10 text-center sm:mb-14">
+    <section className="relative pb-16 pt-24 sm:pb-20 sm:pt-28 md:pb-24 md:pt-32">
+      <div className="content-shell">
+        <Reveal className="mb-10 text-center sm:mb-14">
           <p className="section-eyebrow text-neon-green">FAQ</p>
           <h1 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight text-white">
             Questions lifters ask{" "}
@@ -52,16 +49,16 @@ export default function Faq() {
           <p className="mx-auto mt-4 max-w-xl text-sm text-gray-400 sm:text-base">
             Quick answers about SynapLift, privacy, subscriptions, and the app.
           </p>
-        </motion.div>
+        </Reveal>
 
         <div className="space-y-3">
           {faqs.map((item, index) => (
-            <motion.div key={item.q} {...motionInView.card(index * 0.04)}>
+            <Reveal key={item.q} delay={index * 30}>
               <details className="group rounded-2xl border border-white/8 bg-carbon-50 open:border-neon-blue/25">
                 <summary className="cursor-pointer list-none px-4 py-4 text-sm font-bold text-white marker:content-none sm:px-6 sm:text-base [&::-webkit-details-marker]:hidden">
                   <span className="flex items-start justify-between gap-4">
                     <span className="min-w-0 text-left leading-snug">{item.q}</span>
-                    <span className="shrink-0 text-lg font-normal leading-none text-gray-500 transition group-open:rotate-45">
+                    <span className="shrink-0 text-lg font-normal leading-none text-gray-500 transition-transform duration-200 group-open:rotate-45">
                       +
                     </span>
                   </span>
@@ -92,7 +89,7 @@ export default function Faq() {
                   )}
                 </p>
               </details>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
 
