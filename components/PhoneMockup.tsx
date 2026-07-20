@@ -7,11 +7,11 @@ type PhoneMockupProps = {
 };
 
 const sizeClass = {
-  sm: "w-[min(140px,36vw)] sm:w-[140px]",
-  feature: "w-[min(168px,44vw)] sm:w-[168px]",
-  md: "w-[min(176px,44vw)] sm:w-[176px]",
-  flow: "w-[min(188px,42vw)] sm:w-[188px]",
-  lg: "w-[min(228px,56vw)] sm:w-[220px] lg:w-[228px]",
+  sm: "w-[140px]",
+  feature: "w-[168px]",
+  md: "w-[176px]",
+  flow: "w-[188px]",
+  lg: "w-[228px]",
 } as const;
 
 /** App screenshots are 473×948 — keep in sync with capture size. */
@@ -27,7 +27,7 @@ export default function PhoneMockup({
   const isFeature = size === "feature";
 
   return (
-    <div className={`mx-auto w-full max-w-full shrink-0 ${sizeClass[size]} ${className}`}>
+    <div className={`mx-auto shrink-0 ${sizeClass[size]} ${className}`}>
       <div
         className={`overflow-hidden bg-[#0a0a0a] shadow-[0_16px_32px_-14px_rgba(0,0,0,0.55)] ${
           isFeature

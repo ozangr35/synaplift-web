@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function FaqPage() {
   return (
-    <main className="page-main">
+    <main className="min-h-screen overflow-x-hidden bg-carbon">
       <Navbar />
       <Faq />
       <Footer />

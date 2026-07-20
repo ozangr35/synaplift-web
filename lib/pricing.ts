@@ -1,6 +1,6 @@
 /**
- * SynapLift Pro pricing — keep in sync with App Store / RevenueCat products
- * (`monthly`, `yearly`) and in-app paywall copy.
+ * SynapLift Pro pricing — sync with App Store Connect:
+ * myon_pro_monthly ($9.99/mo), myon_pro_annual ($99.99/yr), RevenueCat, store/metadata/.
  */
 export const pricingPlans = {
   free: {
@@ -17,14 +17,14 @@ export const pricingPlans = {
     name: "SynapLift Pro",
     tagline: "Unlimited AI coaching & physique analysis",
     monthly: {
-      amount: 10,
-      label: "$10",
+      amount: 9.99,
+      label: "$9.99",
       period: "month",
-      perMonthLabel: "$10/mo",
+      perMonthLabel: "$9.99/mo",
     },
     yearly: {
-      amount: 100,
-      label: "$100",
+      amount: 99.99,
+      label: "$99.99",
       period: "year",
       perMonthLabel: "$8.33/mo",
       savingsVsMonthly: 20,

@@ -13,13 +13,13 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <main className="page-main">
+    <main className="min-h-screen bg-carbon">
       <Navbar />
-      <article className="page-article">
-        <p className="section-eyebrow text-neon-blue">
+      <article className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-6 sm:pt-32">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-blue">
           {eyebrow}
         </p>
-        <h1 className="mt-3 text-[clamp(1.75rem,4.5vw,2.25rem)] font-black tracking-tight text-white">
+        <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
           {title}
         </h1>
         <p className="mt-4 text-sm text-gray-500">Last updated: 8 June 2026</p>
