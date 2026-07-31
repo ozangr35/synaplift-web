@@ -1,4 +1,4 @@
-/** SSR-safe motion presets — avoid opacity:0 on first paint (blank page without JS). */
+/** SSR-safe motion presets | avoid opacity:0 on first paint (blank page without JS). */
 export const motionInView = {
   header: {
     initial: { y: 20 },

@@ -4,9 +4,9 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Product — SynapLift",
+  title: "Product | SynapLift",
   description:
-    "How SynapLift works — templates, workout logging, progress tracking, and AI coaching in one strength training app.",
+    "How SynapLift works: templates, workout logging, progress tracking, and AI coaching in one strength training app.",
 };
 
 export default function ProductPage() {
@@ -24,7 +24,7 @@ export default function ProductPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-400">
             Build templates, log sessions with rest timers and quick entry, then
-            review charts and AI feedback — all tied to the workouts you actually
+            review charts and AI feedback, all tied to the workouts you actually
             did.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

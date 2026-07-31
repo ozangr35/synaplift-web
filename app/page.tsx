@@ -17,7 +17,7 @@ export default function Home() {
       <section className="border-t border-white/8 py-14 sm:py-16">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6">
           <p className="text-sm text-gray-400">
-            Ready to see the full flow — templates, logging, and AI coaching?
+            Ready to see the full flow: templates, logging, and AI coaching?
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link

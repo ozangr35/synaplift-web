@@ -8,7 +8,7 @@ const highlights = [
   {
     icon: Dumbbell,
     title: "Built for lifters",
-    body: "Templates, rest timers, and 1RM charts — not generic fitness fluff.",
+    body: "Templates, rest timers, and 1RM charts, not generic fitness fluff.",
   },
   {
     icon: Sparkles,

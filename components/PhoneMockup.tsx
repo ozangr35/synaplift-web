@@ -14,7 +14,7 @@ const sizeClass = {
   lg: "w-[228px]",
 } as const;
 
-/** App screenshots are 473×948 — keep in sync with capture size. */
+/** App screenshots are 473×948 | keep in sync with capture size. */
 const SHOT_ASPECT = "473 / 948";
 
 export default function PhoneMockup({

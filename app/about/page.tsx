@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 
 export const metadata = {
-  title: "About — SynapLift",
-  description: "About SynapLift — AI-powered strength training for serious lifters.",
+  title: "About | SynapLift",
+  description: "About SynapLift: AI-powered strength training for serious lifters.",
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <p>
             <strong className="text-white">SynapLift</strong> is a strength training
             app that combines serious workout logging with an AI Coach and Scan
-            AI — so you can train smarter, track real progress, and get guidance
+            AI so you can train smarter, track real progress, and get guidance
             that feels human, not robotic.
           </p>
           <p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
           </p>
           <p>
             We&apos;re <strong className="text-white">Bootsurf</strong>, based in
-            the Netherlands — building SynapLift to help you get stronger with
+            the Netherlands, building SynapLift to help you get stronger with
             tools that respect your time in the gym.
           </p>
         </div>

@@ -7,14 +7,14 @@ const badges = {
     width: 120,
     height: 40,
     label: "Download on the App Store",
-    soonLabel: "App Store — coming soon",
+    soonLabel: "App Store, coming soon",
   },
   "google-play": {
     src: assets.badges.googlePlay,
     width: 135,
     height: 52,
     label: "Get it on Google Play",
-    soonLabel: "Google Play — coming soon",
+    soonLabel: "Google Play, coming soon",
   },
 } as const;
 

@@ -50,13 +50,13 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <span className="text-gradient-neon">Go Pro for AI.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Workouts, templates, and progress tracking stay free — like Strong and
+            Workouts, templates, and progress tracking stay free, like Strong and
             Hevy. SynapLift Pro unlocks unlimited AI Coach and Scan AI when you
             are ready.
           </p>
         </motion.div>
 
-        {/* Billing toggle — annual default (fitness app best practice) */}
+        {/* Billing toggle | annual default (fitness app best practice) */}
         <motion.div
           {...motionInView.card(0.05)}
           className="mx-auto mb-10 flex max-w-md flex-col items-center gap-3"
@@ -104,7 +104,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
           )}
         </motion.div>
 
-        {/* Plan cards — Free + Pro (Hevy-style two-tier + highlighted Pro) */}
+        {/* Plan cards | Free + Pro (Hevy-style two-tier + highlighted Pro) */}
         <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2 lg:gap-8">
           <motion.article
             {...motionInView.card(0.08)}

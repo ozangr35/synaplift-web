@@ -1,12 +1,12 @@
 /**
- * Legal entity constants for synaplift.com — keep in sync with
+ * Legal entity constants for synaplift.com | keep in sync with
  * lib/core/constants/legal_links.dart in the Flutter app.
  */
 export const companyName = "Bootsurf";
 export const companyCountry = "Netherlands";
 export const companyLegalLine = `${companyName} · ${companyCountry}`;
 
-/** KVK (Kamer van Koophandel) — Bootsurf, Netherlands. */
+/** KVK (Kamer van Koophandel) | Bootsurf, Netherlands. */
 export const kvkNumber = "42091471";
 export const kvkDisplay = `KVK: ${kvkNumber}`;
 export const kvkLegalFooter = `${companyLegalLine} · KVK ${kvkNumber}`;

@@ -1,5 +1,5 @@
 /**
- * SynapLift Pro pricing — sync with App Store Connect:
+ * SynapLift Pro pricing | sync with App Store Connect:
  * myon_pro_monthly ($9.99/mo), myon_pro_annual ($99.99/yr), RevenueCat, store/metadata/.
  */
 export const pricingPlans = {

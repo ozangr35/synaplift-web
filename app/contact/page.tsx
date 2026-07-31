@@ -9,8 +9,8 @@ import {
 } from "@/lib/legal";
 
 export const metadata = {
-  title: "Contact — SynapLift",
-  description: "Contact SynapLift — support, feedback, and partnerships.",
+  title: "Contact | SynapLift",
+  description: "Contact SynapLift for support, feedback, and partnerships.",
 };
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
           Get in touch
         </h1>
         <p className="mt-4 text-sm text-gray-500">
-          Questions about the app, billing, or partnerships — we read every
+          Questions about the app, billing, or partnerships? We read every
           message. Reach us at{" "}
           <a
             href={`mailto:${supportEmail}`}

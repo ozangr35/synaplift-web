@@ -9,7 +9,7 @@ import Link from "next/link";
 import { kvkLegalFooter, supportEmail } from "@/lib/legal";
 
 export const metadata = {
-  title: "Terms of Service — SynapLift",
+  title: "Terms of Service | SynapLift",
   description:
     "Terms of Service and medical disclaimer for the SynapLift fitness app.",
 };
@@ -106,7 +106,7 @@ export default function TermsPage() {
             "Paid plans (monthly and yearly) are billed through the Apple App Store or Google Play.",
             "Prices, trials, and renewal terms are shown at purchase and in your platform subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
-            "Deleting your SynapLift account does NOT cancel billing — cancel in Apple/Google subscription settings.",
+            "Deleting your SynapLift account does NOT cancel billing. Cancel in Apple/Google subscription settings.",
             "Refunds are handled by Apple or Google under their policies, not directly by SynapLift.",
           ]}
         />
@@ -118,7 +118,7 @@ export default function TermsPage() {
             "AI features send your prompts and optional images over encrypted connections to a third-party AI provider (Google), as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
-            "Scan AI is for physique and training feedback only — not medical diagnosis.",
+            "Scan AI is for physique and training feedback only, not medical diagnosis.",
             "We may rate-limit or restrict AI usage on free plans.",
           ]}
         />
@@ -129,7 +129,7 @@ export default function TermsPage() {
         <LegalList
           items={[
             "Misuse the app, reverse engineer protected components, or attempt to bypass paywalls or security.",
-            "Use SynapLift for medical emergencies — call local emergency services.",
+            "Use SynapLift in place of emergency medical care. Call local emergency services instead.",
             "Harass others or upload harmful content through AI features.",
             "Scrape or automate access to our services without permission.",
           ]}

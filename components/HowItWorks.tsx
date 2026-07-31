@@ -29,7 +29,7 @@ const steps = [
     step: "01",
     title: "Build Template",
     description:
-      "Create custom workout templates with exercises, sets, and targets — or start from proven routines.",
+      "Create custom workout templates with exercises, sets, and targets, or start from proven routines.",
     icon: ClipboardList,
     color: "text-neon-blue",
     bg: "bg-neon-blue/15",

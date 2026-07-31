@@ -13,9 +13,9 @@ import {
 } from "@/lib/legal";
 
 export const metadata = {
-  title: "Privacy Policy — SynapLift",
+  title: "Privacy Policy | SynapLift",
   description:
-    "How SynapLift collects, uses, and protects your data — including AI Coach and Scan AI.",
+    "How SynapLift collects, uses, and protects your data, including AI Coach and Scan AI.",
 };
 
 export default function PrivacyPage() {
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
           Before your content is sent for AI analysis, the SynapLift app shows you
           an in-app disclosure naming the provider and asking for{" "}
           <strong className="text-white">explicit permission</strong>. A general
-          terms checkbox alone is not sufficient — you must consent to AI
+          terms checkbox alone is not sufficient. You must consent to AI
           sharing inside the app.
         </p>
       </LegalSection>
@@ -104,9 +104,9 @@ export default function PrivacyPage() {
         <p>We do not sell your personal data. We use trusted processors:</p>
         <LegalList
           items={[
-            "Google — secure sign-in, cloud storage, and AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
-            "Our subscription partner — confirms whether you have SynapLift Pro (Apple and Google handle payment).",
-            "Apple App Store / Google Play — in-app purchases and subscriptions (we do not receive your full card details).",
+            "Google: secure sign-in, cloud storage, and AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
+            "Our subscription partner: confirms whether you have SynapLift Pro (Apple and Google handle payment).",
+            "Apple App Store / Google Play: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}
         />
         <p>

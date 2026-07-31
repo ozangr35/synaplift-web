@@ -12,9 +12,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "SynapLift — Pitch Overview",
+  title: "SynapLift | Pitch Overview",
   description:
-    "Investor & business overview for SynapLift — AI strength training for serious lifters.",
+    "Investor & business overview for SynapLift: AI strength training for serious lifters.",
   robots: {
     index: false,
     follow: false,
@@ -25,7 +25,7 @@ const sections = [
   {
     icon: Target,
     title: "Problem",
-    body: "Most gym apps stop at logging sets and reps, or push generic AI advice with no memory of what you actually lift. Lifters want guidance that knows their PRs, volume, and weak points — not another cookie-cutter plan.",
+    body: "Most gym apps stop at logging sets and reps, or push generic AI advice with no memory of what you actually lift. Lifters want guidance that knows their PRs, volume, and weak points, not another cookie-cutter plan.",
   },
   {
     icon: Zap,
@@ -43,7 +43,7 @@ const sections = [
     bullets: [
       "Workout logging, templates, rest timers, and progress charts",
       "AI Coach chat grounded in your logged workouts (SynapLift Pro)",
-      "Scan AI — physique feedback from your photos (SynapLift Pro)",
+      "Scan AI: physique feedback from your photos (SynapLift Pro)",
       "SynapLift Pro subscription (monthly / yearly)",
       "Privacy-first design, account deletion, Bootsurf (Netherlands)",
     ],
@@ -57,7 +57,7 @@ const sections = [
     icon: Shield,
     title: "Moat & compliance",
     bullets: [
-      "Encrypted online processing — photos and messages handled with care",
+      "Encrypted online processing for photos and messages handled with care",
       "Clear in-app consent before photos or messages are analyzed",
       "EU privacy policy and medical disclaimer",
       "More logged workouts → more relevant coaching over time",
@@ -79,7 +79,7 @@ export default function PitchPage() {
           Pitch deck · June 2026
         </p>
         <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
-          SynapLift — AI Coach That Knows Your Lifts
+          SynapLift: AI Coach That Knows Your Lifts
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
           Strength training app · Bootsurf · Netherlands ·{" "}
@@ -126,7 +126,7 @@ export default function PitchPage() {
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-gray-300">
             <li>Sign in → complete profile</li>
             <li>Log a workout (or show existing history)</li>
-            <li>AI Coach: ask about weak points — show history-aware reply</li>
+            <li>AI Coach: ask about weak points and show a history-aware reply</li>
             <li>Scan AI: physique photo → structured feedback</li>
             <li>Settings: privacy, delete account, SynapLift Pro</li>
           </ol>

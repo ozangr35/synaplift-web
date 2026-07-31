@@ -19,11 +19,11 @@ const faqs = [
   },
   {
     q: "How does the AI Coach know my training?",
-    a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice — not a one-size-fits-all program.",
+    a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice, not a one-size-fits-all program.",
   },
   {
     q: "Can I ask the AI Coach about my food?",
-    a: "Yes. Type a question or attach a meal photo in AI Coach chat — for example, whether a plate looks balanced or how it fits your goals. It’s a quick sanity check, not medical or dietitian advice.",
+    a: "Yes. Type a question or attach a meal photo in AI Coach chat, for example whether a plate looks balanced or how it fits your goals. It’s a quick sanity check, not medical or dietitian advice.",
   },
   {
     q: "Is my data private?",
