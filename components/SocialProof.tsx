@@ -30,10 +30,10 @@ const highlights = [
 export default function SocialProof() {
   return (
     <section className="border-y border-white/8 bg-carbon-50/50 py-10 sm:py-12">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="section-shell">
         <motion.div
           {...motionInView.header}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-6"
         >
           {highlights.map((item, index) => {
             const Icon = item.icon;
@@ -41,13 +41,13 @@ export default function SocialProof() {
               <motion.div
                 key={item.title}
                 {...motionInView.card(index * 0.06)}
-                className="text-center lg:text-left"
+                className="flex min-h-[140px] flex-col items-center rounded-2xl border border-white/6 bg-carbon/40 p-5 text-center sm:p-6 lg:items-start lg:text-left"
               >
-                <div className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10 lg:mx-0">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10">
                   <Icon className="h-5 w-5 text-neon-blue" />
                 </div>
                 <p className="text-sm font-black text-white">{item.title}</p>
-                <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                <p className="mt-1.5 text-xs leading-relaxed text-gray-500 sm:text-sm">
                   {item.body}
                 </p>
               </motion.div>

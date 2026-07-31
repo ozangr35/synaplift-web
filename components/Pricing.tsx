@@ -59,19 +59,19 @@ export default function Pricing({ embedded = false }: PricingProps) {
         {/* Billing toggle | annual default (fitness app best practice) */}
         <motion.div
           {...motionInView.card(0.05)}
-          className="mx-auto mb-10 flex max-w-md flex-col items-center gap-3"
+          className="mx-auto mb-10 flex w-full max-w-md flex-col items-center gap-3"
         >
           <div
             role="tablist"
             aria-label="Billing interval"
-            className="inline-flex rounded-xl border border-white/10 bg-carbon-50 p-1"
+            className="grid w-full grid-cols-2 rounded-xl border border-white/10 bg-carbon-50 p-1 sm:inline-flex sm:w-auto"
           >
             <button
               type="button"
               role="tab"
               aria-selected={interval === "monthly"}
               onClick={() => setInterval("monthly")}
-              className={`rounded-lg px-5 py-2 text-sm font-bold transition ${
+              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
                 interval === "monthly"
                   ? "bg-white/10 text-white"
                   : "text-gray-500 hover:text-gray-300"
@@ -84,20 +84,20 @@ export default function Pricing({ embedded = false }: PricingProps) {
               role="tab"
               aria-selected={interval === "yearly"}
               onClick={() => setInterval("yearly")}
-              className={`relative rounded-lg px-5 py-2 text-sm font-bold transition ${
+              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
                 interval === "yearly"
                   ? "bg-gradient-to-r from-neon-blue/20 to-neon-green/20 text-white ring-1 ring-neon-green/30"
                   : "text-gray-500 hover:text-gray-300"
               }`}
             >
-              Yearly
-              <span className="ml-1.5 hidden text-[10px] font-black uppercase tracking-wide text-neon-green sm:inline">
+              <span className="block sm:inline">Yearly</span>
+              <span className="mt-0.5 block text-[10px] font-black uppercase tracking-wide text-neon-green sm:mt-0 sm:ml-1.5 sm:inline">
                 Save ${pro.yearly.savingsVsMonthly}
               </span>
             </button>
           </div>
           {interval === "yearly" && (
-            <p className="text-xs text-gray-500">
+            <p className="px-2 text-center text-xs leading-relaxed text-gray-500">
               {pro.yearly.perMonthLabel} billed as {pro.yearly.label}/year ·{" "}
               {pro.yearly.savingsPercent}% off vs monthly
             </p>
@@ -147,7 +147,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
             {...motionInView.card(0.12)}
             className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-neon-green/40 bg-gradient-to-b from-neon-green/8 to-carbon-50 p-6 shadow-neon-green sm:p-8"
           >
-            <div className="absolute top-4 right-4">
+            <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
               <span className="inline-flex items-center gap-1 rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
                 <Sparkles className="h-3 w-3" />
                 {interval === "yearly"
@@ -179,7 +179,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 </li>
               ))}
             </ul>
-            <div id="download" className="mt-8 flex flex-col items-center gap-3">
+            <div className="mt-8 flex flex-col items-center gap-3">
               <StoreBadge store="app-store" href={appStoreUrl} />
               <p className="text-center text-xs text-gray-500">
                 Subscribe in the app after download · {pro.cta}

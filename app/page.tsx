@@ -14,27 +14,27 @@ export default function Home() {
       <SocialProof />
       <FeaturesBento embedded />
       <Pricing embedded />
-      <section className="border-t border-white/8 py-14 sm:py-16">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6">
-          <p className="text-sm text-gray-400">
+      <section className="border-t border-white/8 py-12 sm:py-16">
+        <div className="section-shell flex flex-col items-center gap-6 text-center">
+          <p className="max-w-lg text-sm text-gray-400 sm:text-base">
             Ready to see the full flow: templates, logging, and AI coaching?
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="grid w-full max-w-xl grid-cols-1 gap-3 sm:max-w-2xl sm:grid-cols-2 lg:max-w-3xl lg:grid-cols-3">
             <Link
               href="/product"
-              className="rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-sm font-bold text-white transition hover:border-neon-blue/40"
+              className="rounded-xl border border-white/10 bg-carbon-50 px-4 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               How the product works
             </Link>
             <Link
               href="/pricing"
-              className="rounded-xl border border-white/10 bg-carbon-50 px-6 py-3 text-sm font-bold text-white transition hover:border-neon-blue/40"
+              className="rounded-xl border border-white/10 bg-carbon-50 px-4 py-3 text-center text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               View pricing
             </Link>
             <Link
               href="/faq"
-              className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-6 py-3 text-sm font-bold text-neon-green transition hover:bg-neon-green/15"
+              className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-4 py-3 text-center text-sm font-bold text-neon-green transition hover:bg-neon-green/15 sm:col-span-2 lg:col-span-1"
             >
               Read the FAQ
             </Link>

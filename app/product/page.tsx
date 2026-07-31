@@ -27,16 +27,16 @@ export default function ProductPage() {
             review charts and AI feedback, all tied to the workouts you actually
             did.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href="/#features"
-              className="rounded-xl border border-white/10 bg-carbon-50 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-neon-blue/40"
+              className="w-full rounded-xl border border-white/10 bg-carbon-50 px-5 py-2.5 text-center text-sm font-semibold text-white transition hover:border-neon-blue/40 sm:w-auto"
             >
               See features
             </Link>
             <Link
               href="/faq"
-              className="rounded-xl border border-neon-green/30 bg-neon-green/10 px-5 py-2.5 text-sm font-semibold text-neon-green transition hover:bg-neon-green/15"
+              className="w-full rounded-xl border border-neon-green/30 bg-neon-green/10 px-5 py-2.5 text-center text-sm font-semibold text-neon-green transition hover:bg-neon-green/15 sm:w-auto"
             >
               Read the FAQ
             </Link>
