@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SynapLift | Strength Training, Elevated",
   description:
-    "Log workouts, track PRs, and get AI coaching grounded in your real training. SynapLift for iOS and Android.",
+    "Built for serious lifters. Log workouts, track PRs, and get AI coaching grounded in your real training.",
   keywords: [
     "fitness",
     "strength training",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SynapLift | Strength Training, Elevated",
     description:
-      "Log workouts, track PRs, and get AI coaching grounded in your real training.",
+      "Built for serious lifters. Log workouts, track PRs, and get AI coaching grounded in your real training.",
     type: "website",
     locale: "en_US",
     siteName: "SynapLift",

@@ -103,7 +103,7 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "Paid plans (monthly and yearly) are billed through the Apple App Store or Google Play.",
+            "SynapLift Pro is $9.99/month or $99.99/year, billed through the Apple App Store or Google Play.",
             "Prices, trials, and renewal terms are shown at purchase and in your platform subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
             "Deleting your SynapLift account does NOT cancel billing. Cancel in Apple/Google subscription settings.",
@@ -115,7 +115,7 @@ export default function TermsPage() {
       <LegalSection title="6. AI Coach & Scan AI">
         <LegalList
           items={[
-            "AI features send your prompts and optional images over encrypted connections to a third-party AI provider (Google), as described in the Privacy Policy.",
+            "AI features send your prompts and optional images over encrypted connections to Google Gemini via Firebase Functions, as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
             "Scan AI is for physique and training feedback only, not medical diagnosis.",

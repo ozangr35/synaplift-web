@@ -20,7 +20,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "How does the AI Coach know my training?",
-    a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice, not a one-size-fits-all program.",
+    a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice, not a one-size-fits-all program. AI runs on Google Gemini via Firebase Functions.",
   },
   {
     q: "Can I ask the AI Coach about my food?",

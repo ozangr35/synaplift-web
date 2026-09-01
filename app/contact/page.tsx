@@ -10,7 +10,8 @@ import {
 
 export const metadata = {
   title: "Contact | SynapLift",
-  description: "Contact SynapLift for support, feedback, and partnerships.",
+  description:
+    "App Store support and contact for SynapLift: email, feedback, and partnerships.",
 };
 
 export default function ContactPage() {

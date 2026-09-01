@@ -37,7 +37,7 @@ export default function Hero() {
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-neon-blue/25 bg-neon-blue/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-neon-blue sm:mb-6"
             >
               <Sparkles className="h-3.5 w-3.5 shrink-0" />
-              Built for Serious Lifters
+              Built for serious lifters
             </motion.div>
 
             <motion.h1
