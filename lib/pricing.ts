@@ -9,7 +9,7 @@ export const pricingPlans = {
     tagline: "Everything you need to log and progress",
     priceLabel: "$0",
     periodLabel: "forever",
-    cta: "Download free",
+    cta: "Coming soon",
     highlighted: false,
   },
   pro: {

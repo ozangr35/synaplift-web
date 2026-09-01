@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { assets } from "@/lib/assets";
+import { appStoreUrl, playStoreUrl } from "@/lib/site";
 
 const badges = {
   "app-store": {
@@ -8,6 +9,7 @@ const badges = {
     height: 40,
     label: "Download on the App Store",
     soonLabel: "App Store, coming soon",
+    defaultHref: appStoreUrl,
   },
   "google-play": {
     src: assets.badges.googlePlay,
@@ -15,6 +17,7 @@ const badges = {
     height: 52,
     label: "Get it on Google Play",
     soonLabel: "Google Play, coming soon",
+    defaultHref: playStoreUrl,
   },
 } as const;
 
@@ -23,9 +26,20 @@ type StoreBadgeProps = {
   href?: string | null;
 };
 
+/** Official badges only. Renders as non-links until store URLs are set in lib/site.ts. */
+export function StoreBadgeRow({ className }: { className?: string }) {
+  return (
+    <div className={className ?? "flex flex-wrap items-center justify-center gap-3"}>
+      <StoreBadge store="app-store" />
+      <StoreBadge store="google-play" />
+    </div>
+  );
+}
+
 export default function StoreBadge({ store, href }: StoreBadgeProps) {
   const badge = badges[store];
-  const isLive = Boolean(href);
+  const resolvedHref = href !== undefined ? href : badge.defaultHref;
+  const isLive = Boolean(resolvedHref);
 
   const image = (
     <Image
@@ -40,7 +54,7 @@ export default function StoreBadge({ store, href }: StoreBadgeProps) {
   if (isLive) {
     return (
       <a
-        href={href!}
+        href={resolvedHref!}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={badge.label}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Check, Sparkles, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import StoreBadge from "@/components/StoreBadge";
+import { StoreBadgeRow } from "@/components/StoreBadge";
 import {
   BillingInterval,
   freeFeatures,
@@ -12,7 +12,6 @@ import {
   pricingTrustNotes,
   proFeatures,
 } from "@/lib/pricing";
-import { appStoreUrl } from "@/lib/site";
 import { motionInView } from "@/lib/motion";
 
 type PricingProps = {
@@ -136,7 +135,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
               ))}
             </ul>
             <Link
-              href="/#download"
+              href="/download"
               className="mt-8 block rounded-xl border border-white/10 bg-carbon py-3.5 text-center text-sm font-bold text-white transition hover:border-neon-blue/40"
             >
               {pricingPlans.free.cta}
@@ -180,9 +179,9 @@ export default function Pricing({ embedded = false }: PricingProps) {
               ))}
             </ul>
             <div className="mt-8 flex flex-col items-center gap-3">
-              <StoreBadge store="app-store" href={appStoreUrl} />
+              <StoreBadgeRow />
               <p className="text-center text-xs text-gray-500">
-                Subscribe in the app after download · {pro.cta}
+                Subscribe in the app at launch · {pro.cta}
               </p>
             </div>
           </motion.article>

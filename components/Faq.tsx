@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { supportEmail } from "@/lib/legal";
 import { motionInView } from "@/lib/motion";
 
-const faqs = [
+const faqs: { id?: string; q: string; a: string }[] = [
   {
     q: "What is SynapLift?",
     a: "SynapLift is a strength training app that combines workout logging, progress analytics, an AI Coach that reads your lift history (and can comment on meals you ask about), and Scan AI for physique feedback.",
@@ -30,8 +31,9 @@ const faqs = [
     a: "We collect only what’s needed to run the app and improve your experience. Read our Privacy Policy for full details on storage, AI processing, and your rights.",
   },
   {
+    id: "launch",
     q: "When will the app be on the App Store and Google Play?",
-    a: "We’re preparing for launch. Download links on the homepage will go live as soon as the stores are available in your region.",
+    a: "We’re preparing for launch. There is no public App Store or Google Play listing yet. We will post official store links on this site when they go live.",
   },
   {
     q: "How do I cancel or restore a subscription?",
@@ -59,7 +61,10 @@ export default function Faq() {
         <div className="space-y-3">
           {faqs.map((item, index) => (
             <motion.div key={item.q} {...motionInView.card(index * 0.04)}>
-              <details className="group rounded-2xl border border-white/8 bg-carbon-50 open:border-neon-blue/25">
+              <details
+                id={item.id}
+                className="group scroll-mt-24 rounded-2xl border border-white/8 bg-carbon-50 open:border-neon-blue/25"
+              >
                 <summary className="cursor-pointer list-none px-5 py-4 text-sm font-bold text-white marker:content-none sm:px-6 sm:text-base [&::-webkit-details-marker]:hidden">
                   <span className="flex items-center justify-between gap-4">
                     {item.q}
@@ -88,6 +93,24 @@ export default function Faq() {
                         View pricing
                       </Link>{" "}
                       ($9.99/mo or $99.99/yr via App Store).
+                    </>
+                  ) : item.id === "launch" ? (
+                    <>
+                      {item.a} See{" "}
+                      <Link
+                        href="/download"
+                        className="font-semibold text-neon-blue hover:underline"
+                      >
+                        download status
+                      </Link>
+                      . For launch questions, email{" "}
+                      <a
+                        href={`mailto:${supportEmail}`}
+                        className="font-semibold text-neon-blue hover:underline"
+                      >
+                        {supportEmail}
+                      </a>
+                      .
                     </>
                   ) : (
                     item.a
