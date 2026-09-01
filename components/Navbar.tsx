@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Menu, X } from "lucide-react";
+import { Clock, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -94,13 +94,13 @@ export default function Navbar() {
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <Link
-            href="/#pricing"
+            href="/download"
             className="inline-flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-neon-blue to-neon-green px-2.5 text-xs font-bold text-carbon shadow-neon transition-opacity hover:opacity-90 sm:h-auto sm:gap-2 sm:px-5 sm:py-2.5 sm:text-sm"
-            aria-label="Download SynapLift app"
+            aria-label="App coming soon"
             onClick={() => setMenuOpen(false)}
           >
-            <Download className="h-4 w-4 shrink-0" />
-            <span className="hidden sm:inline">Download App</span>
+            <Clock className="h-4 w-4 shrink-0" />
+            <span className="hidden sm:inline">Coming soon</span>
           </Link>
 
           <button

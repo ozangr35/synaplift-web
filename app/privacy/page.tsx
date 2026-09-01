@@ -73,7 +73,7 @@ export default function PrivacyPage() {
         </p>
         <LegalList
           items={[
-            "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to a third-party AI provider (Google) solely for real-time coaching or visual analysis.",
+            "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to Google Gemini (via Firebase Functions) solely for real-time coaching or visual analysis.",
             "No biometric identification: SynapLift does not use your photos for facial recognition, biometric identity verification, or permanent user tracking.",
             "Data retention & protection: Uploaded images are analyzed to generate your response and are not stored permanently on public-facing servers for advertising purposes. They are not sold to data brokers or used for targeted advertising.",
             "User control: You can revoke camera or photo-library permissions at any time in your iOS or Android system settings. Without permission, you can still use text-based coaching where available.",
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
         <p>We do not sell your personal data. We use trusted processors:</p>
         <LegalList
           items={[
-            "Google: secure sign-in, cloud storage, and AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
+            "Google: secure sign-in, cloud storage, Firebase Functions, and Google Gemini for AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
             "Our subscription partner: confirms whether you have SynapLift Pro (Apple and Google handle payment).",
             "Apple App Store / Google Play: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}

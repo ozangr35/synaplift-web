@@ -7,7 +7,6 @@ const footerLinks = [
   { href: "/product", label: "Product" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
-  { href: "/pitch", label: "Pitch" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
 ];
@@ -20,8 +19,8 @@ export default function Footer() {
           <div className="min-w-0 text-center lg:text-left">
             <p className="text-2xl font-black tracking-tight text-white">SynapLift</p>
             <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-gray-500 lg:mx-0">
-              Strength training, powered by AI. Built for lifters who want smarter
-              logs, sharper insights, and a coach in their pocket.
+              Built for serious lifters. Strength training with AI coaching in
+              your pocket.
             </p>
           </div>
 

@@ -17,7 +17,7 @@ export default function AboutPage() {
           About us
         </p>
         <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
-          Built for lifters who want more than a spreadsheet
+          Built for serious lifters
         </h1>
 
         <div className="mt-10 space-y-6 text-sm leading-relaxed text-gray-400">

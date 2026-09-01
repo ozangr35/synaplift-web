@@ -7,7 +7,7 @@ import { motionInView } from "@/lib/motion";
 const highlights = [
   {
     icon: Dumbbell,
-    title: "Built for lifters",
+    title: "Built for serious lifters",
     body: "Templates, rest timers, and 1RM charts, not generic fitness fluff.",
   },
   {

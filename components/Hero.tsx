@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import Link from "next/link";
 import PhoneMockup from "@/components/PhoneMockup";
-import StoreBadge from "@/components/StoreBadge";
+import { StoreBadgeRow } from "@/components/StoreBadge";
 import { assets } from "@/lib/assets";
-import { appStoreUrl } from "@/lib/site";
 import { heroFadeUp } from "@/lib/motion";
 
 const fadeUp = heroFadeUp;
@@ -37,7 +37,7 @@ export default function Hero() {
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-neon-blue/25 bg-neon-blue/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-neon-blue sm:mb-6"
             >
               <Sparkles className="h-3.5 w-3.5 shrink-0" />
-              Built for Serious Lifters
+              Built for serious lifters
             </motion.div>
 
             <motion.h1
@@ -68,9 +68,17 @@ export default function Hero() {
               animate="visible"
               variants={fadeUp}
               id="download"
-              className="mt-8 flex w-full flex-wrap items-center justify-center gap-3 sm:mt-10 md:justify-start"
+              className="mt-8 flex w-full flex-col items-center gap-3 sm:mt-10 md:items-start"
             >
-              <StoreBadge store="app-store" href={appStoreUrl} />
+              <StoreBadgeRow className="text-sm font-semibold text-gray-400" />
+              <p className="text-xs text-gray-500">
+                <Link
+                  href="/faq#launch"
+                  className="font-semibold text-neon-blue hover:underline"
+                >
+                  When will it launch?
+                </Link>
+              </p>
             </motion.div>
 
             <motion.p

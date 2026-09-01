@@ -12,5 +12,7 @@ export const kvkDisplay = `KVK: ${kvkNumber}`;
 export const kvkLegalFooter = `${companyLegalLine} · KVK ${kvkNumber}`;
 
 export const supportEmail = "synaplift@outlook.com";
+/** App Store Connect support URL. */
+export const supportUrl = "https://synaplift.com/contact";
 export const privacyPolicyUrl = "https://synaplift.com/privacy";
 export const termsOfServiceUrl = "https://synaplift.com/terms";
