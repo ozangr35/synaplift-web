@@ -70,9 +70,8 @@ export default function Hero() {
               id="download"
               className="mt-8 flex w-full flex-col items-center gap-3 sm:mt-10 md:items-start"
             >
-              <StoreBadgeRow className="flex flex-wrap items-center justify-center gap-3 md:justify-start" />
+              <StoreBadgeRow className="text-sm font-semibold text-gray-400" />
               <p className="text-xs text-gray-500">
-                Coming soon on the App Store and Google Play.{" "}
                 <Link
                   href="/faq#launch"
                   className="font-semibold text-neon-blue hover:underline"

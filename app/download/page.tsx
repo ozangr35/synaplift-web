@@ -24,16 +24,12 @@ export default function DownloadPage() {
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
           SynapLift is not on the App Store or Google Play yet. We do not have
-          public store listings, and we will not post placeholder download
-          links. Official badges below will become live links when the stores
-          approve the app.
+          public store listings, and we will not show official store badges
+          until those listings are live.
         </p>
 
-        <div className="mt-10 rounded-2xl border border-white/8 bg-carbon-50 p-6 sm:p-8">
+        <div className="mt-10 rounded-2xl border border-white/8 bg-carbon-50 p-6 sm:p-8 text-center">
           <StoreBadgeRow />
-          <p className="mt-4 text-center text-xs text-gray-500">
-            App Store and Google Play · coming soon
-          </p>
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
