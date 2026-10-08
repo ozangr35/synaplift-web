@@ -8,15 +8,15 @@ import { motionInView } from "@/lib/motion";
 const faqs: { id?: string; q: string; a: string }[] = [
   {
     q: "What is SynapLift?",
-    a: "SynapLift is a strength training app that combines workout logging, progress analytics, an AI Coach that reads your lift history (and can comment on meals you ask about), and Scan AI for physique feedback.",
+    a: "SynapLift is a strength training app that combines workout logging, progress tracking, an AI Coach that reads your lift history (and can comment on meals you ask about), and Scan AI for physique feedback.",
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. You can log workouts, use templates, rest timers, and track progress for free. You get one free AI Coach message to try; SynapLift Pro unlocks unlimited AI Coach and Scan AI.",
+    a: "Yes. Unlimited workout logging, custom templates, rest timers, PR and volume tracking, progress, calendar, and full workout history are free. You also get 1 AI Coach message to try (the Coach reads your lift history) and 1 Scan AI physique scan per month. SynapLift Pro is Unlimited AI Coach & Scan AI.",
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, priority AI responses, and full progress analytics. Pro is $9.99/month or $99.99/year (save $20 vs paying monthly). See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach that knows your lifts, and Unlimited Scan AI physique analysis (batches of up to 5 photos per scan). Pricing announced at launch. See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -84,15 +84,16 @@ export default function Faq() {
                     </>
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
-                      Unlimited AI Coach chat, unlimited Scan AI, and full
-                      analytics.{" "}
+                      Unlimited AI Coach that knows your lifts, and Unlimited
+                      Scan AI physique analysis (batches of up to 5 photos per
+                      scan). Pricing announced at launch.{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"
                       >
                         View pricing
-                      </Link>{" "}
-                      ($9.99/mo or $99.99/yr via App Store).
+                      </Link>
+                      .
                     </>
                   ) : item.id === "launch" ? (
                     <>
