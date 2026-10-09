@@ -1,12 +1,13 @@
 /**
- * SynapLift Pro pricing | sync with App Store Connect / RevenueCat:
- * myon_pro_monthly ($9.99/mo), myon_pro_annual ($99.99/yr), entitlement `pro`.
+ * SynapLift plan copy. There is no live store listing, so the site shows no Pro price.
+ * Product ids match the app entitlement `pro`.
  */
 export const storeProductIds = {
   monthly: "myon_pro_monthly",
   annual: "myon_pro_annual",
   entitlement: "pro",
 } as const;
+
 export const pricingPlans = {
   free: {
     id: "free",
@@ -20,42 +21,25 @@ export const pricingPlans = {
   pro: {
     id: "pro",
     name: "SynapLift Pro",
-    tagline: "Unlimited AI coaching & physique analysis",
-    monthly: {
-      amount: 9.99,
-      label: "$9.99",
-      period: "month",
-      perMonthLabel: "$9.99/mo",
-    },
-    yearly: {
-      amount: 99.99,
-      label: "$99.99",
-      period: "year",
-      perMonthLabel: "$8.33/mo",
-      savingsVsMonthly: 20,
-      savingsPercent: 17,
-      badge: "Best value",
-    },
+    tagline: "Unlimited AI Coach & Scan AI",
+    priceLabel: "Pricing announced at launch",
     cta: "Get SynapLift Pro",
     highlighted: true,
   },
 } as const;
 
-export type BillingInterval = "monthly" | "yearly";
-
 export const freeFeatures = [
   "Unlimited workout logging",
   "Custom templates & rest timers",
   "PR & volume tracking",
-  "1 AI Coach message to try",
+  "Progress, calendar & full workout history",
+  "1 AI Coach message a month",
+  "1 Scan AI physique scan per month",
 ] as const;
 
 export const proFeatures = [
-  "Unlimited AI Coach chat",
-  "Scan AI physique analysis",
-  "Coach reads your lift history",
-  "Full progress analytics",
-  "Priority AI responses",
+  "Unlimited AI Coach that knows your lifts",
+  "Unlimited Scan AI physique analysis",
 ] as const;
 
 export const pricingTrustNotes = [

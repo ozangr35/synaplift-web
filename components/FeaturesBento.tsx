@@ -44,9 +44,9 @@ const features = [
   },
   {
     id: "tracking",
-    title: "Pro Tracking",
+    title: "Pro-grade tracking",
     description:
-      "Rest timers, volume analytics, and 1RM charts so every session compounds into measurable progress.",
+      "Rest timers, volume tracking, and 1RM charts so every session compounds into measurable progress.",
     icon: BarChart3,
     accent: "blue" as const,
     bullets: [

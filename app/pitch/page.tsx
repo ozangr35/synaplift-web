@@ -42,8 +42,8 @@ const sections = [
     title: "Product (live demo)",
     bullets: [
       "Workout logging, templates, rest timers, and progress charts",
-      "AI Coach chat grounded in your logged workouts (SynapLift Pro)",
-      "Scan AI: physique feedback from your photos (SynapLift Pro)",
+      "AI Coach chat grounded in your logged workouts (1 message a month on Free; Pro: Unlimited AI Coach that knows your lifts)",
+      "Scan AI: physique feedback from your photos (1 scan a month on Free; Pro: Unlimited Scan AI physique analysis, up to 5 photos per scan)",
       "SynapLift Pro subscription (monthly / yearly)",
       "Privacy-first design, account deletion, Bootsurf (Netherlands)",
     ],
@@ -51,7 +51,7 @@ const sections = [
   {
     icon: BarChart3,
     title: "Business model",
-    body: "B2C subscription via the App Store and Google Play. Workouts and progress are free; AI Coach and Scan AI are included with SynapLift Pro.",
+    body: "B2C subscription via the App Store and Google Play. Workouts, progress, calendar, and history are free, with 1 AI Coach message a month and 1 Scan AI scan a month. Pro is Unlimited AI Coach & Scan AI. Pricing announced at launch.",
   },
   {
     icon: Shield,

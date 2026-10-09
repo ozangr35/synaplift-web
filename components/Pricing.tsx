@@ -1,12 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles, X } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 import { StoreBadgeRow } from "@/components/StoreBadge";
 import {
-  BillingInterval,
   freeFeatures,
   pricingPlans,
   pricingTrustNotes,
@@ -20,10 +18,7 @@ type PricingProps = {
 };
 
 export default function Pricing({ embedded = false }: PricingProps) {
-  const [interval, setInterval] = useState<BillingInterval>("yearly");
   const pro = pricingPlans.pro;
-  const price =
-    interval === "yearly" ? pro.yearly : pro.monthly;
 
   return (
     <section
@@ -49,58 +44,10 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <span className="text-gradient-neon">Go Pro for AI.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Workouts, templates, and progress tracking stay free, like other
-            logging apps. SynapLift Pro unlocks unlimited AI Coach and Scan AI
-            when you are ready.
+            Unlimited logging, templates, progress, calendar, and history stay
+            free, with 1 AI Coach message a month and 1 Scan AI scan a month. SynapLift
+            Pro is Unlimited AI Coach & Scan AI. Pricing is announced at launch.
           </p>
-        </motion.div>
-
-        {/* Billing toggle | annual default (fitness app best practice) */}
-        <motion.div
-          {...motionInView.card(0.05)}
-          className="mx-auto mb-10 flex w-full max-w-md flex-col items-center gap-3"
-        >
-          <div
-            role="tablist"
-            aria-label="Billing interval"
-            className="grid w-full grid-cols-2 rounded-xl border border-white/10 bg-carbon-50 p-1 sm:inline-flex sm:w-auto"
-          >
-            <button
-              type="button"
-              role="tab"
-              aria-selected={interval === "monthly"}
-              onClick={() => setInterval("monthly")}
-              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
-                interval === "monthly"
-                  ? "bg-white/10 text-white"
-                  : "text-gray-500 hover:text-gray-300"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={interval === "yearly"}
-              onClick={() => setInterval("yearly")}
-              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
-                interval === "yearly"
-                  ? "bg-gradient-to-r from-neon-blue/20 to-neon-green/20 text-white ring-1 ring-neon-green/30"
-                  : "text-gray-500 hover:text-gray-300"
-              }`}
-            >
-              <span className="block sm:inline">Yearly</span>
-              <span className="mt-0.5 block text-[10px] font-black uppercase tracking-wide text-neon-green sm:mt-0 sm:ml-1.5 sm:inline">
-                Save ${pro.yearly.savingsVsMonthly}
-              </span>
-            </button>
-          </div>
-          {interval === "yearly" && (
-            <p className="px-2 text-center text-xs leading-relaxed text-gray-500">
-              {pro.yearly.perMonthLabel} billed as {pro.yearly.label}/year ·{" "}
-              {pro.yearly.savingsPercent}% off vs monthly
-            </p>
-          )}
         </motion.div>
 
         {/* Plan cards | Free + Pro (two-tier + highlighted Pro) */}
@@ -149,23 +96,13 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
               <span className="inline-flex items-center gap-1 rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
                 <Sparkles className="h-3 w-3" />
-                {interval === "yearly"
-                  ? pro.yearly.badge
-                  : "Most popular"}
+                Pro
               </span>
             </div>
             <p className="text-sm font-bold text-neon-green">{pro.name}</p>
-            <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-4xl font-black text-white">
-                {price.label}
-              </span>
-              <span className="text-sm text-gray-400">/{price.period}</span>
-            </div>
-            {interval === "yearly" && (
-              <p className="mt-1 text-sm font-semibold text-neon-green">
-                {pro.yearly.perMonthLabel} · save ${pro.yearly.savingsVsMonthly}/yr
-              </p>
-            )}
+            <p className="mt-3 text-2xl font-black leading-tight tracking-tight text-white sm:text-3xl">
+              {pro.priceLabel}
+            </p>
             <p className="mt-2 text-sm text-gray-400">{pro.tagline}</p>
             <ul className="mt-6 flex-1 space-y-3">
               {proFeatures.map((feature) => (
@@ -178,6 +115,9 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-gray-500">
+              Scan AI on Pro uses batches of up to 5 photos per scan.
+            </p>
             <div className="mt-8 flex flex-col items-center gap-3">
               <StoreBadgeRow />
               <p className="text-center text-xs text-gray-500">
@@ -194,37 +134,37 @@ export default function Pricing({ embedded = false }: PricingProps) {
         >
           <div className="grid grid-cols-[1fr_auto_auto] gap-0 border-b border-white/8 bg-white/[0.03] px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-500 sm:px-6">
             <span>Feature</span>
-            <span className="w-16 text-center sm:w-20">Free</span>
-            <span className="w-16 text-center text-neon-green sm:w-20">Pro</span>
+            <span className="w-[5.25rem] text-center sm:w-28">Free</span>
+            <span className="w-[5.25rem] text-center text-neon-green sm:w-28">
+              Pro
+            </span>
           </div>
           {[
             ["Workout logging & templates", true, true],
             ["Rest timers & PR charts", true, true],
-            ["AI Coach messages", "1 trial", "Unlimited"],
-            ["Scan AI physique analysis", false, true],
-            ["Coach uses your lift history", false, true],
+            ["AI Coach", "1 message / month", "Unlimited"],
+            ["Scan AI", "1 / month", "Unlimited"],
+            ["Coach uses your lift history", true, true],
           ].map(([label, freeVal, proVal]) => (
             <div
               key={String(label)}
               className="grid grid-cols-[1fr_auto_auto] items-center gap-0 border-b border-white/6 px-4 py-3.5 last:border-0 sm:px-6"
             >
               <span className="text-sm text-gray-300">{label}</span>
-              <span className="flex w-16 justify-center sm:w-20">
+              <span className="flex w-[5.25rem] justify-center px-1 text-center sm:w-28">
                 {freeVal === true ? (
                   <Check className="h-4 w-4 text-neon-blue" aria-label="Included" />
-                ) : freeVal === false ? (
-                  <X className="h-4 w-4 text-gray-600" aria-label="Not included" />
                 ) : (
-                  <span className="text-xs font-semibold text-gray-400">
+                  <span className="text-xs font-semibold leading-tight text-gray-400">
                     {freeVal}
                   </span>
                 )}
               </span>
-              <span className="flex w-16 justify-center sm:w-20">
+              <span className="flex w-[5.25rem] justify-center px-1 text-center sm:w-28">
                 {proVal === true ? (
                   <Check className="h-4 w-4 text-neon-green" aria-label="Included" />
                 ) : (
-                  <span className="text-xs font-semibold text-neon-green">
+                  <span className="text-xs font-semibold leading-tight text-neon-green">
                     {proVal}
                   </span>
                 )}

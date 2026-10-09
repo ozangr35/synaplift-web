@@ -5,7 +5,7 @@ import Pricing from "@/components/Pricing";
 export const metadata = {
   title: "Pricing | SynapLift",
   description:
-    "SynapLift is free for workout logging. SynapLift Pro unlocks unlimited AI Coach and Scan AI ($9.99/month or $99.99/year).",
+    "SynapLift Free includes workout logging, 1 AI Coach message a month, and 1 Scan AI scan a month. Pro is Unlimited AI Coach & Scan AI. Pricing announced at launch.",
 };
 
 export default function PricingPage() {
