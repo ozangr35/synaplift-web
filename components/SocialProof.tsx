@@ -18,7 +18,7 @@ const highlights = [
   {
     icon: Zap,
     title: "Try before you Pro",
-    body: "1 AI Coach message and 1 Scan AI scan a month. Pro is Unlimited AI Coach & Scan AI.",
+    body: "1 AI Coach message a month and 1 Scan AI scan a month. Pro is Unlimited AI Coach & Scan AI.",
   },
   {
     icon: Shield,

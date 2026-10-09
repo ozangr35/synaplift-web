@@ -12,7 +12,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. Unlimited workout logging, custom templates, rest timers, PR and volume tracking, progress, calendar, and full workout history are free. You also get 1 AI Coach message to try (the Coach reads your lift history) and 1 Scan AI physique scan per month. SynapLift Pro is Unlimited AI Coach & Scan AI.",
+    a: "Yes. Unlimited workout logging, custom templates, rest timers, PR and volume tracking, progress, calendar, and full workout history are free. You also get 1 AI Coach message and 1 Scan AI physique scan a month (the Coach reads your lift history). SynapLift Pro is Unlimited AI Coach & Scan AI.",
   },
   {
     q: "What does SynapLift Pro include?",

@@ -30,7 +30,7 @@ export default function AboutPage() {
           <p>
             Log sets and 1RM trends, build templates, run rest timers, and chat
             with your coach about workouts, recovery, macros, and equipment.
-            Free includes 1 AI Coach message and 1 Scan AI scan a month.
+            Free includes 1 AI Coach message a month and 1 Scan AI scan a month.
             SynapLift Pro is Unlimited AI Coach & Scan AI.
           </p>
           <p>

@@ -45,7 +45,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             Unlimited logging, templates, progress, calendar, and history stay
-            free, with 1 AI Coach message and 1 Scan AI scan a month. SynapLift
+            free, with 1 AI Coach message a month and 1 Scan AI scan a month. SynapLift
             Pro is Unlimited AI Coach & Scan AI. Pricing is announced at launch.
           </p>
         </motion.div>
@@ -142,7 +142,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
           {[
             ["Workout logging & templates", true, true],
             ["Rest timers & PR charts", true, true],
-            ["AI Coach", "1 message to try", "Unlimited"],
+            ["AI Coach", "1 message / month", "Unlimited"],
             ["Scan AI", "1 / month", "Unlimited"],
             ["Coach uses your lift history", true, true],
           ].map(([label, freeVal, proVal]) => (

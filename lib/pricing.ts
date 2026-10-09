@@ -33,7 +33,7 @@ export const freeFeatures = [
   "Custom templates & rest timers",
   "PR & volume tracking",
   "Progress, calendar & full workout history",
-  "1 AI Coach message to try",
+  "1 AI Coach message a month",
   "1 Scan AI physique scan per month",
 ] as const;
 
