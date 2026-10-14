@@ -16,7 +16,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, priority AI responses, and full progress analytics. Pro is $9.99/month or $99.99/year (save $20 vs paying monthly). See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, and full progress analytics. Pricing announced at launch. See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -85,14 +85,14 @@ export default function Faq() {
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
                       Unlimited AI Coach chat, unlimited Scan AI, and full
-                      analytics.{" "}
+                      analytics. Pricing announced at launch.{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"
                       >
                         View pricing
-                      </Link>{" "}
-                      ($9.99/mo or $99.99/yr via App Store).
+                      </Link>
+                      .
                     </>
                   ) : item.id === "launch" ? (
                     <>

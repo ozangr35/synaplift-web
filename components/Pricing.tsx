@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import { Check, Sparkles, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 import { StoreBadgeRow } from "@/components/StoreBadge";
 import {
-  BillingInterval,
   freeFeatures,
   pricingPlans,
   pricingTrustNotes,
@@ -20,10 +18,7 @@ type PricingProps = {
 };
 
 export default function Pricing({ embedded = false }: PricingProps) {
-  const [interval, setInterval] = useState<BillingInterval>("yearly");
   const pro = pricingPlans.pro;
-  const price =
-    interval === "yearly" ? pro.yearly : pro.monthly;
 
   return (
     <section
@@ -53,54 +48,6 @@ export default function Pricing({ embedded = false }: PricingProps) {
             logging apps. SynapLift Pro unlocks unlimited AI Coach and Scan AI
             when you are ready.
           </p>
-        </motion.div>
-
-        {/* Billing toggle | annual default (fitness app best practice) */}
-        <motion.div
-          {...motionInView.card(0.05)}
-          className="mx-auto mb-10 flex w-full max-w-md flex-col items-center gap-3"
-        >
-          <div
-            role="tablist"
-            aria-label="Billing interval"
-            className="grid w-full grid-cols-2 rounded-xl border border-white/10 bg-carbon-50 p-1 sm:inline-flex sm:w-auto"
-          >
-            <button
-              type="button"
-              role="tab"
-              aria-selected={interval === "monthly"}
-              onClick={() => setInterval("monthly")}
-              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
-                interval === "monthly"
-                  ? "bg-white/10 text-white"
-                  : "text-gray-500 hover:text-gray-300"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={interval === "yearly"}
-              onClick={() => setInterval("yearly")}
-              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
-                interval === "yearly"
-                  ? "bg-gradient-to-r from-neon-blue/20 to-neon-green/20 text-white ring-1 ring-neon-green/30"
-                  : "text-gray-500 hover:text-gray-300"
-              }`}
-            >
-              <span className="block sm:inline">Yearly</span>
-              <span className="mt-0.5 block text-[10px] font-black uppercase tracking-wide text-neon-green sm:mt-0 sm:ml-1.5 sm:inline">
-                Save ${pro.yearly.savingsVsMonthly}
-              </span>
-            </button>
-          </div>
-          {interval === "yearly" && (
-            <p className="px-2 text-center text-xs leading-relaxed text-gray-500">
-              {pro.yearly.perMonthLabel} billed as {pro.yearly.label}/year ·{" "}
-              {pro.yearly.savingsPercent}% off vs monthly
-            </p>
-          )}
         </motion.div>
 
         {/* Plan cards | Free + Pro (two-tier + highlighted Pro) */}
@@ -149,23 +96,13 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
               <span className="inline-flex items-center gap-1 rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
                 <Sparkles className="h-3 w-3" />
-                {interval === "yearly"
-                  ? pro.yearly.badge
-                  : "Most popular"}
+                Most popular
               </span>
             </div>
             <p className="text-sm font-bold text-neon-green">{pro.name}</p>
-            <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-4xl font-black text-white">
-                {price.label}
-              </span>
-              <span className="text-sm text-gray-400">/{price.period}</span>
-            </div>
-            {interval === "yearly" && (
-              <p className="mt-1 text-sm font-semibold text-neon-green">
-                {pro.yearly.perMonthLabel} · save ${pro.yearly.savingsVsMonthly}/yr
-              </p>
-            )}
+            <p className="mt-3 text-4xl font-black leading-tight text-white">
+              {pro.priceLabel}
+            </p>
             <p className="mt-2 text-sm text-gray-400">{pro.tagline}</p>
             <ul className="mt-6 flex-1 space-y-3">
               {proFeatures.map((feature) => (
