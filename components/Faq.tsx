@@ -32,8 +32,8 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     id: "launch",
-    q: "When will the app be on the Apple App Store?",
-    a: "We’re preparing for launch. There is no public Apple App Store listing yet. We will post official store links on this site when they go live.",
+    q: "When will the app be on the App Store?",
+    a: "We’re preparing for launch. There is no public App Store listing yet. We will post official store links on this site when they go live.",
   },
   {
     q: "How do I cancel or restore a subscription?",

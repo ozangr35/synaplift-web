@@ -28,7 +28,7 @@ export function StoreBadgeRow({ className }: { className?: string }) {
           className ?? "text-sm font-semibold text-gray-400"
         }
       >
-        Coming soon on the App Store
+        Coming soon on iPhone
       </p>
     );
   }

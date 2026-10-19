@@ -76,7 +76,7 @@ export default function PrivacyPage() {
             "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to Google Gemini (via Firebase Functions) solely for real-time coaching or visual analysis.",
             "No biometric identification: SynapLift does not use your photos for facial recognition, biometric identity verification, or permanent user tracking.",
             "Data retention & protection: Uploaded images are analyzed to generate your response and are not stored permanently on public-facing servers for advertising purposes. They are not sold to data brokers or used for targeted advertising.",
-            "User control: You can revoke camera or photo-library permissions at any time in your iOS or Android system settings. Without permission, you can still use text-based coaching where available.",
+            "User control: You can revoke camera or photo-library permissions at any time in your iPhone Settings. Without permission, you can still use text-based coaching where available.",
           ]}
         />
         <p>
