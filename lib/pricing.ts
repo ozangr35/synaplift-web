@@ -32,13 +32,13 @@ export const freeFeatures = [
   "Custom templates & rest timers",
   "PR & volume tracking",
   "Progress analytics and charts",
+  "Coach reads your lift history",
   "1 free AI Coach message after you sign in",
 ] as const;
 
 export const proFeatures = [
   "Unlimited AI Coach chat",
   "Scan AI physique analysis",
-  "Coach reads your lift history",
 ] as const;
 
 export const pricingTrustNotes = [

@@ -139,7 +139,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
             ["Rest timers & PR charts", true, true],
             ["AI Coach messages", "1 free message", "Unlimited"],
             ["Scan AI physique analysis", false, true],
-            ["Coach uses your lift history", false, true],
+            ["Coach uses your lift history", true, true],
           ].map(([label, freeVal, proVal]) => (
             <div
               key={String(label)}
