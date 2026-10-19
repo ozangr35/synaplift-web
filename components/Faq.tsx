@@ -12,7 +12,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. You can log workouts, use templates, rest timers, and track progress for free. You get one free AI Coach message to try; SynapLift Pro unlocks unlimited AI Coach and Scan AI.",
+    a: "Yes. Workout logging, templates and history are free. 1 free AI Coach message after you sign in. SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.",
   },
   {
     q: "What does SynapLift Pro include?",

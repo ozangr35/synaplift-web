@@ -20,7 +20,7 @@ export const pricingPlans = {
   pro: {
     id: "pro",
     name: "SynapLift Pro",
-    tagline: "Unlimited AI coaching & physique analysis",
+    tagline: "Unlimited AI Coach · Scan AI included",
     priceLabel: "Pricing announced at launch",
     cta: "Get SynapLift Pro",
     highlighted: true,
@@ -31,7 +31,7 @@ export const freeFeatures = [
   "Unlimited workout logging",
   "Custom templates & rest timers",
   "PR & volume tracking",
-  "1 AI Coach message to try",
+  "1 free AI Coach message after you sign in.",
 ] as const;
 
 export const proFeatures = [
