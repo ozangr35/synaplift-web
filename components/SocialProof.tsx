@@ -18,7 +18,7 @@ const highlights = [
   {
     icon: Zap,
     title: "Try before you Pro",
-    body: "1 free AI Coach message after you sign in.",
+    body: "1 free AI Coach message after you sign in",
   },
   {
     icon: Shield,

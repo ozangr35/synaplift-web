@@ -137,7 +137,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
           {[
             ["Workout logging & templates", true, true],
             ["Rest timers & PR charts", true, true],
-            ["AI Coach messages", "1 message", "Unlimited"],
+            ["AI Coach messages", "1 free message", "Unlimited"],
             ["Scan AI physique analysis", false, true],
             ["Coach uses your lift history", false, true],
           ].map(([label, freeVal, proVal]) => (

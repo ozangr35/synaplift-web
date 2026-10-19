@@ -32,7 +32,7 @@ export const freeFeatures = [
   "Custom templates & rest timers",
   "PR & volume tracking",
   "Progress analytics and charts",
-  "1 free AI Coach message after you sign in.",
+  "1 free AI Coach message after you sign in",
 ] as const;
 
 export const proFeatures = [
