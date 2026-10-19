@@ -103,11 +103,12 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "SynapLift Pro pricing is announced at launch and is billed through the Apple App Store or Google Play.",
-            "Prices, trials, and renewal terms are shown at purchase and in your platform subscription settings.",
+            "SynapLift Pro pricing is announced at launch and is billed through the Apple App Store.",
+            "Prices and renewal terms are shown at purchase and in your Apple subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
-            "Deleting your SynapLift account does NOT cancel billing. Cancel in Apple/Google subscription settings.",
-            "Refunds are handled by Apple or Google under their policies, not directly by SynapLift.",
+            "Deleting your SynapLift account does NOT cancel billing. Cancel in your Apple subscription settings.",
+            "Refunds are handled by Apple under its policies, not directly by SynapLift.",
+            "SynapLift Pro AI features (AI Coach and Scan AI) are for reasonable personal use; we may limit abnormal or automated usage.",
           ]}
         />
       </LegalSection>

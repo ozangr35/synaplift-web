@@ -12,11 +12,11 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. You can log workouts, use templates, rest timers, and track progress for free. You get one free AI Coach message to try; SynapLift Pro unlocks unlimited AI Coach and Scan AI.",
+    a: "Yes. Workout logging, templates and history are free. 1 free AI Coach message after you sign in. SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.",
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, and full progress analytics. Pricing announced at launch. See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach chat, and Scan AI included. Pricing announced at launch. See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -32,12 +32,12 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     id: "launch",
-    q: "When will the app be on the App Store and Google Play?",
-    a: "We’re preparing for launch. There is no public App Store or Google Play listing yet. We will post official store links on this site when they go live.",
+    q: "When will the app be on the App Store?",
+    a: "We’re preparing for launch. There is no public App Store listing yet. We will post official store links on this site when they go live.",
   },
   {
     q: "How do I cancel or restore a subscription?",
-    a: "Subscriptions are managed by Apple or Google. Cancel anytime in your device subscription settings. Use Restore Purchases in the app if you reinstall or switch devices.",
+    a: "Subscriptions are managed by Apple. Cancel anytime in your iPhone subscription settings. Use Restore Purchases in the app if you reinstall or switch devices.",
   },
 ];
 
@@ -84,8 +84,8 @@ export default function Faq() {
                     </>
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
-                      Unlimited AI Coach chat, unlimited Scan AI, and full
-                      analytics. Pricing announced at launch.{" "}
+                      Unlimited AI Coach chat, and Scan AI included. Pricing
+                      announced at launch.{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"

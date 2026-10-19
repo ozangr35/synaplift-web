@@ -49,7 +49,7 @@ export default function PrivacyPage() {
             "Account data: email address (when provided by Apple or Google), display name, and sign-in identifiers when you use Sign in with Apple or Google.",
             "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
-            "Subscription status: whether you have SynapLift Pro (billing is handled by Apple or Google; we do not store your payment card details).",
+            "Subscription status: whether you have SynapLift Pro (billing is handled by Apple; we do not store your payment card details).",
             "Technical data: app version, device type, and security signals to protect our services.",
           ]}
         />
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
             "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to Google Gemini (via Firebase Functions) solely for real-time coaching or visual analysis.",
             "No biometric identification: SynapLift does not use your photos for facial recognition, biometric identity verification, or permanent user tracking.",
             "Data retention & protection: Uploaded images are analyzed to generate your response and are not stored permanently on public-facing servers for advertising purposes. They are not sold to data brokers or used for targeted advertising.",
-            "User control: You can revoke camera or photo-library permissions at any time in your iOS or Android system settings. Without permission, you can still use text-based coaching where available.",
+            "User control: You can revoke camera or photo-library permissions at any time in your iPhone Settings. Without permission, you can still use text-based coaching where available.",
           ]}
         />
         <p>
@@ -105,8 +105,8 @@ export default function PrivacyPage() {
         <LegalList
           items={[
             "Google: secure sign-in, cloud storage, Firebase Functions, and Google Gemini for AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
-            "Our subscription partner: confirms whether you have SynapLift Pro (Apple and Google handle payment).",
-            "Apple App Store / Google Play: in-app purchases and subscriptions (we do not receive your full card details).",
+            "Our subscription partner: confirms whether you have SynapLift Pro (Apple handles payment).",
+            "The Apple App Store: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}
         />
         <p>
@@ -154,11 +154,10 @@ export default function PrivacyPage() {
         <p>
           <strong className="text-white">Important:</strong> Deleting your
           account does <em>not</em> cancel an active SynapLift Pro subscription
-          billed through Apple or Google. Cancel subscriptions in{" "}
+          billed through the Apple App Store. Cancel subscriptions in{" "}
           <strong className="text-white">
             iOS Settings → Apple ID → Subscriptions
-          </strong>{" "}
-          or Google Play subscription settings.
+          </strong>.
         </p>
       </LegalSection>
 
