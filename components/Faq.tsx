@@ -16,7 +16,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, Scan AI included, and full progress analytics. Pricing announced at launch. See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach chat, and Scan AI included. Pricing announced at launch. See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -84,8 +84,8 @@ export default function Faq() {
                     </>
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
-                      Unlimited AI Coach chat, Scan AI included, and full
-                      analytics. Pricing announced at launch.{" "}
+                      Unlimited AI Coach chat, and Scan AI included. Pricing
+                      announced at launch.{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"

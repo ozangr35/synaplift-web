@@ -31,6 +31,7 @@ export const freeFeatures = [
   "Unlimited workout logging",
   "Custom templates & rest timers",
   "PR & volume tracking",
+  "Progress analytics and charts",
   "1 free AI Coach message after you sign in.",
 ] as const;
 
@@ -38,7 +39,6 @@ export const proFeatures = [
   "Unlimited AI Coach chat",
   "Scan AI physique analysis",
   "Coach reads your lift history",
-  "Full progress analytics",
 ] as const;
 
 export const pricingTrustNotes = [
