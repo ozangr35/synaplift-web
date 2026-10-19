@@ -37,7 +37,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "How do I cancel or restore a subscription?",
-    a: "Subscriptions are managed by Apple or Google. Cancel anytime in your device subscription settings. Use Restore Purchases in the app if you reinstall or switch devices.",
+    a: "Subscriptions are managed by Apple. Cancel anytime in your iPhone subscription settings. Use Restore Purchases in the app if you reinstall or switch devices.",
   },
 ];
 

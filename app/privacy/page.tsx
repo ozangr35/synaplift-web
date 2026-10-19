@@ -49,7 +49,7 @@ export default function PrivacyPage() {
             "Account data: email address (when provided by Apple or Google), display name, and sign-in identifiers when you use Sign in with Apple or Google.",
             "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
-            "Subscription status: whether you have SynapLift Pro (billing is handled by Apple or Google; we do not store your payment card details).",
+            "Subscription status: whether you have SynapLift Pro (billing is handled by Apple; we do not store your payment card details).",
             "Technical data: app version, device type, and security signals to protect our services.",
           ]}
         />
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
         <LegalList
           items={[
             "Google: secure sign-in, cloud storage, Firebase Functions, and Google Gemini for AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
-            "Our subscription partner: confirms whether you have SynapLift Pro (Apple and Google handle payment).",
+            "Our subscription partner: confirms whether you have SynapLift Pro (Apple handles payment).",
             "The Apple App Store: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}
         />
