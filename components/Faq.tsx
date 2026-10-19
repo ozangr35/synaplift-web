@@ -16,7 +16,7 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, unlimited Scan AI analysis, and full progress analytics. Pricing announced at launch. See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach chat, Scan AI included, and full progress analytics. Pricing announced at launch. See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -32,8 +32,8 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     id: "launch",
-    q: "When will the app be on the App Store and Google Play?",
-    a: "We’re preparing for launch. There is no public App Store or Google Play listing yet. We will post official store links on this site when they go live.",
+    q: "When will the app be on the Apple App Store?",
+    a: "We’re preparing for launch. There is no public Apple App Store listing yet. We will post official store links on this site when they go live.",
   },
   {
     q: "How do I cancel or restore a subscription?",
@@ -84,7 +84,7 @@ export default function Faq() {
                     </>
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
-                      Unlimited AI Coach chat, unlimited Scan AI, and full
+                      Unlimited AI Coach chat, Scan AI included, and full
                       analytics. Pricing announced at launch.{" "}
                       <Link
                         href="/pricing"

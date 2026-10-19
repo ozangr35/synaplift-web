@@ -106,7 +106,7 @@ export default function PrivacyPage() {
           items={[
             "Google: secure sign-in, cloud storage, Firebase Functions, and Google Gemini for AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
             "Our subscription partner: confirms whether you have SynapLift Pro (Apple and Google handle payment).",
-            "Apple App Store / Google Play: in-app purchases and subscriptions (we do not receive your full card details).",
+            "The Apple App Store: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}
         />
         <p>
@@ -154,11 +154,10 @@ export default function PrivacyPage() {
         <p>
           <strong className="text-white">Important:</strong> Deleting your
           account does <em>not</em> cancel an active SynapLift Pro subscription
-          billed through Apple or Google. Cancel subscriptions in{" "}
+          billed through the Apple App Store. Cancel subscriptions in{" "}
           <strong className="text-white">
             iOS Settings → Apple ID → Subscriptions
-          </strong>{" "}
-          or Google Play subscription settings.
+          </strong>.
         </p>
       </LegalSection>
 
