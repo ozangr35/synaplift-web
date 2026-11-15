@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { assets } from "@/lib/assets";
-import { appStoreUrl, playStoreUrl } from "@/lib/site";
+import { appStoreUrl } from "@/lib/site";
 
 const badges = {
   "app-store": {
@@ -9,13 +9,6 @@ const badges = {
     height: 40,
     label: "Download on the App Store",
     defaultHref: appStoreUrl,
-  },
-  "google-play": {
-    src: assets.badges.googlePlay,
-    width: 135,
-    height: 52,
-    label: "Get it on Google Play",
-    defaultHref: playStoreUrl,
   },
 } as const;
 
@@ -27,16 +20,15 @@ type StoreBadgeProps = {
 /** Official artwork only when a live store URL is set. Otherwise plain text. */
 export function StoreBadgeRow({ className }: { className?: string }) {
   const ios = appStoreUrl ? <StoreBadge store="app-store" /> : null;
-  const play = playStoreUrl ? <StoreBadge store="google-play" /> : null;
 
-  if (!ios && !play) {
+  if (!ios) {
     return (
       <p
         className={
           className ?? "text-sm font-semibold text-gray-400"
         }
       >
-        Coming soon on iOS & Android
+        Coming soon on iPhone
       </p>
     );
   }
@@ -44,7 +36,6 @@ export function StoreBadgeRow({ className }: { className?: string }) {
   return (
     <div className={className ?? "flex flex-wrap items-center justify-center gap-3"}>
       {ios}
-      {play}
     </div>
   );
 }

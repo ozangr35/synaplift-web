@@ -16,6 +16,5 @@ export const assets = {
   },
   badges: {
     appStore: "/assets/badges/app-store.svg",
-    googlePlay: "/assets/badges/google-play.png",
   },
 } as const;

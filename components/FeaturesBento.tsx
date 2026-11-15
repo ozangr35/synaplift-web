@@ -29,7 +29,7 @@ const features = [
       { icon: Salad, text: "Ask if your food is healthy (text or photo)" },
     ],
     screenshot: assets.screenshots.featureCoach,
-    screenshotAlt: "SynapLift AI Coach workout plan with save as template",
+    screenshotAlt: "SynapLift AI Coach chat",
   },
   {
     id: "scan",
@@ -44,7 +44,7 @@ const features = [
   },
   {
     id: "tracking",
-    title: "Pro Tracking",
+    title: "Progress tracking",
     description:
       "Rest timers, volume analytics, and 1RM charts so every session compounds into measurable progress.",
     icon: BarChart3,

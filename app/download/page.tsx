@@ -8,7 +8,7 @@ import { supportEmail } from "@/lib/legal";
 export const metadata = {
   title: "Download | SynapLift",
   description:
-    "SynapLift is coming soon on the App Store and Google Play. No public store listing yet.",
+    "SynapLift is coming soon on the Apple App Store. No public store listing yet.",
 };
 
 export default function DownloadPage() {
@@ -23,7 +23,7 @@ export default function DownloadPage() {
           Coming soon
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
-          SynapLift is not on the App Store or Google Play yet. We do not have
+          SynapLift is not on the Apple App Store yet. We do not have
           public store listings, and we will not show official store badges
           until those listings are live.
         </p>

@@ -44,9 +44,9 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <span className="text-gradient-neon">Go Pro for AI.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Workouts, templates, and progress tracking stay free, like other
-            logging apps. SynapLift Pro unlocks unlimited AI Coach and Scan AI
-            when you are ready.
+            Workout logging, templates and history are free. SynapLift Pro
+            unlocks unlimited AI Coach, with Scan AI included when you are
+            ready.
           </p>
         </motion.div>
 
@@ -137,9 +137,9 @@ export default function Pricing({ embedded = false }: PricingProps) {
           {[
             ["Workout logging & templates", true, true],
             ["Rest timers & PR charts", true, true],
-            ["AI Coach messages", "1 trial", "Unlimited"],
+            ["AI Coach messages", "1 free message", "Unlimited"],
             ["Scan AI physique analysis", false, true],
-            ["Coach uses your lift history", false, true],
+            ["Coach uses your lift history", true, true],
           ].map(([label, freeVal, proVal]) => (
             <div
               key={String(label)}

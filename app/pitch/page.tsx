@@ -51,7 +51,7 @@ const sections = [
   {
     icon: BarChart3,
     title: "Business model",
-    body: "B2C subscription via the App Store and Google Play. Workouts and progress are free; AI Coach and Scan AI are included with SynapLift Pro.",
+    body: "B2C subscription via the Apple App Store. Workouts and progress are free; AI Coach and Scan AI are included with SynapLift Pro.",
   },
   {
     icon: Shield,
