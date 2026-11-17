@@ -109,6 +109,7 @@ export default function TermsPage() {
             "Deleting your SynapLift account does NOT cancel billing. Cancel in your Apple subscription settings.",
             "Refunds are handled by Apple under its policies, not directly by SynapLift.",
             "SynapLift Pro AI features (AI Coach and Scan AI) are for reasonable personal use; we may limit abnormal or automated usage.",
+            "Scan AI is included with a fair daily limit to keep the service reliable.",
           ]}
         />
       </LegalSection>
