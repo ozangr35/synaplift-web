@@ -66,7 +66,7 @@ const sections = [
   {
     icon: Globe,
     title: "Traction & stage",
-    body: "Pre-launch / TestFlight-ready. Built by a student entrepreneur team in the Netherlands. Seeking mentorship, distribution advice, and optional pre-seed for marketing, trademark (EU), and user acquisition in Turkey and the Netherlands.",
+    body: "Pre-launch / ready for beta testing. Built by a student entrepreneur team in the Netherlands. Seeking mentorship, distribution advice, and optional pre-seed for marketing, trademark (EU), and user acquisition in Turkey and the Netherlands.",
   },
 ];
 

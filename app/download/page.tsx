@@ -57,7 +57,7 @@ export default function DownloadPage() {
             <p className="mt-1 text-sm text-neon-blue">{supportEmail}</p>
             <p className="mt-2 text-sm text-gray-500">
               Email us for launch updates. There is no public waitlist or
-              TestFlight link yet.
+              beta yet.
             </p>
           </div>
         </a>

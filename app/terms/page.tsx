@@ -116,7 +116,7 @@ export default function TermsPage() {
       <LegalSection title="6. AI Coach & Scan AI">
         <LegalList
           items={[
-            "AI features send your prompts and optional images over encrypted connections to Google Gemini via Firebase Functions, as described in the Privacy Policy.",
+            "AI features send your prompts and optional images over encrypted connections to Google's AI via Google Cloud, as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
             "Scan AI is for physique and training feedback only, not medical diagnosis.",
