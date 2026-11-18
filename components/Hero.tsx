@@ -88,7 +88,7 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-5 text-xs text-gray-600 sm:mt-6"
             >
-              Free to start · SynapLift Pro unlocks AI Coach & Scan AI
+              Free to start · Pro: Unlimited AI Coach · Scan AI included
             </motion.p>
           </div>
 

@@ -12,11 +12,11 @@ const faqs: { id?: string; q: string; a: string }[] = [
   },
   {
     q: "Is SynapLift free?",
-    a: "Yes. Workout logging, templates and history are free. 1 free AI Coach message after you sign in. SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.",
+    a: "Yes. Workout logging, templates and history are free. 1 lifetime AI Coach message. SynapLift Pro unlocks Unlimited AI Coach, with Scan AI included.",
   },
   {
     q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, and Scan AI included. Pricing announced at launch. See our pricing page for a full comparison.",
+    a: "Unlimited AI Coach · Scan AI included. SynapLift Pro is €8.99 per month or €69.99 per year (Save 35% on yearly). See our pricing page for a full comparison.",
   },
   {
     q: "How does the AI Coach know my training?",
@@ -84,8 +84,9 @@ export default function Faq() {
                     </>
                   ) : item.q === "What does SynapLift Pro include?" ? (
                     <>
-                      Unlimited AI Coach chat, and Scan AI included. Pricing
-                      announced at launch.{" "}
+                      Unlimited AI Coach · Scan AI included. SynapLift Pro is
+                      €8.99 per month or €69.99 per year (Save 35% on
+                      yearly).{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"

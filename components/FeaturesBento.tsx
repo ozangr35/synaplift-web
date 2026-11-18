@@ -20,7 +20,7 @@ const features = [
     id: "coach",
     title: "Smart AI Coach",
     description:
-      "Chat with an AI coach that reads your logged lifts, PRs, and volume. Ask how healthy a meal is or attach a food photo for quick feedback.",
+      "Chat with an AI coach that reads your logged lifts, PRs, and volume. Ask how healthy a meal is or attach a food photo for quick feedback. Free includes 1 lifetime message; SynapLift Pro unlocks Unlimited AI Coach.",
     icon: Bot,
     accent: "blue" as const,
     bullets: [
@@ -35,7 +35,7 @@ const features = [
     id: "scan",
     title: "Scan AI",
     description:
-      "Upload a physique photo for instant AI analysis with body composition insights and actionable suggestions.",
+      "Upload a physique photo for instant AI analysis with body composition insights and actionable suggestions. Scan AI is included with SynapLift Pro.",
     icon: Camera,
     accent: "green" as const,
     bullets: [{ icon: Camera, text: "Photo-based physique analysis" }],

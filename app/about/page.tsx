@@ -30,7 +30,8 @@ export default function AboutPage() {
           <p>
             Log sets and 1RM trends, build templates, run rest timers, and chat
             with your coach about workouts, recovery, macros, and equipment.
-            SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.
+            Free includes 1 lifetime AI Coach message. SynapLift Pro unlocks
+            Unlimited AI Coach, with Scan AI included.
           </p>
           <p>
             We&apos;re <strong className="text-white">Bootsurf</strong>, based in

@@ -49,7 +49,7 @@ const steps = [
     step: "03",
     title: "AI Analysis",
     description:
-      "Review progress charts, chat with your AI Coach, and run Scan AI for physique insights.",
+      "Review progress charts, chat with your AI Coach (1 lifetime message on Free; Unlimited AI Coach on Pro), and run Scan AI for physique insights (included with SynapLift Pro).",
     icon: Brain,
     color: "text-neon-blue",
     bg: "bg-neon-blue/15",
