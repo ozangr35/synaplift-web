@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <p>Depending on how you use SynapLift, we may process:</p>
         <LegalList
           items={[
-            "Account data: email address (when provided by Apple, Google, or a verified email sign-in), display name, and sign-in identifiers. Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple, Google, or a verified email. SynapLift Pro is tied to your account.",
+            "Account data: email address (when provided by Apple or Google sign-in), display name, and sign-in identifiers. Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple or Google. SynapLift Pro is tied to your account.",
             "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
             "Subscription status: whether you have SynapLift Pro (billing is handled by Apple; we do not store your payment card details).",

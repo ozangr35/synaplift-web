@@ -92,7 +92,7 @@ export default function TermsPage() {
       <LegalSection title="4. Account & security">
         <LegalList
           items={[
-            "Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple, Google, or a verified email. SynapLift Pro is tied to your account.",
+            "Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple or Google. SynapLift Pro is tied to your account.",
             "You are responsible for keeping your login credentials secure.",
             "You must provide accurate profile information where requested.",
             "You may delete your account at any time in Settings → Delete account.",
