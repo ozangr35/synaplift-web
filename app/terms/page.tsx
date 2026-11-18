@@ -92,6 +92,7 @@ export default function TermsPage() {
       <LegalSection title="4. Account & security">
         <LegalList
           items={[
+            "Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple, Google, or a verified email. SynapLift Pro is tied to your account.",
             "You are responsible for keeping your login credentials secure.",
             "You must provide accurate profile information where requested.",
             "You may delete your account at any time in Settings → Delete account.",
@@ -103,13 +104,13 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "SynapLift Pro pricing is announced at launch and is billed through the Apple App Store.",
+            "SynapLift Pro is €8.99 per month or €69.99 per year, billed through the Apple App Store.",
             "Prices and renewal terms are shown at purchase and in your Apple subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
             "Deleting your SynapLift account does NOT cancel billing. Cancel in your Apple subscription settings.",
             "Refunds are handled by Apple under its policies, not directly by SynapLift.",
             "SynapLift Pro AI features (AI Coach and Scan AI) are for reasonable personal use; we may limit abnormal or automated usage.",
-            "Scan AI is included with a fair daily limit to keep the service reliable.",
+            "Scan AI and AI Coach are included with fair daily limits to keep the service reliable.",
           ]}
         />
       </LegalSection>
@@ -119,6 +120,7 @@ export default function TermsPage() {
           items={[
             "AI features send your prompts and optional images over encrypted connections to Google's AI via Google Cloud, as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
+            "The first time you open Scan AI, you confirm on the Scan AI consent screen that you are 18 or older. Scan AI does not guess age from photos. Use one adult per photo.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
             "Scan AI is for physique and training feedback only, not medical diagnosis.",
             "We may rate-limit or restrict AI usage on free plans.",

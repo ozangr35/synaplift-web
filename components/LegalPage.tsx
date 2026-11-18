@@ -22,7 +22,7 @@ export function LegalPage({
         <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
           {title}
         </h1>
-        <p className="mt-4 text-sm text-gray-500">Last updated: 8 June 2026</p>
+        <p className="mt-4 text-sm text-gray-500">Last updated: 18 November 2026</p>
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-gray-400">
           {children}
         </div>
