@@ -27,9 +27,9 @@ const flowScreens = [
 const steps = [
   {
     step: "01",
-    title: "Build Template",
+    title: "Build a template",
     description:
-      "Create custom workout templates with exercises, sets, and targets, or start from proven routines.",
+      "Create custom workout templates with exercises, sets, and targets.",
     icon: ClipboardList,
     color: "text-neon-blue",
     bg: "bg-neon-blue/15",
@@ -37,7 +37,7 @@ const steps = [
   },
   {
     step: "02",
-    title: "Crush Workout",
+    title: "Log your workout",
     description:
       "Log every set with rest timers, quick entry, and live volume tracking while you train.",
     icon: Flame,
@@ -47,7 +47,7 @@ const steps = [
   },
   {
     step: "03",
-    title: "AI Analysis",
+    title: "Review and ask Coach",
     description:
       "Review progress charts, chat with your AI Coach (1 lifetime message on Free; Unlimited AI Coach on Pro), and run Scan AI for physique insights (included with SynapLift Pro).",
     icon: Brain,

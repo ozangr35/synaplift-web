@@ -24,7 +24,7 @@ const features = [
     icon: Bot,
     accent: "blue" as const,
     bullets: [
-      { icon: MessageSquare, text: "Real-time chat coaching" },
+      { icon: MessageSquare, text: "Ask about your training anytime" },
       { icon: Dumbbell, text: "Workout & equipment advice" },
       { icon: Salad, text: "Ask if your food is healthy (text or photo)" },
     ],
@@ -35,7 +35,7 @@ const features = [
     id: "scan",
     title: "Scan AI",
     description:
-      "Upload a physique photo for instant AI analysis with body composition insights and actionable suggestions. Scan AI is included with SynapLift Pro.",
+      "AI feedback on your physique with practical suggestions. Not medical advice.",
     icon: Camera,
     accent: "green" as const,
     bullets: [{ icon: Camera, text: "Photo-based physique analysis" }],
@@ -98,8 +98,8 @@ export default function FeaturesBento({ embedded = false }: { embedded?: boolean
             <span className="text-gradient-neon">train smarter</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            A premium training stack with AI coaching, physique analysis, and pro-grade
-            tracking in one app.
+            Logging, progress charts and an AI Coach that knows your training, in one
+            app.
           </p>
         </motion.div>
 

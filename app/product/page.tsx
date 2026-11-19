@@ -20,7 +20,7 @@ export default function ProductPage() {
           </p>
           <h1 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
             One app from{" "}
-            <span className="text-gradient-neon">warm-up to weekly review</span>
+            <span className="text-gradient-neon">first set to progress review</span>
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-400">
             Build templates, log sessions with rest timers and quick entry, then

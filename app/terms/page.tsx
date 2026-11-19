@@ -44,7 +44,7 @@ export default function TermsPage() {
           </li>
           <li>
             <strong className="text-white">Limitation of liability:</strong>{" "}
-            Under no circumstances shall Bootsurf (operator of SynapLift,
+            Under no circumstances shall BootSurf (operator of SynapLift,
             established in the Netherlands) be held liable for any physical injuries, health
             complications, or damages resulting from the use of the app or
             adherence to the AI Coach&apos;s recommendations.

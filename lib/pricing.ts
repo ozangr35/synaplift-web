@@ -16,8 +16,8 @@ export const pricingPlans = {
     name: "Free",
     tagline: "Everything you need to log and progress",
     priceLabel: "€0",
-    periodLabel: "forever",
-    cta: "Coming soon",
+    periodLabel: "Free forever",
+    cta: "Get the app",
     highlighted: false,
   },
   pro: {
@@ -60,3 +60,10 @@ export const pricingTrustNotes = [
   "Restore Purchases available in the app",
   "Deleting your account does not cancel billing",
 ] as const;
+
+/** Shown once under the pricing cards. Edit here if Design changes the wording. */
+export const pricingCurrencyNote =
+  "Prices in EUR. The App Store shows the price in your local currency.";
+
+export const pricingSubscribeNote =
+  "Subscribe in the app once it's on the App Store.";

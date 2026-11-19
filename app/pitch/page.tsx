@@ -45,13 +45,13 @@ const sections = [
       "AI Coach chat grounded in your logged workouts (1 lifetime message on Free; Unlimited AI Coach on SynapLift Pro)",
       "Scan AI: physique feedback from your photos (SynapLift Pro)",
       "SynapLift Pro subscription (monthly / yearly)",
-      "Privacy-first design, account deletion, Bootsurf (Netherlands)",
+      "Privacy-first design, account deletion, BootSurf (Netherlands)",
     ],
   },
   {
     icon: BarChart3,
     title: "Business model",
-    body: "B2C subscription via the Apple App Store. Workouts and progress are free, with 1 lifetime AI Coach message. SynapLift Pro is €8.99 per month or €69.99 per year (Save 35% on yearly) and includes Unlimited AI Coach and Scan AI.",
+    body: "B2C subscription via the Apple App Store. Workouts and progress are free, with 1 lifetime AI Coach message. SynapLift Pro is €8.99 per month or €69.99 per year and includes Unlimited AI Coach and Scan AI.",
   },
   {
     icon: Shield,
@@ -82,7 +82,7 @@ export default function PitchPage() {
           SynapLift: AI Coach That Knows Your Lifts
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
-          Strength training app · Bootsurf · Netherlands ·{" "}
+          Strength training app · BootSurf · Netherlands ·{" "}
           <a
             href="mailto:synaplift@outlook.com"
             className="font-semibold text-neon-blue hover:underline"

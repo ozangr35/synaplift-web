@@ -59,7 +59,7 @@ export default function Hero() {
               className="mt-5 max-w-xl text-base leading-relaxed text-gray-400 sm:mt-6 sm:text-lg"
             >
               SynapLift logs your sets, tracks PRs and volume, and coaches you from
-              your real training history. Your personal trainer in your pocket.
+              your real training history.
             </motion.p>
 
             <motion.div

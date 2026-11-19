@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { StoreBadgeRow } from "@/components/StoreBadge";
 import {
   BillingInterval,
   freeFeatures,
+  pricingCurrencyNote,
   pricingPlans,
+  pricingSubscribeNote,
   pricingTrustNotes,
   proFeatures,
 } from "@/lib/pricing";
@@ -49,9 +50,8 @@ export default function Pricing({ embedded = false }: PricingProps) {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             Workout logging, templates and history are free, with 1 lifetime AI
-            Coach message. SynapLift Pro is €8.99 per month or €69.99 per year
-            (Save 35% on yearly), and unlocks Unlimited AI Coach, with Scan AI
-            included.
+            Coach message. SynapLift Pro is €8.99 per month or €69.99 per year,
+            and unlocks Unlimited AI Coach, with Scan AI included.
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 {pricingPlans.free.priceLabel}
               </span>
               <span className="text-sm text-gray-500">
-                {pricingPlans.free.periodLabel}
+                / {pricingPlans.free.periodLabel}
               </span>
             </div>
             <p className="mt-2 text-sm text-gray-400">
@@ -139,18 +139,13 @@ export default function Pricing({ embedded = false }: PricingProps) {
             {...motionInView.card(0.12)}
             className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-neon-green/40 bg-gradient-to-b from-neon-green/8 to-carbon-50 p-6 shadow-neon-green sm:p-8"
           >
-            <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
-              {interval === "yearly" ? (
+            {interval === "yearly" ? (
+              <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
                 <span className="inline-flex items-center rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
                   {pro.yearly.badge}
                 </span>
-              ) : (
-                <span className="inline-flex items-center gap-1 rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
-                  <Sparkles className="h-3 w-3" />
-                  Most popular
-                </span>
-              )}
-            </div>
+              </div>
+            ) : null}
             <p className="text-sm font-bold text-neon-green">{pro.name}</p>
             <div className="mt-3 flex items-baseline gap-2">
               <span className="text-4xl font-black text-white">
@@ -170,14 +165,15 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-center gap-3">
-              <StoreBadgeRow />
-              <p className="text-center text-xs text-gray-500">
-                Subscribe in the app at launch · {pro.cta}
-              </p>
-            </div>
+            <p className="mt-8 text-center text-xs text-gray-500">
+              {pricingSubscribeNote}
+            </p>
           </motion.article>
         </div>
+
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-gray-500">
+          {pricingCurrencyNote}
+        </p>
 
         {/* Feature comparison table */}
         <motion.div
