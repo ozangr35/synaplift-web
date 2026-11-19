@@ -20,12 +20,11 @@ export default function DownloadPage() {
           Download
         </p>
         <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
-          Coming soon
+          Get SynapLift
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-400">
-          SynapLift is not on the Apple App Store yet. We do not have
-          public store listings, and we will not show official store badges
-          until those listings are live.
+          SynapLift isn&apos;t on the App Store yet. We&apos;ll put the link
+          here the day it goes live.
         </p>
 
         <div className="mt-10 rounded-2xl border border-white/8 bg-carbon-50 p-6 sm:p-8 text-center">
@@ -57,7 +56,7 @@ export default function DownloadPage() {
             <p className="mt-1 text-sm text-neon-blue">{supportEmail}</p>
             <p className="mt-2 text-sm text-gray-500">
               Email us for launch updates. There is no public waitlist or
-              TestFlight link yet.
+              beta yet.
             </p>
           </div>
         </a>

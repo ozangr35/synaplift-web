@@ -17,13 +17,13 @@ const highlights = [
   },
   {
     icon: Zap,
-    title: "Try before you Pro",
-    body: "1 free AI Coach message after you sign in",
+    title: "Try Coach for free",
+    body: "Your first AI Coach message is free after you sign in.",
   },
   {
     icon: Shield,
-    title: "Privacy-first",
-    body: "GDPR-aligned policy, in-app consent before AI, account deletion in Settings.",
+    title: "Your data stays yours",
+    body: "We ask before any AI feature reads your data, and you can delete your account in Settings.",
   },
 ] as const;
 

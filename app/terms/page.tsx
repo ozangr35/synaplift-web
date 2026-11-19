@@ -44,7 +44,7 @@ export default function TermsPage() {
           </li>
           <li>
             <strong className="text-white">Limitation of liability:</strong>{" "}
-            Under no circumstances shall Bootsurf (operator of SynapLift,
+            Under no circumstances shall BootSurf (operator of SynapLift,
             established in the Netherlands) be held liable for any physical injuries, health
             complications, or damages resulting from the use of the app or
             adherence to the AI Coach&apos;s recommendations.
@@ -92,6 +92,7 @@ export default function TermsPage() {
       <LegalSection title="4. Account & security">
         <LegalList
           items={[
+            "Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple or Google. SynapLift Pro is tied to your account.",
             "You are responsible for keeping your login credentials secure.",
             "You must provide accurate profile information where requested.",
             "You may delete your account at any time in Settings → Delete account.",
@@ -103,12 +104,13 @@ export default function TermsPage() {
       <LegalSection title="5. SynapLift Pro subscriptions">
         <LegalList
           items={[
-            "SynapLift Pro pricing is announced at launch and is billed through the Apple App Store.",
+            "SynapLift Pro is €8.99 per month or €69.99 per year, billed through the Apple App Store.",
             "Prices and renewal terms are shown at purchase and in your Apple subscription settings.",
             "Use Restore Purchases in the app if you reinstall or change devices.",
             "Deleting your SynapLift account does NOT cancel billing. Cancel in your Apple subscription settings.",
             "Refunds are handled by Apple under its policies, not directly by SynapLift.",
             "SynapLift Pro AI features (AI Coach and Scan AI) are for reasonable personal use; we may limit abnormal or automated usage.",
+            "Scan AI and AI Coach are included with fair daily limits to keep the service reliable.",
           ]}
         />
       </LegalSection>
@@ -116,8 +118,9 @@ export default function TermsPage() {
       <LegalSection title="6. AI Coach & Scan AI">
         <LegalList
           items={[
-            "AI features send your prompts and optional images over encrypted connections to Google Gemini via Firebase Functions, as described in the Privacy Policy.",
+            "AI features send your prompts and optional images over encrypted connections to Google's AI via Google Cloud, as described in the Privacy Policy.",
             "You must grant explicit in-app consent before data is shared with third-party AI.",
+            "The first time you open Scan AI, you confirm on the Scan AI consent screen that you are 18 or older. Scan AI does not guess age from photos. Use one adult per photo.",
             "Do not upload content that is illegal, offensive, non-consensual, or unrelated to fitness.",
             "Scan AI is for physique and training feedback only, not medical diagnosis.",
             "We may rate-limit or restrict AI usage on free plans.",

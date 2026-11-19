@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Sparkles, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import Link from "next/link";
-import { StoreBadgeRow } from "@/components/StoreBadge";
+import { useState } from "react";
 import {
+  BillingInterval,
   freeFeatures,
+  pricingCurrencyNote,
   pricingPlans,
+  pricingSubscribeNote,
   pricingTrustNotes,
   proFeatures,
 } from "@/lib/pricing";
@@ -18,7 +21,9 @@ type PricingProps = {
 };
 
 export default function Pricing({ embedded = false }: PricingProps) {
+  const [interval, setInterval] = useState<BillingInterval>("yearly");
   const pro = pricingPlans.pro;
+  const price = interval === "yearly" ? pro.yearly : pro.monthly;
 
   return (
     <section
@@ -44,10 +49,51 @@ export default function Pricing({ embedded = false }: PricingProps) {
             <span className="text-gradient-neon">Go Pro for AI.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            Workout logging, templates and history are free. SynapLift Pro
-            unlocks unlimited AI Coach, with Scan AI included when you are
-            ready.
+            Workout logging, templates and history are free, with 1 lifetime AI
+            Coach message. SynapLift Pro is €8.99 per month or €69.99 per year,
+            and unlocks Unlimited AI Coach, with Scan AI included.
           </p>
+        </motion.div>
+
+        <motion.div
+          {...motionInView.card(0.05)}
+          className="mx-auto mb-10 flex w-full max-w-md flex-col items-center gap-3"
+        >
+          <div
+            role="tablist"
+            aria-label="Billing interval"
+            className="grid w-full grid-cols-2 rounded-xl border border-white/10 bg-carbon-50 p-1 sm:inline-flex sm:w-auto"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={interval === "monthly"}
+              onClick={() => setInterval("monthly")}
+              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
+                interval === "monthly"
+                  ? "bg-white/10 text-white"
+                  : "text-gray-500 hover:text-gray-300"
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={interval === "yearly"}
+              onClick={() => setInterval("yearly")}
+              className={`rounded-lg px-3 py-2.5 text-sm font-bold transition sm:px-5 ${
+                interval === "yearly"
+                  ? "bg-gradient-to-r from-neon-blue/20 to-neon-green/20 text-white ring-1 ring-neon-green/30"
+                  : "text-gray-500 hover:text-gray-300"
+              }`}
+            >
+              <span className="block sm:inline">Yearly</span>
+              <span className="mt-0.5 block text-[10px] font-black uppercase tracking-wide text-neon-green sm:mt-0 sm:ml-1.5 sm:inline">
+                {pro.yearly.badge}
+              </span>
+            </button>
+          </div>
         </motion.div>
 
         {/* Plan cards | Free + Pro (two-tier + highlighted Pro) */}
@@ -64,7 +110,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 {pricingPlans.free.priceLabel}
               </span>
               <span className="text-sm text-gray-500">
-                {pricingPlans.free.periodLabel}
+                / {pricingPlans.free.periodLabel}
               </span>
             </div>
             <p className="mt-2 text-sm text-gray-400">
@@ -93,16 +139,20 @@ export default function Pricing({ embedded = false }: PricingProps) {
             {...motionInView.card(0.12)}
             className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-neon-green/40 bg-gradient-to-b from-neon-green/8 to-carbon-50 p-6 shadow-neon-green sm:p-8"
           >
-            <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
-              <span className="inline-flex items-center gap-1 rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
-                <Sparkles className="h-3 w-3" />
-                Most popular
-              </span>
-            </div>
+            {interval === "yearly" ? (
+              <div className="mb-3 flex flex-wrap items-center gap-2 lg:absolute lg:top-4 lg:right-4 lg:mb-0">
+                <span className="inline-flex items-center rounded-full bg-neon-green/15 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-neon-green ring-1 ring-neon-green/30">
+                  {pro.yearly.badge}
+                </span>
+              </div>
+            ) : null}
             <p className="text-sm font-bold text-neon-green">{pro.name}</p>
-            <p className="mt-3 text-4xl font-black leading-tight text-white">
-              {pro.priceLabel}
-            </p>
+            <div className="mt-3 flex items-baseline gap-2">
+              <span className="text-4xl font-black text-white">
+                {price.label}
+              </span>
+              <span className="text-sm text-gray-400">/{price.period}</span>
+            </div>
             <p className="mt-2 text-sm text-gray-400">{pro.tagline}</p>
             <ul className="mt-6 flex-1 space-y-3">
               {proFeatures.map((feature) => (
@@ -115,14 +165,15 @@ export default function Pricing({ embedded = false }: PricingProps) {
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-center gap-3">
-              <StoreBadgeRow />
-              <p className="text-center text-xs text-gray-500">
-                Subscribe in the app at launch · {pro.cta}
-              </p>
-            </div>
+            <p className="mt-8 text-center text-xs text-gray-500">
+              {pricingSubscribeNote}
+            </p>
           </motion.article>
         </div>
+
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-gray-500">
+          {pricingCurrencyNote}
+        </p>
 
         {/* Feature comparison table */}
         <motion.div
@@ -137,7 +188,7 @@ export default function Pricing({ embedded = false }: PricingProps) {
           {[
             ["Workout logging & templates", true, true],
             ["Rest timers & PR charts", true, true],
-            ["AI Coach messages", "1 free message", "Unlimited"],
+            ["AI Coach messages", "1 lifetime", "Unlimited"],
             ["Scan AI physique analysis", false, true],
             ["Coach uses your lift history", true, true],
           ].map(([label, freeVal, proVal]) => (

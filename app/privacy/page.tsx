@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <p>Depending on how you use SynapLift, we may process:</p>
         <LegalList
           items={[
-            "Account data: email address (when provided by Apple or Google), display name, and sign-in identifiers when you use Sign in with Apple or Google.",
+            "Account data: email address (when provided by Apple or Google sign-in), display name, and sign-in identifiers. Sign-in is required before you can use the app (there is no guest mode), via Sign in with Apple or Google. SynapLift Pro is tied to your account.",
             "Profile & fitness data: age, weight, height, goals, experience level, training preferences, and workout history (exercises, sets, reps, volume, personal records).",
             "AI Coach data: text messages you send to the coach and optional photos you attach in chat.",
             "Subscription status: whether you have SynapLift Pro (billing is handled by Apple; we do not store your payment card details).",
@@ -73,10 +73,11 @@ export default function PrivacyPage() {
         </p>
         <LegalList
           items={[
-            "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to Google Gemini (via Firebase Functions) solely for real-time coaching or visual analysis.",
+            "Image processing: When you upload a physique or workout photo, the image is sent over encrypted connections to Google's AI (via Google Cloud) solely for real-time coaching or visual analysis.",
             "No biometric identification: SynapLift does not use your photos for facial recognition, biometric identity verification, or permanent user tracking.",
             "Data retention & protection: Uploaded images are analyzed to generate your response and are not stored permanently on public-facing servers for advertising purposes. They are not sold to data brokers or used for targeted advertising.",
             "User control: You can revoke camera or photo-library permissions at any time in your iPhone Settings. Without permission, you can still use text-based coaching where available.",
+            "Age confirmation: The first time you open Scan AI, you confirm on the Scan AI consent screen that you are 18 or older. SynapLift does not guess age from photos. Use one adult per photo.",
           ]}
         />
         <p>
@@ -104,7 +105,7 @@ export default function PrivacyPage() {
         <p>We do not sell your personal data. We use trusted processors:</p>
         <LegalList
           items={[
-            "Google: secure sign-in, cloud storage, Firebase Functions, and Google Gemini for AI text/vision analysis (processing may occur in the EU or US per Google’s terms).",
+            "Google: secure sign-in, cloud storage, Google Cloud, and Google's AI for text/vision analysis (processing may occur in the EU or US per Google’s terms).",
             "Our subscription partner: confirms whether you have SynapLift Pro (Apple handles payment).",
             "The Apple App Store: in-app purchases and subscriptions (we do not receive your full card details).",
           ]}

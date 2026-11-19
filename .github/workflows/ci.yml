@@ -22,3 +22,7 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run build
       - run: bash scripts/check-secrets.sh
+      - name: Check built HTML for stack names
+        run: bash scripts/check-stack-names.sh
+      - name: Check built HTML for price copy
+        run: bash scripts/check-prices.sh

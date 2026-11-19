@@ -1,5 +1,5 @@
 /**
- * SynapLift Pro plan copy. There is no live store listing, so this file stores no Pro price.
+ * SynapLift Pro plan copy and prices.
  * Product ids match the app entitlement `pro`.
  */
 export const storeProductIds = {
@@ -7,21 +7,35 @@ export const storeProductIds = {
   annual: "myon_pro_annual",
   entitlement: "pro",
 } as const;
+
+export type BillingInterval = "monthly" | "yearly";
+
 export const pricingPlans = {
   free: {
     id: "free",
     name: "Free",
     tagline: "Everything you need to log and progress",
-    priceLabel: "$0",
-    periodLabel: "forever",
-    cta: "Coming soon",
+    priceLabel: "€0",
+    periodLabel: "Free forever",
+    cta: "Get the app",
     highlighted: false,
   },
   pro: {
     id: "pro",
     name: "SynapLift Pro",
     tagline: "Unlimited AI Coach · Scan AI included",
-    priceLabel: "Pricing announced at launch",
+    monthly: {
+      amount: 8.99,
+      label: "€8.99",
+      period: "month",
+    },
+    yearly: {
+      amount: 69.99,
+      label: "€69.99",
+      period: "year",
+      savingsPercent: 35,
+      badge: "Save 35%",
+    },
     cta: "Get SynapLift Pro",
     highlighted: true,
   },
@@ -33,12 +47,12 @@ export const freeFeatures = [
   "PR & volume tracking",
   "Progress analytics and charts",
   "Coach reads your lift history",
-  "1 free AI Coach message after you sign in",
+  "1 lifetime AI Coach message",
 ] as const;
 
 export const proFeatures = [
-  "Unlimited AI Coach chat",
-  "Scan AI physique analysis",
+  "Unlimited AI Coach",
+  "Scan AI included",
 ] as const;
 
 export const pricingTrustNotes = [
@@ -46,3 +60,10 @@ export const pricingTrustNotes = [
   "Restore Purchases available in the app",
   "Deleting your account does not cancel billing",
 ] as const;
+
+/** Shown once under the pricing cards. Edit here if Design changes the wording. */
+export const pricingCurrencyNote =
+  "Prices in EUR. The App Store shows the price in your local currency.";
+
+export const pricingSubscribeNote =
+  "Subscribe in the app once it's on the App Store.";

@@ -7,37 +7,57 @@ import { motionInView } from "@/lib/motion";
 
 const faqs: { id?: string; q: string; a: string }[] = [
   {
-    q: "What is SynapLift?",
-    a: "SynapLift is a strength training app that combines workout logging, progress analytics, an AI Coach that reads your lift history (and can comment on meals you ask about), and Scan AI for physique feedback.",
+    q: "How much does Pro cost?",
+    a: "€8.99 a month or €69.99 a year. The App Store shows the price in your local currency. Cancel anytime.",
   },
   {
-    q: "Is SynapLift free?",
-    a: "Yes. Workout logging, templates and history are free. 1 free AI Coach message after you sign in. SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.",
+    q: "What's free?",
+    a: "Workout logging, templates, rest timers, charts and history are free forever. You also get 1 free AI Coach message after you sign in.",
   },
   {
-    q: "What does SynapLift Pro include?",
-    a: "Unlimited AI Coach chat, and Scan AI included. Pricing announced at launch. See our pricing page for a full comparison.",
+    q: "What does Pro add?",
+    a: "Unlimited AI Coach, with Scan AI included.",
   },
   {
-    q: "How does the AI Coach know my training?",
-    a: "The coach uses your logged workouts, PRs, volume, and profile context to tailor advice, not a one-size-fits-all program. AI runs on Google Gemini via Firebase Functions.",
+    q: "How does Coach know my training?",
+    a: "It reads the workouts, PRs and volume you logged in the app. It gives general fitness guidance, not medical advice.",
   },
   {
-    q: "Can I ask the AI Coach about my food?",
-    a: "Yes. Type a question or attach a meal photo in AI Coach chat, for example whether a plate looks balanced or how it fits your goals. It’s a quick sanity check, not medical or dietitian advice.",
+    q: "Can I ask Coach about food?",
+    a: "Yes, type a question or attach a meal photo. It's a quick check, not dietitian advice.",
   },
   {
-    q: "Is my data private?",
-    a: "We collect only what’s needed to run the app and improve your experience. Read our Privacy Policy for full details on storage, AI processing, and your rights.",
+    q: "What happens to my Scan photos?",
+    a: "Your photo is sent to Google's AI for the analysis and isn't stored on our servers. Scan is for adults (18+) only.",
+  },
+  {
+    q: "What should I wear for Scan?",
+    a: "Fitted workout clothes, alone in the frame. Men can scan shirtless, women wear a top or sports bra. No underwear.",
+  },
+  {
+    q: "Do I need an account?",
+    a: "Yes, sign in with Apple or Google so your workouts and Pro stay with you.",
+  },
+  {
+    q: "Which languages?",
+    a: "English, Turkish, German, Spanish, French, Portuguese, Japanese and Chinese.",
+  },
+  {
+    q: "Is it on Android?",
+    a: "Not yet. SynapLift is iPhone-only for now.",
+  },
+  {
+    q: "How do I cancel or restore?",
+    a: "Cancel in your iPhone's subscription settings. Use Restore Purchases in the app after reinstalling.",
+  },
+  {
+    q: "How do I delete my account?",
+    a: "Settings > Delete account. This doesn't cancel your subscription; cancel that in the App Store.",
   },
   {
     id: "launch",
-    q: "When will the app be on the App Store?",
-    a: "We’re preparing for launch. There is no public App Store listing yet. We will post official store links on this site when they go live.",
-  },
-  {
-    q: "How do I cancel or restore a subscription?",
-    a: "Subscriptions are managed by Apple. Cancel anytime in your iPhone subscription settings. Use Restore Purchases in the app if you reinstall or switch devices.",
+    q: "When does it launch?",
+    a: "Soon on the App Store. The link will be on this site the day it goes live.",
   },
 ];
 
@@ -46,15 +66,11 @@ export default function Faq() {
     <section className="relative pt-28 pb-20 sm:pt-32 sm:pb-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div {...motionInView.header} className="mb-12 text-center sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neon-green">
+          <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
             FAQ
-          </p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
-            Questions lifters ask{" "}
-            <span className="text-gradient-neon">before they download</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-gray-400">
-            Quick answers about SynapLift, privacy, subscriptions, and the app.
+            Short answers about the app, your data and Pro.
           </p>
         </motion.div>
 
@@ -74,36 +90,19 @@ export default function Faq() {
                   </span>
                 </summary>
                 <p className="border-t border-white/6 px-5 pb-5 text-sm leading-relaxed text-gray-400 sm:px-6">
-                  {item.q === "Is my data private?" ? (
+                  {item.q === "How much does Pro cost?" ? (
                     <>
-                      We collect only what’s needed to run the app. See our{" "}
-                      <Link href="/privacy" className="font-semibold text-neon-blue hover:underline">
-                        Privacy Policy
-                      </Link>{" "}
-                      for full details.
-                    </>
-                  ) : item.q === "What does SynapLift Pro include?" ? (
-                    <>
-                      Unlimited AI Coach chat, and Scan AI included. Pricing
-                      announced at launch.{" "}
+                      {item.a}{" "}
                       <Link
                         href="/pricing"
                         className="font-semibold text-neon-blue hover:underline"
                       >
-                        View pricing
+                        See pricing
                       </Link>
-                      .
                     </>
                   ) : item.id === "launch" ? (
                     <>
-                      {item.a} See{" "}
-                      <Link
-                        href="/download"
-                        className="font-semibold text-neon-blue hover:underline"
-                      >
-                        download status
-                      </Link>
-                      . For launch questions, email{" "}
+                      {item.a} For launch questions, email{" "}
                       <a
                         href={`mailto:${supportEmail}`}
                         className="font-semibold text-neon-blue hover:underline"

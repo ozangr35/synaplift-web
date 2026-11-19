@@ -24,16 +24,17 @@ export default function AboutPage() {
           <p>
             <strong className="text-white">SynapLift</strong> is a strength training
             app that combines serious workout logging with an AI Coach and Scan
-            AI so you can train smarter, track real progress, and get guidance
-            that feels human, not robotic.
+            AI so you can train smarter, track real progress, and get advice
+            based on what you actually lifted.
           </p>
           <p>
             Log sets and 1RM trends, build templates, run rest timers, and chat
             with your coach about workouts, recovery, macros, and equipment.
-            SynapLift Pro unlocks unlimited AI Coach, with Scan AI included.
+            Free includes 1 lifetime AI Coach message. SynapLift Pro unlocks
+            Unlimited AI Coach, with Scan AI included.
           </p>
           <p>
-            We&apos;re <strong className="text-white">Bootsurf</strong>, based in
+            We&apos;re <strong className="text-white">BootSurf</strong>, based in
             the Netherlands, building SynapLift to help you get stronger with
             tools that respect your time in the gym.
           </p>
